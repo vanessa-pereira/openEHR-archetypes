@@ -65,7 +65,7 @@ Waterlow pressure damage risk assessment da NHS Taunton e Somerset Trust.
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"dae548f6f082897f3206ddc8cdb566cb">
+		["MD5-CAM-1.0.1"] = <"55f8fdc1c205608d80b3bff62df42469">
 		["build_uid"] = <"e74b85d0-4d3a-4135-8124-b383d0bb4157">
 	>
 
@@ -259,17 +259,12 @@ definition
 									}
 									CLUSTER[at0068] occurrences matches {0..1} matches {    -- Major surgery or trauma
 										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0114] occurrences matches {0..1} matches {    -- Orthopaedic / spinal
-												value matches {
-													0|[local::at0153],
-													5|[local::at0143]
-												}
-											}
-											ELEMENT[at0144] occurrences matches {0..1} matches {    -- Duration of surgery
+											ELEMENT[at0144] occurrences matches {0..1} matches {    -- Major surgery or trauma in the last 48 hours
 												value matches {
 													0|[local::at0154],
 													5|[local::at0145],
-													8|[local::at0146]
+													5|[local::at0146],
+													8|[local::at0161]
 												}
 											}
 										}
@@ -551,7 +546,7 @@ ontology
 				>
 				["at0073"] = <
 					text = <"Neurological deficit">
-					description = <"Risk conferred by neurological deficit. Each identified risk can be scored between 4-6 but a maximum of 6 only can be given for the whole neurological deficit category.">
+					description = <"Risk conferred by neurological deficit. Each identified risk can be scored between 4-6 and a maximum of 18 can be given for the whole neurological deficit category.">
 				>
 				["at0106"] = <
 					text = <"Cytotoxics">
@@ -564,10 +559,6 @@ ontology
 				["at0108"] = <
 					text = <"Anti-inflammatories">
 					description = <"The subject is receiving anti-inflammatory medication.">
-				>
-				["at0114"] = <
-					text = <"Orthopaedic / spinal">
-					description = <"Risks related to orthopaedic or spinal surgery.">
 				>
 				["at0116"] = <
 					text = <"Healthy">
@@ -677,21 +668,17 @@ ontology
 					text = <"Significant medication risk">
 					description = <"The subject has significant risk related to medication.">
 				>
-				["at0143"] = <
-					text = <"Orthopaedic / spinal surgery">
-					description = <"The subject has undergone orthopaedic or spinal surgery.">
-				>
 				["at0144"] = <
-					text = <"Duration of surgery">
+					text = <"Major surgery or trauma in the last 48 hours">
 					description = <"Risks imparted by length of surgery.">
 				>
 				["at0145"] = <
-					text = <"On table > 2 hrs (Past 48 hrs)">
-					description = <"The subject has had surgery within the past 48 hours lasting over 2 hours.">
+					text = <"Orthopaedic / spinal surgery">
+					description = <"The patient was submitted to Orthopaedic / bellow waist / spinal surgery.">
 				>
 				["at0146"] = <
-					text = <"On table > 6 hrs (Past 48 hrs)">
-					description = <"The subject has had surgery within the past 48 hours lasting over 6 hours.">
+					text = <"On table for more than 2 hours">
+					description = <"The subject has had surgery within the past 48 hours lasting over 2 hours.">
 				>
 				["at0150"] = <
 					text = <"Diabetes, MS, CVA">
@@ -705,13 +692,9 @@ ontology
 					text = <"Paraplegia">
 					description = <"The subject has a paraplegia.">
 				>
-				["at0153"] = <
-					text = <"No orthopaedic / spinal surgery">
-					description = <"The subject has no risk related to spinal / orthopaedic surgery.">
-				>
 				["at0154"] = <
-					text = <"On table < 2 hrs or not in past 48 hrs">
-					description = <"The subject has had surgery more than 48 hrs ago or lasting for less than 2 hours.">
+					text = <"No major or surgery trauma">
+					description = <"No major or surgery trauma.">
 				>
 				["at0155"] = <
 					text = <"NG tube / Fluids only">
@@ -732,6 +715,10 @@ ontology
 				["at0159"] = <
 					text = <"Very high risk">
 					description = <"The subject is at very high risk of developing a pressure ulcer. Waterlow score is greater that 20.">
+				>
+				["at0161"] = <
+					text = <"On table for more than 6 hours">
+					description = <"The subject has had surgery within the past 48 hours lasting over 6 hours.">
 				>
 			>
 		>
@@ -941,10 +928,6 @@ ontology
 					text = <"Anti-inflamatórios">
 					description = <"O sujeito está a utilizar medicação anti-inflamatória.">
 				>
-				["at0114"] = <
-					text = <"Ortopédico / abaixo da medula lombar">
-					description = <"Riscos relacionados à cirurgia ortopédica ou lombar/espinhal.">
-				>
 				["at0116"] = <
 					text = <"Saudável">
 					description = <"A pele parece saudável.">
@@ -1054,10 +1037,6 @@ ontology
 					text = <"Risco de medicação significativa">
 					description = <"O sujeito tem riscos significativos relacionados ao medicamento.">
 				>
-				["at0143"] = <
-					text = <"Cirurgia ortopédica / medula lombar">
-					description = <"O sujeito tem riscos relacionados à cirurgia da coluna vertebral / ortopédica.">
-				>
 				["at0144"] = <
 					text = <"Duração da cirurgia">
 					description = <"Riscos transmitidos pela duração da cirurgia.">
@@ -1082,10 +1061,6 @@ ontology
 					text = <"Paraplégico">
 					description = <"O paciente é paraplégico.">
 				>
-				["at0153"] = <
-					text = <"Sem risco de cirurgia ortopédica / medula lombar">
-					description = <"O sujeito não tem riscos relacionados à cirurgia da coluna vertebral / ortopédica.">
-				>
 				["at0154"] = <
 					text = <"Em cirurgia < 2h ou não nas últimas 48h">
 					description = <"O paciente teve uma cirurgia há mais de 48 horas ou com duração de menos de 2 horas.">
@@ -1109,6 +1084,10 @@ ontology
 				["at0159"] = <
 					text = <"Muito alto risco">
 					description = <"O paciente corre um risco muito alto de desenvolver uma úlcera por pressão. A pontuação de Waterlow é maior que 20.">
+				>
+				["at0161"] = <
+					text = <"*On table for more than 6 hours (en)">
+					description = <"*The subject has had surgery within the past 48 hours lasting over 6 hours. (en)">
 				>
 			>
 		>
