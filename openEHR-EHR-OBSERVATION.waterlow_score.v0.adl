@@ -65,7 +65,7 @@ Waterlow pressure damage risk assessment da NHS Taunton e Somerset Trust.
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"55f8fdc1c205608d80b3bff62df42469">
+		["MD5-CAM-1.0.1"] = <"8593eb7669ca7e0115b3b8f27ce1cff4">
 		["build_uid"] = <"e74b85d0-4d3a-4135-8124-b383d0bb4157">
 	>
 
@@ -1038,16 +1038,16 @@ ontology
 					description = <"O sujeito tem riscos significativos relacionados ao medicamento.">
 				>
 				["at0144"] = <
-					text = <"Duração da cirurgia">
+					text = <"Cirurgia major ou trauma nas últimas 48 horas">
 					description = <"Riscos transmitidos pela duração da cirurgia.">
 				>
 				["at0145"] = <
-					text = <"Em cirurgia > 2h (Nas últimas 48h)">
-					description = <"O paciente teve uma cirurgia nas últimas 48 horas, com duração superior a 2 horas.">
+					text = <"Cirurgia ortopédica / coluna vertebral">
+					description = <"O paciente teve uma cirurgia ortopédica ou de coluna vertebral.">
 				>
 				["at0146"] = <
-					text = <"Em cirurgia > 6h (Nas últimas 48h)">
-					description = <"O paciente teve uma cirurgia nas últimas 48 horas, com duração superior a 6 horas.">
+					text = <"Em cirurgia mais do que 2 horas">
+					description = <"O paciente teve uma cirurgia nas últimas 48 horas, com duração superior a 2 horas.">
 				>
 				["at0150"] = <
 					text = <"Diabetes, EM, CVA (en)">
@@ -1062,8 +1062,8 @@ ontology
 					description = <"O paciente é paraplégico.">
 				>
 				["at0154"] = <
-					text = <"Em cirurgia < 2h ou não nas últimas 48h">
-					description = <"O paciente teve uma cirurgia há mais de 48 horas ou com duração de menos de 2 horas.">
+					text = <"Sem cirurgia major ou trauma">
+					description = <"O paciente não teve cirurgia major ou trauma.">
 				>
 				["at0155"] = <
 					text = <"Sonda nasogástrica / Apenas líquidos">
@@ -1086,8 +1086,8 @@ ontology
 					description = <"O paciente corre um risco muito alto de desenvolver uma úlcera por pressão. A pontuação de Waterlow é maior que 20.">
 				>
 				["at0161"] = <
-					text = <"*On table for more than 6 hours (en)">
-					description = <"*The subject has had surgery within the past 48 hours lasting over 6 hours. (en)">
+					text = <"Em cirurgia mais do que 6 horas">
+					description = <"O paciente teve uma cirurgia nas últimas 48 horas, com duração superior a 6 horas.">
 				>
 			>
 		>
