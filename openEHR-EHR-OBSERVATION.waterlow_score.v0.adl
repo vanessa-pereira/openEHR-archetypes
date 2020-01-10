@@ -65,7 +65,7 @@ Waterlow pressure damage risk assessment da NHS Taunton e Somerset Trust.
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8593eb7669ca7e0115b3b8f27ce1cff4">
+		["MD5-CAM-1.0.1"] = <"01e73d6af794d124173909ad1832a93e">
 		["build_uid"] = <"e74b85d0-4d3a-4135-8124-b383d0bb4157">
 	>
 
@@ -429,7 +429,7 @@ ontology
 					description = <"The subject is incontinent of urine.">
 				>
 				["at0026"] = <
-					text = <"Faecal incontinente">
+					text = <"Faecal incontinence">
 					description = <"The subject is incontinent of faeces.">
 				>
 				["at0027"] = <
@@ -693,8 +693,8 @@ ontology
 					description = <"The subject has a paraplegia.">
 				>
 				["at0154"] = <
-					text = <"No major or surgery trauma">
-					description = <"No major or surgery trauma.">
+					text = <"No major surgery or trauma">
+					description = <"No major surgery or trauma.">
 				>
 				["at0155"] = <
 					text = <"NG tube / Fluids only">
@@ -741,7 +741,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"Indíce de massa corpora (IMC)">
+					text = <"Indíce de massa corporal (IMC)">
 					description = <"Risco conferido pela estrutura do sujeito, baseado no cálculo do IMC.">
 				>
 				["at0005"] = <

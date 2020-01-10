@@ -1,0 +1,590 @@
+archetype (adl_version=1.4; uid=f03745a4-18db-4661-91b5-adf7127bc47e)
+	openEHR-EHR-OBSERVATION.ulcer_prevention_management.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2019-10-30">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Pathfinder - Better by Marand">
+		["email"] = <"vanessa.pereira@better.care">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"ffd2ed7e9adb5cfa361f2f21bd6b54a3">
+		["build_uid"] = <"9ea4b3f4-9fd2-3c1f-b441-3f996e04bee5">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Pressure ulcer prevention management
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {0..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									CLUSTER[at0004] occurrences matches {0..1} matches {    -- Problem statement or issue
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0005] occurrences matches {0..1} matches {    -- Pressure ulceration development stage
+												value matches {
+													1|[local::at0006],
+													2|[local::at0007],
+													3|[local::at0008]
+												}
+											}
+											ELEMENT[at0009] occurrences matches {0..1} matches {    -- Category
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0010,    -- Category 1
+															at0011,    -- Category 2
+															at0012,    -- Category 3
+															at0013,    -- Category 4
+															at0014,    -- Unstageable
+															at0015,    -- Mucosal
+															at0016]    -- Deep tissue injury
+														}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0017] occurrences matches {0..1} matches {    -- A - ASSESS - plan of care
+										items cardinality matches {1..*; unordered} matches {
+											CLUSTER[at0018] occurrences matches {0..1} matches {    -- S - Skin inspection
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0019] occurrences matches {0..1} matches {    -- Risk stage
+														value matches {
+															1|[local::at0020],
+															2|[local::at0021],
+															3|[local::at0022]
+														}
+													}
+													ELEMENT[at0023] occurrences matches {0..1} matches {    -- Comment
+														value matches {
+															DV_TEXT matches {*}
+														}
+													}
+												}
+											}
+											CLUSTER[at0024] occurrences matches {0..1} matches {    -- S - Surface
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0025] occurrences matches {0..1} matches {    -- Risk stage
+														value matches {
+															1|[local::at0026],
+															2|[local::at0027],
+															3|[local::at0028]
+														}
+													}
+													ELEMENT[at0031] occurrences matches {0..1} matches {    -- Comment
+														value matches {
+															DV_TEXT matches {*}
+														}
+													}
+												}
+											}
+											CLUSTER[at0049] occurrences matches {0..1} matches {    -- K - Keep moving
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0050] occurrences matches {0..1} matches {    -- Risk stage
+														value matches {
+															1|[local::at0051],
+															2|[local::at0052],
+															3|[local::at0053]
+														}
+													}
+													ELEMENT[at0054] occurrences matches {0..1} matches {    -- Comment
+														value matches {
+															DV_TEXT matches {*}
+														}
+													}
+												}
+											}
+											CLUSTER[at0055] occurrences matches {0..1} matches {    -- I - Incontinence
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0056] occurrences matches {0..1} matches {    -- Patient has bladder/bowel incontinence ?
+														value matches {
+															DV_BOOLEAN matches {*}
+														}
+													}
+													ELEMENT[at0058] occurrences matches {0..1} matches {    -- Patient has moisture lesion ?
+														value matches {
+															DV_BOOLEAN matches {*}
+														}
+													}
+													ELEMENT[at0059] occurrences matches {0..1} matches {    -- Treatment line
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0060,    -- First line treatment
+																	at0061]    -- Second line treatment
+																}
+															}
+														}
+													}
+													ELEMENT[at0076] occurrences matches {0..1} matches {    -- Treatment line comment
+														value matches {
+															DV_TEXT matches {*}
+														}
+													}
+													ELEMENT[at0057] occurrences matches {0..1} matches {    -- Comment
+														value matches {
+															DV_TEXT matches {*}
+														}
+													}
+												}
+											}
+											CLUSTER[at0062] occurrences matches {0..1} matches {    -- N - Nutrition
+												items cardinality matches {1..*; unordered} matches {
+													CLUSTER[at0083] occurrences matches {0..1} matches {    -- Referral nutrition type
+														items cardinality matches {1..*; unordered} matches {
+															CLUSTER[at0085] occurrences matches {0..1} matches {    -- Food chart
+																items cardinality matches {1..*; unordered} matches {
+																	ELEMENT[at0095] occurrences matches {0..1} matches {    -- Does the patient need a food chart ?
+																		value matches {
+																			DV_BOOLEAN matches {*}
+																		}
+																	}
+																	ELEMENT[at0086] occurrences matches {0..1} matches {    -- Referral option
+																		value matches {
+																			DV_CODED_TEXT matches {
+																				defining_code matches {
+																					[local::at0092]    -- Food chart
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+															CLUSTER[at0088] occurrences matches {0..1} matches {    -- Dietician referral
+																items cardinality matches {1..*; unordered} matches {
+																	ELEMENT[at0096] occurrences matches {0..1} matches {    -- Does the patient need a dietician referral ?
+																		value matches {
+																			DV_BOOLEAN matches {*}
+																		}
+																	}
+																	ELEMENT[at0089] occurrences matches {0..1} matches {    -- Referral option
+																		value matches {
+																			DV_CODED_TEXT matches {
+																				defining_code matches {
+																					[local::at0093]    -- Dietician referral
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+													ELEMENT[at0087] occurrences matches {0..1} matches {    -- Comment
+														value matches {
+															DV_TEXT matches {*}
+														}
+													}
+												}
+											}
+											CLUSTER[at0068] occurrences matches {0..1} matches {    -- G - Patient information
+												items cardinality matches {1..*; unordered} matches {
+													CLUSTER[at0082] occurrences matches {0..1} matches {    -- Patient information leaflet and discussion
+														items cardinality matches {1..*; unordered} matches {
+															ELEMENT[at0069] occurrences matches {0..1} matches {    -- Patient information leaflet given ?
+																value matches {
+																	DV_BOOLEAN matches {*}
+																}
+															}
+															ELEMENT[at0077] occurrences matches {0..1} matches {    -- Status
+																value matches {
+																	DV_CODED_TEXT matches {
+																		defining_code matches {
+																			[local::
+																			at0078,    -- Discussed and understood
+																			at0079,    -- Discussed and partially understood
+																			at0080]    -- Unable to discuss
+																		}
+																	}
+																}
+															}
+															ELEMENT[at0081] occurrences matches {0..1} matches {    -- Comment
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+														}
+													}
+													ELEMENT[at0070] occurrences matches {0..1} matches {    -- Discuss with family/carers ?
+														value matches {
+															DV_BOOLEAN matches {*}
+														}
+													}
+													ELEMENT[at0071] occurrences matches {0..1} matches {    -- Safeguarding considered ?
+														value matches {
+															DV_BOOLEAN matches {*}
+														}
+													}
+													ELEMENT[at0097] occurrences matches {0..1} matches {    -- Comment
+														value matches {
+															DV_TEXT matches {*}
+														}
+													}
+												}
+											}
+											CLUSTER[at0099] occurrences matches {0..1} matches {    -- Care given variance
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0098] occurrences matches {0..1} matches {    -- Comment
+														value matches {
+															DV_TEXT matches {*}
+														}
+													}
+												}
+											}
+										}
+									}
+									allow_archetype CLUSTER[at0075] occurrences matches {0..*} matches {    -- Extension
+										include
+											archetype_id/value matches {/.*/}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0030] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0072] occurrences matches {0..1} matches {    -- Last updated
+						value matches {
+							DV_DATE matches {*}
+						}
+					}
+					ELEMENT[at0073] occurrences matches {0..1} matches {    -- Assessment method
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0074] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Pressure ulcer prevention management">
+					description = <"ulcer prevention management">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Problem statement or issue">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"Pressure ulceration development stage">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"At risk">
+					description = <"Patient is at risk of developing pressure ulceration.">
+				>
+				["at0007"] = <
+					text = <"High risk">
+					description = <"Patient is at high risk of developing pressure ulceration.">
+				>
+				["at0008"] = <
+					text = <"Very high risk">
+					description = <"Patient is at very high risk of developing pressure ulceration.">
+				>
+				["at0009"] = <
+					text = <"Category">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"Category 1">
+					description = <"Non blanching redness of intact skin">
+				>
+				["at0011"] = <
+					text = <"Category 2">
+					description = <"Broken skin or blister">
+				>
+				["at0012"] = <
+					text = <"Category 3">
+					description = <"Full thickness (fat or slough visible)">
+				>
+				["at0013"] = <
+					text = <"Category 4">
+					description = <"Full thinkness (bone, tendon or muscle exposed)">
+				>
+				["at0014"] = <
+					text = <"Unstageable">
+					description = <"Unable to grade the pressure damage due to slough or eschar">
+				>
+				["at0015"] = <
+					text = <"Mucosal">
+					description = <"This is pressure damage to the muscosa. It cannot be graded, e.g. nostril, mouth.">
+				>
+				["at0016"] = <
+					text = <"Deep tissue injury">
+					description = <"Purple or maroon area of discoloured intact skin or blood filled blister.">
+				>
+				["at0017"] = <
+					text = <"A - ASSESS - plan of care">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"S - Skin inspection">
+					description = <"*">
+				>
+				["at0019"] = <
+					text = <"Risk stage">
+					description = <"*">
+				>
+				["at0020"] = <
+					text = <"At risk: 2-4 hourly">
+					description = <"*">
+				>
+				["at0021"] = <
+					text = <"At high risk: 2 hourly">
+					description = <"*">
+				>
+				["at0022"] = <
+					text = <"At very high risk: 1-2 hourly">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0024"] = <
+					text = <"S - Surface">
+					description = <"*">
+				>
+				["at0025"] = <
+					text = <"Risk stage">
+					description = <"*">
+				>
+				["at0026"] = <
+					text = <"At risk">
+					description = <"*">
+				>
+				["at0027"] = <
+					text = <"At high risk">
+					description = <"*">
+				>
+				["at0028"] = <
+					text = <"At very high risk">
+					description = <"*">
+				>
+				["at0030"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0031"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0049"] = <
+					text = <"K - Keep moving">
+					description = <"*">
+				>
+				["at0050"] = <
+					text = <"Risk stage">
+					description = <"*">
+				>
+				["at0051"] = <
+					text = <"At risk: 2-4 hourly">
+					description = <"*">
+				>
+				["at0052"] = <
+					text = <"At high risk: 2 hourly">
+					description = <"*">
+				>
+				["at0053"] = <
+					text = <"At very high risk: 1-2 hourly">
+					description = <"*">
+				>
+				["at0054"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0055"] = <
+					text = <"I - Incontinence">
+					description = <"*">
+				>
+				["at0056"] = <
+					text = <"Patient has bladder/bowel incontinence ?">
+					description = <"*">
+				>
+				["at0057"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0058"] = <
+					text = <"Patient has moisture lesion ?">
+					description = <"*">
+				>
+				["at0059"] = <
+					text = <"Treatment line">
+					description = <"*">
+				>
+				["at0060"] = <
+					text = <"First line treatment">
+					description = <"*">
+				>
+				["at0061"] = <
+					text = <"Second line treatment">
+					description = <"*">
+				>
+				["at0062"] = <
+					text = <"N - Nutrition">
+					description = <"*">
+				>
+				["at0068"] = <
+					text = <"G - Patient information">
+					description = <"*">
+				>
+				["at0069"] = <
+					text = <"Patient information leaflet given ?">
+					description = <"*">
+				>
+				["at0070"] = <
+					text = <"Discuss with family/carers ?">
+					description = <"*">
+				>
+				["at0071"] = <
+					text = <"Safeguarding considered ?">
+					description = <"*">
+				>
+				["at0072"] = <
+					text = <"Last updated">
+					description = <"*">
+				>
+				["at0073"] = <
+					text = <"Assessment method">
+					description = <"*">
+				>
+				["at0074"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0075"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0076"] = <
+					text = <"Treatment line comment">
+					description = <"*">
+				>
+				["at0077"] = <
+					text = <"Status">
+					description = <"*">
+				>
+				["at0078"] = <
+					text = <"Discussed and understood">
+					description = <"*">
+				>
+				["at0079"] = <
+					text = <"Discussed and partially understood">
+					description = <"*">
+				>
+				["at0080"] = <
+					text = <"Unable to discuss">
+					description = <"*">
+				>
+				["at0081"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0082"] = <
+					text = <"Patient information leaflet and discussion">
+					description = <"*">
+				>
+				["at0083"] = <
+					text = <"Referral nutrition type">
+					description = <"*">
+				>
+				["at0085"] = <
+					text = <"Food chart">
+					description = <"*">
+				>
+				["at0086"] = <
+					text = <"Referral option">
+					description = <"*">
+				>
+				["at0087"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0088"] = <
+					text = <"Dietician referral">
+					description = <"*">
+				>
+				["at0089"] = <
+					text = <"Referral option">
+					description = <"*">
+				>
+				["at0092"] = <
+					text = <"Food chart">
+					description = <"Patient will be included in food chart.">
+				>
+				["at0093"] = <
+					text = <"Dietician referral">
+					description = <"Patient will be included on dietician referral.">
+				>
+				["at0095"] = <
+					text = <"Does the patient need a food chart ?">
+					description = <"*">
+				>
+				["at0096"] = <
+					text = <"Does the patient need a dietician referral ?">
+					description = <"*">
+				>
+				["at0097"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0098"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0099"] = <
+					text = <"Care given variance">
+					description = <"*">
+				>
+			>
+		>
+	>

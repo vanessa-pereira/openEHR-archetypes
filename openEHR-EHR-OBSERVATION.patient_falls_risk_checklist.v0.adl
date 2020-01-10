@@ -1,0 +1,952 @@
+archetype (adl_version=1.4; uid=220d49ce-df73-4d58-b212-c38f7cc70975)
+	openEHR-EHR-OBSERVATION.patient_falls_risk_checklist.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2019-08-16">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Pathfinder - Better by Marand">
+		["email"] = <"vanessa.pereira@better.care">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"e5dd2a3b0aab21831de97bb0f714dc89">
+		["build_uid"] = <"707bcf95-7f25-3f16-85cc-e5add0fddbd2">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Patient falls risk checklist
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {0..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									CLUSTER[at0012] occurrences matches {0..1} matches {    -- Lying and standing BP completed
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0006] occurrences matches {0..1} matches {    -- Result
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0005] occurrences matches {0..1} matches {    -- Comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0011] occurrences matches {0..1} matches {    -- Confirmation sign
+												value matches {
+													DV_IDENTIFIER matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0094] occurrences matches {0..*} matches {    -- Extension
+												include
+													archetype_id/value matches {/.*/}
+											}
+										}
+									}
+									CLUSTER[at0013] occurrences matches {0..1} matches {    -- Consider elimination needs
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0014] occurrences matches {0..1} matches {    -- Result
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0015] occurrences matches {0..1} matches {    -- Comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0016] occurrences matches {0..1} matches {    -- Confirmation sign
+												value matches {
+													DV_IDENTIFIER matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0079] occurrences matches {0..*} matches {    -- Extension
+												include
+													archetype_id/value matches {/.*/}
+											}
+										}
+									}
+									CLUSTER[at0017] occurrences matches {0..1} matches {    -- Fear of falling
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0018] occurrences matches {0..1} matches {    -- Result
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0019] occurrences matches {0..1} matches {    -- Comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0020] occurrences matches {0..1} matches {    -- Confirmation sign
+												value matches {
+													DV_IDENTIFIER matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0077] occurrences matches {0..*} matches {    -- Extension
+												include
+													archetype_id/value matches {/.*/}
+											}
+										}
+									}
+									CLUSTER[at0021] occurrences matches {0..1} matches {    -- Sensory issues (eyesight/hearing)
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0022] occurrences matches {0..1} matches {    -- Result
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0023] occurrences matches {0..1} matches {    -- Comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0024] occurrences matches {0..1} matches {    -- Confirmation sign
+												value matches {
+													DV_IDENTIFIER matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0080] occurrences matches {0..*} matches {    -- Extension
+												include
+													archetype_id/value matches {/.*/}
+											}
+										}
+									}
+									CLUSTER[at0097] occurrences matches {0..1} matches {    -- Update bed board
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0098] occurrences matches {0..1} matches {    -- Result
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0099] occurrences matches {0..1} matches {    -- Comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0100] occurrences matches {0..1} matches {    -- Confirmation sign
+												value matches {
+													DV_IDENTIFIER matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0101] occurrences matches {0..*} matches {    -- Extension
+												include
+													archetype_id/value matches {/.*/}
+											}
+										}
+									}
+									CLUSTER[at0025] occurrences matches {0..1} matches {    -- Collateral history
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0026] occurrences matches {0..1} matches {    -- Result
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0027] occurrences matches {0..1} matches {    -- Comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0028] occurrences matches {0..1} matches {    -- Confirmation sign
+												value matches {
+													DV_IDENTIFIER matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0081] occurrences matches {0..*} matches {    -- Extension
+												include
+													archetype_id/value matches {/.*/}
+											}
+										}
+									}
+									CLUSTER[at0033] occurrences matches {0..1} matches {    -- Include in safety briefing
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0034] occurrences matches {0..1} matches {    -- Result
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0035] occurrences matches {0..1} matches {    -- Comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0036] occurrences matches {0..1} matches {    -- Confirmation sign
+												value matches {
+													DV_IDENTIFIER matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0082] occurrences matches {0..*} matches {    -- Extension
+												include
+													archetype_id/value matches {/.*/}
+											}
+										}
+									}
+									CLUSTER[at0029] occurrences matches {0..1} matches {    -- Bed rails
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0030] occurrences matches {0..1} matches {    -- Result
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0031] occurrences matches {0..1} matches {    -- Comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0032] occurrences matches {0..1} matches {    -- Confirmation sign
+												value matches {
+													DV_IDENTIFIER matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0083] occurrences matches {0..*} matches {    -- Extension
+												include
+													archetype_id/value matches {/.*/}
+											}
+										}
+									}
+									CLUSTER[at0037] occurrences matches {0..1} matches {    -- High low bed
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0038] occurrences matches {0..1} matches {    -- Result
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0039] occurrences matches {0..1} matches {    -- Comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0040] occurrences matches {0..1} matches {    -- Confirmation sign
+												value matches {
+													DV_IDENTIFIER matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0084] occurrences matches {0..*} matches {    -- Extension
+												include
+													archetype_id/value matches {/.*/}
+											}
+										}
+									}
+									CLUSTER[at0041] occurrences matches {0..1} matches {    -- Crash mat / falls alarm
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0042] occurrences matches {0..1} matches {    -- Result
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0043] occurrences matches {0..1} matches {    -- Comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0044] occurrences matches {0..1} matches {    -- Confirmation sign
+												value matches {
+													DV_IDENTIFIER matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0085] occurrences matches {0..*} matches {    -- Extension
+												include
+													archetype_id/value matches {/.*/}
+											}
+										}
+									}
+									CLUSTER[at0045] occurrences matches {0..1} matches {    -- Medication review
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0046] occurrences matches {0..1} matches {    -- Result
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0047] occurrences matches {0..1} matches {    -- Comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0048] occurrences matches {0..1} matches {    -- Confirmation sign
+												value matches {
+													DV_IDENTIFIER matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0086] occurrences matches {0..*} matches {    -- Extension
+												include
+													archetype_id/value matches {/.*/}
+											}
+										}
+									}
+									CLUSTER[at0049] occurrences matches {0..1} matches {    -- Visible bed space
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0050] occurrences matches {0..1} matches {    -- Result
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0051] occurrences matches {0..1} matches {    -- Comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0052] occurrences matches {0..1} matches {    -- Confirmation sign
+												value matches {
+													DV_IDENTIFIER matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0087] occurrences matches {0..*} matches {    -- Extension
+												include
+													archetype_id/value matches {/.*/}
+											}
+										}
+									}
+									CLUSTER[at0053] occurrences matches {0..1} matches {    -- Stay close toileting / call bell reminder / regular check
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0054] occurrences matches {0..1} matches {    -- Result
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0055] occurrences matches {0..1} matches {    -- Comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0056] occurrences matches {0..1} matches {    -- Confirmation sign
+												value matches {
+													DV_IDENTIFIER matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0088] occurrences matches {0..*} matches {    -- Extension
+												include
+													archetype_id/value matches {/.*/}
+											}
+										}
+									}
+									CLUSTER[at0057] occurrences matches {0..1} matches {    -- Vision assessment, advice given in self-referral to optician
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0058] occurrences matches {0..1} matches {    -- Result
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0059] occurrences matches {0..1} matches {    -- Comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0060] occurrences matches {0..1} matches {    -- Confirmation sign
+												value matches {
+													DV_IDENTIFIER matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0089] occurrences matches {0..*} matches {    -- Extension
+												include
+													archetype_id/value matches {/.*/}
+											}
+										}
+									}
+									CLUSTER[at0061] occurrences matches {0..1} matches {    -- Additional supervision
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0062] occurrences matches {0..1} matches {    -- Result
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0063] occurrences matches {0..1} matches {    -- Comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0064] occurrences matches {0..1} matches {    -- Confirmation sign
+												value matches {
+													DV_IDENTIFIER matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0090] occurrences matches {0..*} matches {    -- Extension
+												include
+													archetype_id/value matches {/.*/}
+											}
+										}
+									}
+									CLUSTER[at0065] occurrences matches {0..1} matches {    -- Hourly intentional rounding
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0066] occurrences matches {0..1} matches {    -- Result
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0067] occurrences matches {0..1} matches {    -- Comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0068] occurrences matches {0..1} matches {    -- Confirmation sign
+												value matches {
+													DV_IDENTIFIER matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0091] occurrences matches {0..*} matches {    -- Extension
+												include
+													archetype_id/value matches {/.*/}
+											}
+										}
+									}
+									CLUSTER[at0069] occurrences matches {0..1} matches {    -- Footwear
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0070] occurrences matches {0..1} matches {    -- Result
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0102] occurrences matches {0..1} matches {    -- Footwear type
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0103,    -- Hospital socks
+															at0104,    -- Patient's own footware
+															at0105]    -- Other
+														}
+													}
+												}
+											}
+											ELEMENT[at0071] occurrences matches {0..1} matches {    -- Comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0072] occurrences matches {0..1} matches {    -- Confirmation sign
+												value matches {
+													DV_IDENTIFIER matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0092] occurrences matches {0..*} matches {    -- Extension
+												include
+													archetype_id/value matches {/.*/}
+											}
+										}
+									}
+									CLUSTER[at0073] occurrences matches {0..1} matches {    -- Walking aids
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0074] occurrences matches {0..1} matches {    -- Result
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0106] occurrences matches {0..1} matches {    -- Walking aids type
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0107,    -- Stick
+															at0108,    -- Frame
+															at0109,    -- Wheelchair
+															at0111]    -- Other
+														}
+													}
+												}
+											}
+											ELEMENT[at0075] occurrences matches {0..1} matches {    -- Comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0076] occurrences matches {0..1} matches {    -- Confirmation sign
+												value matches {
+													DV_IDENTIFIER matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0093] occurrences matches {0..*} matches {    -- Extension
+												include
+													archetype_id/value matches {/.*/}
+											}
+										}
+									}
+									allow_archetype CLUSTER[at0096] occurrences matches {0..*} matches {    -- Additional information
+										include
+											archetype_id/value matches {/.*/}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0007] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Last updated
+						value matches {
+							DV_DATE matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Assessment method
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0095] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Patient falls risk checklist">
+					description = <"patient falls risk checklist">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Result">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0008"] = <
+					text = <"Last updated">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Assessment method">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"Confirmation sign">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"Lying and standing BP completed">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"Consider elimination needs">
+					description = <"*">
+				>
+				["at0014"] = <
+					text = <"Result">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"Confirmation sign">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"Fear of falling">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"Result">
+					description = <"*">
+				>
+				["at0019"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0020"] = <
+					text = <"Confirmation sign">
+					description = <"*">
+				>
+				["at0021"] = <
+					text = <"Sensory issues (eyesight/hearing)">
+					description = <"*">
+				>
+				["at0022"] = <
+					text = <"Result">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0024"] = <
+					text = <"Confirmation sign">
+					description = <"*">
+				>
+				["at0025"] = <
+					text = <"Collateral history">
+					description = <"*">
+				>
+				["at0026"] = <
+					text = <"Result">
+					description = <"*">
+				>
+				["at0027"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0028"] = <
+					text = <"Confirmation sign">
+					description = <"*">
+				>
+				["at0029"] = <
+					text = <"Bed rails">
+					description = <"*">
+				>
+				["at0030"] = <
+					text = <"Result">
+					description = <"*">
+				>
+				["at0031"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0032"] = <
+					text = <"Confirmation sign">
+					description = <"*">
+				>
+				["at0033"] = <
+					text = <"Include in safety briefing">
+					description = <"*">
+				>
+				["at0034"] = <
+					text = <"Result">
+					description = <"*">
+				>
+				["at0035"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0036"] = <
+					text = <"Confirmation sign">
+					description = <"*">
+				>
+				["at0037"] = <
+					text = <"High low bed">
+					description = <"*">
+				>
+				["at0038"] = <
+					text = <"Result">
+					description = <"*">
+				>
+				["at0039"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0040"] = <
+					text = <"Confirmation sign">
+					description = <"*">
+				>
+				["at0041"] = <
+					text = <"Crash mat / falls alarm">
+					description = <"*">
+				>
+				["at0042"] = <
+					text = <"Result">
+					description = <"*">
+				>
+				["at0043"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0044"] = <
+					text = <"Confirmation sign">
+					description = <"*">
+				>
+				["at0045"] = <
+					text = <"Medication review">
+					description = <"*">
+				>
+				["at0046"] = <
+					text = <"Result">
+					description = <"*">
+				>
+				["at0047"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0048"] = <
+					text = <"Confirmation sign">
+					description = <"*">
+				>
+				["at0049"] = <
+					text = <"Visible bed space">
+					description = <"*">
+				>
+				["at0050"] = <
+					text = <"Result">
+					description = <"*">
+				>
+				["at0051"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0052"] = <
+					text = <"Confirmation sign">
+					description = <"*">
+				>
+				["at0053"] = <
+					text = <"Stay close toileting / call bell reminder / regular check">
+					description = <"*">
+				>
+				["at0054"] = <
+					text = <"Result">
+					description = <"*">
+				>
+				["at0055"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0056"] = <
+					text = <"Confirmation sign">
+					description = <"*">
+				>
+				["at0057"] = <
+					text = <"Vision assessment, advice given in self-referral to optician">
+					description = <"*">
+				>
+				["at0058"] = <
+					text = <"Result">
+					description = <"*">
+				>
+				["at0059"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0060"] = <
+					text = <"Confirmation sign">
+					description = <"*">
+				>
+				["at0061"] = <
+					text = <"Additional supervision">
+					description = <"*">
+				>
+				["at0062"] = <
+					text = <"Result">
+					description = <"*">
+				>
+				["at0063"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0064"] = <
+					text = <"Confirmation sign">
+					description = <"*">
+				>
+				["at0065"] = <
+					text = <"Hourly intentional rounding">
+					description = <"*">
+				>
+				["at0066"] = <
+					text = <"Result">
+					description = <"*">
+				>
+				["at0067"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0068"] = <
+					text = <"Confirmation sign">
+					description = <"*">
+				>
+				["at0069"] = <
+					text = <"Footwear">
+					description = <"*">
+				>
+				["at0070"] = <
+					text = <"Result">
+					description = <"*">
+				>
+				["at0071"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0072"] = <
+					text = <"Confirmation sign">
+					description = <"*">
+				>
+				["at0073"] = <
+					text = <"Walking aids">
+					description = <"*">
+				>
+				["at0074"] = <
+					text = <"Result">
+					description = <"*">
+				>
+				["at0075"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0076"] = <
+					text = <"Confirmation sign">
+					description = <"*">
+				>
+				["at0077"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0079"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0080"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0081"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0082"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0083"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0084"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0085"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0086"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0087"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0088"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0089"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0090"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0091"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0092"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0093"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0094"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0095"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0096"] = <
+					text = <"Additional information">
+					description = <"*">
+				>
+				["at0097"] = <
+					text = <"Update bed board">
+					description = <"*">
+				>
+				["at0098"] = <
+					text = <"Result">
+					description = <"*">
+				>
+				["at0099"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0100"] = <
+					text = <"Confirmation sign">
+					description = <"*">
+				>
+				["at0101"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0102"] = <
+					text = <"Footwear type">
+					description = <"*">
+				>
+				["at0103"] = <
+					text = <"Hospital socks">
+					description = <"Patient uses hospital socks as footwear.">
+				>
+				["at0104"] = <
+					text = <"Patient's own footware">
+					description = <"Patient uses his own footwear.">
+				>
+				["at0105"] = <
+					text = <"Other">
+					description = <"Other type of footwear.">
+				>
+				["at0106"] = <
+					text = <"Walking aids type">
+					description = <"*">
+				>
+				["at0107"] = <
+					text = <"Stick">
+					description = <"*">
+				>
+				["at0108"] = <
+					text = <"Frame">
+					description = <"*">
+				>
+				["at0109"] = <
+					text = <"Wheelchair">
+					description = <"*">
+				>
+				["at0111"] = <
+					text = <"Other">
+					description = <"*">
+				>
+			>
+		>
+	>

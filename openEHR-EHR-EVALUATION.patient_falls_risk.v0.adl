@@ -1,0 +1,286 @@
+archetype (adl_version=1.4; uid=27811154-bbf2-4432-818c-bd22a044f9a4)
+	openEHR-EHR-EVALUATION.patient_falls_risk.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["pt-pt"] = <
+			language = <[ISO_639-1::pt-pt]>
+			author = <
+				["name"] = <"Vanessa Pereira">
+				["organisation"] = <"Pathfinder - Better by Marand">
+				["email"] = <"vanessa.pereira@better.care">
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2019-08-16">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Pathfinder - Better by Marand">
+		["email"] = <"vanessa.pereira@better.care">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["pt-pt"] = <
+			language = <[ISO_639-1::pt-pt]>
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			keywords = <"falls risk assessment, risk assessment, falls", ...>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"a3bb5352f03f5f6376d547559135e93c">
+		["build_uid"] = <"5e19940c-c811-4e76-9ff5-dfae3725dfd6">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Patient falls risk
+		data matches {
+			ITEM_TREE[at0002] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0010] occurrences matches {0..1} matches {    -- Assessment date
+						value matches {
+							DV_DATE matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Health risk
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					CLUSTER[at0005] occurrences matches {0..1} matches {    -- Patient fall risk assessment
+						items cardinality matches {0..*; unordered} matches {
+							ELEMENT[at0006] occurrences matches {0..1} matches {    -- Are they over 65 ?
+								value matches {
+									DV_BOOLEAN matches {*}
+								}
+							}
+							ELEMENT[at0007] occurrences matches {0..1} matches {    -- Have they fallen in the last 12 months ?
+								value matches {
+									DV_BOOLEAN matches {*}
+								}
+							}
+							ELEMENT[at0008] occurrences matches {0..1} matches {    -- Do they have confusion ?
+								value matches {
+									DV_BOOLEAN matches {*}
+								}
+							}
+							ELEMENT[at0009] occurrences matches {0..1} matches {    -- Do you believe they are at risk of falling ?
+								value matches {
+									DV_BOOLEAN matches {*}
+								}
+							}
+						}
+					}
+					ELEMENT[at0014] occurrences matches {0..1} matches {    -- Fall risk assessment result
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0015,    -- Unlikely faller
+									at0016]    -- Likely faller
+								}
+							}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {    -- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0017] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Last updated
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- Assessment method
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0018] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Patient falls risk">
+					description = <"Assessment of the potential and likelihood of future adverse patient risk of falling.">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Health risk">
+					description = <"Identification of the potential future disease, condition or health issue for which the risk is being assessed, by name.">
+				>
+				["at0005"] = <
+					text = <"Patient fall risk assessment">
+					description = <"Evaluation of the health risk.">
+				>
+				["at0006"] = <
+					text = <"Are they over 65 ?">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Have they fallen in the last 12 months ?">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Do they have confusion ?">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Do you believe they are at risk of falling ?">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"Assessment date">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"Last updated">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"Assessment method">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"Comment">
+					description = <"Additional narrative about the risk assessment not captured in other fields.">
+				>
+				["at0014"] = <
+					text = <"Fall risk assessment result">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"Unlikely faller">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"Likely faller">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+			>
+		>
+		["pt-pt"] = <
+			items = <
+				["at0000"] = <
+					text = <"Risco de queda do paciente">
+					description = <"*">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Risco de saúde">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"Avaliação de risco do paciente">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Tem mais que 65 anos ?">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Houve ocurrência de quedas nos últimos 12 meses ?">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"O paciente apresenta sintomas de confusão ?">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Acredita que o paciente possa estar em risco de cair ?">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"Data de avaliação">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"Data da última actualização">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"Método de avaliação">
+					description = <"Identificação do algoritmo ou diretriz utilizado para fazer a avaliação de risco.">
+				>
+				["at0013"] = <
+					text = <"Comentário adicional">
+					description = <"Narrativa adicional sobre a avaliação de risco não obtida em outros campos.">
+				>
+				["at0014"] = <
+					text = <"Resultado da avaliação de risco de queda">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"Não propício a quedas">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"Propício a quedas">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"*CLUSTER_SLOT (en)">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"*CLUSTER_SLOT (en)">
+					description = <"*">
+				>
+			>
+		>
+	>

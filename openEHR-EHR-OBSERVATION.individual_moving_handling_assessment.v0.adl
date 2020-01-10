@@ -1,0 +1,1103 @@
+archetype (adl_version=1.4; uid=53466980-fc61-46c4-84c1-463565d9cf57)
+	openEHR-EHR-OBSERVATION.individual_moving_handling_assessment.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2019-08-21">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Pathfinder - Better by Marand">
+		["email"] = <"vanessa.pereira@better.care">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			keywords = <"moving, handling, care plan, assessment", ...>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"ab68ab3a5ad046af5289d0760f61debd">
+		["build_uid"] = <"251d230c-411b-3525-8f13-6358a1c6add2">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Individual moving and handling assessment
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {0..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									CLUSTER[at0004] occurrences matches {0..1} matches {    -- Patient handling issues
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0098] occurrences matches {0..1} matches {    -- Type of issue
+												value matches {
+													1|[local::at0099],
+													2|[local::at0100],
+													3|[local::at0101],
+													4|[local::at0102],
+													5|[local::at0103],
+													6|[local::at0104],
+													7|[local::at0105],
+													8|[local::at0106],
+													9|[local::at0107]
+												}
+											}
+											ELEMENT[at0109] occurrences matches {0..1} matches {    -- Risk level
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0110,    -- Low
+															at0111,    -- Medium
+															at0112]    -- High
+														}
+													}
+												}
+											}
+											ELEMENT[at0113] occurrences matches {0..1} matches {    -- Fully independent ?
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0114,    -- Yes
+															at0115]    -- No
+														}
+													}
+												}
+											}
+											ELEMENT[at0116] occurrences matches {0..1} matches {    -- Comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+										}
+									}
+									CLUSTER[at0010] occurrences matches {0..1} matches {    -- Key moving and handling equipment required and allocated
+										items cardinality matches {1..*; unordered} matches {
+											CLUSTER[at0011] occurrences matches {0..1} matches {    -- Bed type
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0142] occurrences matches {0..1} matches {    -- Type
+														value matches {
+															1|[local::at0143],
+															2|[local::at0144],
+															3|[local::at0145]
+														}
+													}
+													ELEMENT[at0146] occurrences matches {0..1} matches {    -- Specialist information
+														value matches {
+															DV_TEXT matches {*}
+														}
+													}
+												}
+											}
+											CLUSTER[at0012] occurrences matches {0..1} matches {    -- Hoist system
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0148] occurrences matches {0..1} matches {    -- Type
+														value matches {
+															1|[local::at0149],
+															2|[local::at0150],
+															3|[local::at0151],
+															4|[local::at0152]
+														}
+													}
+												}
+											}
+											CLUSTER[at0013] occurrences matches {0..1} matches {    -- Make / Model
+												items cardinality matches {1..*; unordered} matches {
+													allow_archetype CLUSTER[at0141] occurrences matches {0..*} matches {    -- Medical device
+														include
+															archetype_id/value matches {/.*/}
+													}
+												}
+											}
+											CLUSTER[at0014] occurrences matches {0..1} matches {    -- Sling size
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0135] occurrences matches {0..1} matches {    -- Is available?
+														value matches {
+															1|[local::at0136],
+															2|[local::at0137]
+														}
+													}
+													ELEMENT[at0155] occurrences matches {0..1} matches {    -- Size
+														value matches {
+															DV_TEXT matches {*}
+														}
+													}
+												}
+											}
+											CLUSTER[at0016] occurrences matches {0..1} matches {    -- Sling types
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0118] occurrences matches {0..1} matches {    -- Type
+														value matches {
+															1|[local::at0119],
+															2|[local::at0120],
+															3|[local::at0121],
+															4|[local::at0122],
+															5|[local::at0123],
+															6|[local::at0124],
+															7|[local::at0125]
+														}
+													}
+													ELEMENT[at0117] occurrences matches {0..1} matches {    -- Other type information
+														value matches {
+															DV_TEXT matches {*}
+														}
+													}
+												}
+											}
+											CLUSTER[at0017] occurrences matches {0..1} matches {    -- Other equipment
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0126] occurrences matches {0..1} matches {    -- Added equipment
+														value matches {
+															1|[local::at0127],
+															2|[local::at0128],
+															3|[local::at0129],
+															4|[local::at0130],
+															5|[local::at0131]
+														}
+													}
+													ELEMENT[at0132] occurrences matches {0..1} matches {    -- Specialist chair information
+														value matches {
+															DV_TEXT matches {*}
+														}
+													}
+													ELEMENT[at0133] occurrences matches {0..1} matches {    -- Other information
+														value matches {
+															DV_TEXT matches {*}
+														}
+													}
+												}
+											}
+											ELEMENT[at0134] occurrences matches {0..1} matches {    -- Comment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+										}
+									}
+									CLUSTER[at0018] occurrences matches {0..1} matches {    -- Individual care plan
+										items cardinality matches {1..*; unordered} matches {
+											CLUSTER[at0033] occurrences matches {0..1} matches {    -- Task
+												items cardinality matches {1..*; unordered} matches {
+													CLUSTER[at0019] occurrences matches {0..1} matches {    -- Moving up to down the bed / trolley / tablet
+														items cardinality matches {1..*; unordered} matches {
+															ELEMENT[at0026] occurrences matches {0..1} matches {    -- Capability
+																value matches {
+																	1|[local::at0027],
+																	2|[local::at0028]
+																}
+															}
+															ELEMENT[at0029] occurrences matches {0..1} matches {    -- Handling technique
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0030] occurrences matches {0..1} matches {    -- Equipment used
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0031] occurrences matches {0..1} matches {    -- Action required
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0032] occurrences matches {0..1} matches {    -- No. of staff
+																value matches {
+																	DV_IDENTIFIER matches {*}
+																}
+															}
+															ELEMENT[at0087] occurrences matches {0..1} matches {    -- Comment
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+														}
+													}
+													CLUSTER[at0020] occurrences matches {0..1} matches {    -- Turning to side / prone etc.
+														items cardinality matches {1..*; unordered} matches {
+															ELEMENT[at0034] occurrences matches {0..1} matches {    -- Capability
+																value matches {
+																	1|[local::at0035],
+																	2|[local::at0036]
+																}
+															}
+															ELEMENT[at0037] occurrences matches {0..1} matches {    -- Handling technique
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0038] occurrences matches {0..1} matches {    -- Equipment used
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0039] occurrences matches {0..1} matches {    -- Action required
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0040] occurrences matches {0..1} matches {    -- No. of staff
+																value matches {
+																	DV_IDENTIFIER matches {*}
+																}
+															}
+															ELEMENT[at0088] occurrences matches {0..1} matches {    -- Comment
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+														}
+													}
+													CLUSTER[at0021] occurrences matches {0..1} matches {    -- Lying to sitting up in bed
+														items cardinality matches {1..*; unordered} matches {
+															ELEMENT[at0041] occurrences matches {0..1} matches {    -- Capability
+																value matches {
+																	1|[local::at0042],
+																	2|[local::at0043]
+																}
+															}
+															ELEMENT[at0044] occurrences matches {0..1} matches {    -- Handling technique
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0045] occurrences matches {0..1} matches {    -- Equipment used
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0046] occurrences matches {0..1} matches {    -- Action required
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0047] occurrences matches {0..1} matches {    -- No. of staff
+																value matches {
+																	DV_IDENTIFIER matches {*}
+																}
+															}
+															ELEMENT[at0089] occurrences matches {0..1} matches {    -- Comment
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+														}
+													}
+													CLUSTER[at0023] occurrences matches {0..1} matches {    -- Bed to bed / trolley
+														items cardinality matches {1..*; unordered} matches {
+															ELEMENT[at0048] occurrences matches {0..1} matches {    -- Capability
+																value matches {
+																	1|[local::at0049],
+																	2|[local::at0050]
+																}
+															}
+															ELEMENT[at0051] occurrences matches {0..1} matches {    -- Handling technique
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0052] occurrences matches {0..1} matches {    -- Equipment used
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0053] occurrences matches {0..1} matches {    -- Action required
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0054] occurrences matches {0..1} matches {    -- No. of staff
+																value matches {
+																	DV_IDENTIFIER matches {*}
+																}
+															}
+															ELEMENT[at0090] occurrences matches {0..1} matches {    -- Comment
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+														}
+													}
+													CLUSTER[at0024] occurrences matches {0..1} matches {    -- Bed to chair / commode
+														items cardinality matches {1..*; unordered} matches {
+															ELEMENT[at0055] occurrences matches {0..1} matches {    -- Capability
+																value matches {
+																	1|[local::at0056],
+																	2|[local::at0057]
+																}
+															}
+															ELEMENT[at0058] occurrences matches {0..1} matches {    -- Handling technique
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0059] occurrences matches {0..1} matches {    -- Equipment used
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0060] occurrences matches {0..1} matches {    -- Action required
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0061] occurrences matches {0..1} matches {    -- No. of staff
+																value matches {
+																	DV_IDENTIFIER matches {*}
+																}
+															}
+															ELEMENT[at0091] occurrences matches {0..1} matches {    -- Comment
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+														}
+													}
+													CLUSTER[at0025] occurrences matches {0..1} matches {    -- Walking
+														items cardinality matches {1..*; unordered} matches {
+															ELEMENT[at0062] occurrences matches {0..1} matches {    -- Capability
+																value matches {
+																	1|[local::at0063],
+																	2|[local::at0064]
+																}
+															}
+															ELEMENT[at0065] occurrences matches {0..1} matches {    -- Handling technique
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0066] occurrences matches {0..1} matches {    -- Equipment used
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0067] occurrences matches {0..1} matches {    -- Action required
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0068] occurrences matches {0..1} matches {    -- No. of staff
+																value matches {
+																	DV_IDENTIFIER matches {*}
+																}
+															}
+															ELEMENT[at0092] occurrences matches {0..1} matches {    -- Comment
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+														}
+													}
+													CLUSTER[at0069] occurrences matches {0..1} matches {    -- Tolleting / showering
+														items cardinality matches {1..*; unordered} matches {
+															ELEMENT[at0070] occurrences matches {0..1} matches {    -- Capability
+																value matches {
+																	1|[local::at0071],
+																	2|[local::at0072]
+																}
+															}
+															ELEMENT[at0073] occurrences matches {0..1} matches {    -- Handling technique
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0074] occurrences matches {0..1} matches {    -- Equipment used
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0075] occurrences matches {0..1} matches {    -- Action required
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0076] occurrences matches {0..1} matches {    -- No. of staff
+																value matches {
+																	DV_IDENTIFIER matches {*}
+																}
+															}
+															ELEMENT[at0093] occurrences matches {0..1} matches {    -- Comment
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+														}
+													}
+													CLUSTER[at0077] occurrences matches {0..1} matches {    -- Emergency handling
+														items cardinality matches {1..*; unordered} matches {
+															ELEMENT[at0078] occurrences matches {0..1} matches {    -- Handling technique
+																value matches {
+																	1|[local::at0079],
+																	2|[local::at0080],
+																	3|[local::at0081],
+																	4|[local::at0082],
+																	5|[local::at0083],
+																	6|[local::at0084],
+																	7|[local::at0085]
+																}
+															}
+															ELEMENT[at0086] occurrences matches {0..1} matches {    -- Equipment used
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0094] occurrences matches {0..1} matches {    -- Comment
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0095] occurrences matches {0..1} matches {    -- No. of staff
+																value matches {
+																	DV_IDENTIFIER matches {*}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+									allow_archetype CLUSTER[at0156] occurrences matches {0..*} matches {    -- Complete assessment and care plan staff
+										include
+											archetype_id/value matches {/.*/}
+									}
+									allow_archetype CLUSTER[at0157] occurrences matches {0..*} matches {    -- Review assessment and care plan staff
+										include
+											archetype_id/value matches {/.*/}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0096] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0097] occurrences matches {0..1} matches {    -- Last updated
+						value matches {
+							DV_DATE matches {*}
+						}
+					}
+					ELEMENT[at0153] occurrences matches {0..1} matches {    -- Score version
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0154] occurrences matches {0..1} matches {    -- Assessment method
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Individual moving and handling assessment">
+					description = <"Individual moving and handling assessment based on the requirements from NHS Taunton">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Patient handling issues">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"Key moving and handling equipment required and allocated">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"Bed type">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"Hoist system">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"Make / Model">
+					description = <"*">
+				>
+				["at0014"] = <
+					text = <"Sling size">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"Sling types">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"Other equipment">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"Individual care plan">
+					description = <"*">
+				>
+				["at0019"] = <
+					text = <"Moving up to down the bed / trolley / tablet">
+					description = <"*">
+				>
+				["at0020"] = <
+					text = <"Turning to side / prone etc.">
+					description = <"*">
+				>
+				["at0021"] = <
+					text = <"Lying to sitting up in bed">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"Bed to bed / trolley">
+					description = <"*">
+				>
+				["at0024"] = <
+					text = <"Bed to chair / commode">
+					description = <"*">
+				>
+				["at0025"] = <
+					text = <"Walking">
+					description = <"*">
+				>
+				["at0026"] = <
+					text = <"Capability">
+					description = <"*">
+				>
+				["at0027"] = <
+					text = <"Independent">
+					description = <"*">
+				>
+				["at0028"] = <
+					text = <"Assistance">
+					description = <"*">
+				>
+				["at0029"] = <
+					text = <"Handling technique">
+					description = <"*">
+				>
+				["at0030"] = <
+					text = <"Equipment used">
+					description = <"*">
+				>
+				["at0031"] = <
+					text = <"Action required">
+					description = <"*">
+				>
+				["at0032"] = <
+					text = <"No. of staff">
+					description = <"*">
+				>
+				["at0033"] = <
+					text = <"Task">
+					description = <"*">
+				>
+				["at0034"] = <
+					text = <"Capability">
+					description = <"*">
+				>
+				["at0035"] = <
+					text = <"Independent">
+					description = <"*">
+				>
+				["at0036"] = <
+					text = <"Assistance">
+					description = <"*">
+				>
+				["at0037"] = <
+					text = <"Handling technique">
+					description = <"*">
+				>
+				["at0038"] = <
+					text = <"Equipment used">
+					description = <"*">
+				>
+				["at0039"] = <
+					text = <"Action required">
+					description = <"*">
+				>
+				["at0040"] = <
+					text = <"No. of staff">
+					description = <"*">
+				>
+				["at0041"] = <
+					text = <"Capability">
+					description = <"*">
+				>
+				["at0042"] = <
+					text = <"Independent">
+					description = <"*">
+				>
+				["at0043"] = <
+					text = <"Assistance">
+					description = <"*">
+				>
+				["at0044"] = <
+					text = <"Handling technique">
+					description = <"*">
+				>
+				["at0045"] = <
+					text = <"Equipment used">
+					description = <"*">
+				>
+				["at0046"] = <
+					text = <"Action required">
+					description = <"*">
+				>
+				["at0047"] = <
+					text = <"No. of staff">
+					description = <"*">
+				>
+				["at0048"] = <
+					text = <"Capability">
+					description = <"*">
+				>
+				["at0049"] = <
+					text = <"Independent">
+					description = <"*">
+				>
+				["at0050"] = <
+					text = <"Assistance">
+					description = <"*">
+				>
+				["at0051"] = <
+					text = <"Handling technique">
+					description = <"*">
+				>
+				["at0052"] = <
+					text = <"Equipment used">
+					description = <"*">
+				>
+				["at0053"] = <
+					text = <"Action required">
+					description = <"*">
+				>
+				["at0054"] = <
+					text = <"No. of staff">
+					description = <"*">
+				>
+				["at0055"] = <
+					text = <"Capability">
+					description = <"*">
+				>
+				["at0056"] = <
+					text = <"Independent">
+					description = <"*">
+				>
+				["at0057"] = <
+					text = <"Assistance">
+					description = <"*">
+				>
+				["at0058"] = <
+					text = <"Handling technique">
+					description = <"*">
+				>
+				["at0059"] = <
+					text = <"Equipment used">
+					description = <"*">
+				>
+				["at0060"] = <
+					text = <"Action required">
+					description = <"*">
+				>
+				["at0061"] = <
+					text = <"No. of staff">
+					description = <"*">
+				>
+				["at0062"] = <
+					text = <"Capability">
+					description = <"*">
+				>
+				["at0063"] = <
+					text = <"Independent">
+					description = <"*">
+				>
+				["at0064"] = <
+					text = <"Assistance">
+					description = <"*">
+				>
+				["at0065"] = <
+					text = <"Handling technique">
+					description = <"*">
+				>
+				["at0066"] = <
+					text = <"Equipment used">
+					description = <"*">
+				>
+				["at0067"] = <
+					text = <"Action required">
+					description = <"*">
+				>
+				["at0068"] = <
+					text = <"No. of staff">
+					description = <"*">
+				>
+				["at0069"] = <
+					text = <"Tolleting / showering">
+					description = <"*">
+				>
+				["at0070"] = <
+					text = <"Capability">
+					description = <"*">
+				>
+				["at0071"] = <
+					text = <"Independent">
+					description = <"*">
+				>
+				["at0072"] = <
+					text = <"Assistance">
+					description = <"*">
+				>
+				["at0073"] = <
+					text = <"Handling technique">
+					description = <"*">
+				>
+				["at0074"] = <
+					text = <"Equipment used">
+					description = <"*">
+				>
+				["at0075"] = <
+					text = <"Action required">
+					description = <"*">
+				>
+				["at0076"] = <
+					text = <"No. of staff">
+					description = <"*">
+				>
+				["at0077"] = <
+					text = <"Emergency handling">
+					description = <"*">
+				>
+				["at0078"] = <
+					text = <"Handling technique">
+					description = <"*">
+				>
+				["at0079"] = <
+					text = <"Hoist with standard sling">
+					description = <"*">
+				>
+				["at0080"] = <
+					text = <"Mangar cushion">
+					description = <"*">
+				>
+				["at0081"] = <
+					text = <"Emergency lower technique">
+					description = <"*">
+				>
+				["at0082"] = <
+					text = <"Stretcher with lift sling / scoop">
+					description = <"*">
+				>
+				["at0083"] = <
+					text = <"Independent floor to sitting">
+					description = <"*">
+				>
+				["at0084"] = <
+					text = <"Flat lift kit">
+					description = <"*">
+				>
+				["at0085"] = <
+					text = <"Lifting sheet">
+					description = <"*">
+				>
+				["at0086"] = <
+					text = <"Equipment used">
+					description = <"*">
+				>
+				["at0087"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0088"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0089"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0090"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0091"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0092"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0093"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0094"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0095"] = <
+					text = <"No. of staff">
+					description = <"*">
+				>
+				["at0096"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0097"] = <
+					text = <"Last updated">
+					description = <"The date this health risk assessment was last updated.">
+					comment = <"This data element may be thought redundant if the data is recorded and stored using COMPOSITIONs within a closed clinical system. However if this information is extracted from its original COMPOSITION context, for example, to be included in another document or message then the temporal context is effectively removed. This 'Last updated' data element has been explicitly added to allow the critical temporal data to be kept alongside the clinical data in all circumstances. It is assumed that the clinical system can copy the date from the COMPOSITION to reduce the need for duplication of data entry by the clinician.">
+				>
+				["at0098"] = <
+					text = <"Type of issue">
+					description = <"*">
+				>
+				["at0099"] = <
+					text = <"Mobility / balance issues">
+					description = <"e.g. limited joint movement or muscle tone">
+				>
+				["at0100"] = <
+					text = <"Communication issues">
+					description = <"e.g. comprehension, language, etc.">
+				>
+				["at0101"] = <
+					text = <"Visual or other physical impairment">
+					description = <"e.g. hearing">
+				>
+				["at0102"] = <
+					text = <"Confused / agitated / memory limitations / impaired judgement">
+					description = <"*">
+				>
+				["at0103"] = <
+					text = <"Major surgery / trauma / wounds">
+					description = <"*">
+				>
+				["at0104"] = <
+					text = <"Medical condition affecting mobility">
+					description = <"e.g. shortness of breath, hemiplegia">
+				>
+				["at0105"] = <
+					text = <"Medication affecting mobility">
+					description = <"e.g. sedation">
+				>
+				["at0106"] = <
+					text = <"Medical equipment attachments">
+					description = <"e.g. infusion devices, catheters">
+				>
+				["at0107"] = <
+					text = <"Other issues as highlighted in assessments">
+					description = <"e.g. weight, skin, integrity, falls risk, and pain">
+				>
+				["at0109"] = <
+					text = <"Risk level">
+					description = <"*">
+				>
+				["at0110"] = <
+					text = <"Low">
+					description = <"Needs minimal or no assistance / supervision / guidance">
+				>
+				["at0111"] = <
+					text = <"Medium">
+					description = <"Able to cooperate and can move with assistance and / or requires the use of small moving aids">
+				>
+				["at0112"] = <
+					text = <"High">
+					description = <"Unable to assist in any way, may be unconscious and / or is likely to behave unpredictably">
+				>
+				["at0113"] = <
+					text = <"Fully independent ?">
+					description = <"*">
+				>
+				["at0114"] = <
+					text = <"Yes">
+					description = <"The patient is fully independent">
+				>
+				["at0115"] = <
+					text = <"No">
+					description = <"The patient is not fully independent and requires assistance">
+				>
+				["at0116"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0117"] = <
+					text = <"Other type information">
+					description = <"*">
+				>
+				["at0118"] = <
+					text = <"Type">
+					description = <"*">
+				>
+				["at0119"] = <
+					text = <"High back standard">
+					description = <"*">
+				>
+				["at0120"] = <
+					text = <"Reposition sheet">
+					description = <"*">
+				>
+				["at0121"] = <
+					text = <"Walking harness">
+					description = <"*">
+				>
+				["at0122"] = <
+					text = <"Stand aid sling">
+					description = <"*">
+				>
+				["at0123"] = <
+					text = <"Amputee">
+					description = <"*">
+				>
+				["at0124"] = <
+					text = <"Stretcher">
+					description = <"*">
+				>
+				["at0125"] = <
+					text = <"Other">
+					description = <"*">
+				>
+				["at0126"] = <
+					text = <"Added equipment">
+					description = <"*">
+				>
+				["at0127"] = <
+					text = <"Slide sheets 2x - flat">
+					description = <"*">
+				>
+				["at0128"] = <
+					text = <"Slide sheets 2x - tube">
+					description = <"*">
+				>
+				["at0129"] = <
+					text = <"Sitting transfer board">
+					description = <"e.g. banana board">
+				>
+				["at0130"] = <
+					text = <"Specialist chair">
+					description = <"*">
+				>
+				["at0131"] = <
+					text = <"Other">
+					description = <"*">
+				>
+				["at0132"] = <
+					text = <"Specialist chair information">
+					description = <"*">
+				>
+				["at0133"] = <
+					text = <"Other information">
+					description = <"*">
+				>
+				["at0134"] = <
+					text = <"Comment">
+					description = <"*">
+				>
+				["at0135"] = <
+					text = <"Is available?">
+					description = <"*">
+				>
+				["at0136"] = <
+					text = <"Yes">
+					description = <"*">
+				>
+				["at0137"] = <
+					text = <"N/A">
+					description = <"*">
+				>
+				["at0141"] = <
+					text = <"Medical device">
+					description = <"*">
+				>
+				["at0142"] = <
+					text = <"Type">
+					description = <"*">
+				>
+				["at0143"] = <
+					text = <"Electric">
+					description = <"4 section profile">
+				>
+				["at0144"] = <
+					text = <"Standard manual">
+					description = <"*">
+				>
+				["at0145"] = <
+					text = <"Specialist">
+					description = <"e.g. bariatric with turning mattress">
+				>
+				["at0146"] = <
+					text = <"Specialist information">
+					description = <"*">
+				>
+				["at0148"] = <
+					text = <"Type">
+					description = <"*">
+				>
+				["at0149"] = <
+					text = <"Overhead">
+					description = <"*">
+				>
+				["at0150"] = <
+					text = <"Mobile">
+					description = <"*">
+				>
+				["at0151"] = <
+					text = <"Sit to stand (powered)">
+					description = <"*">
+				>
+				["at0152"] = <
+					text = <"Sit to stand Turner (manual)">
+					description = <"*">
+				>
+				["at0153"] = <
+					text = <"Score version">
+					description = <"The version of the score used, normally recorded as the year.">
+				>
+				["at0154"] = <
+					text = <"Assessment method">
+					description = <"Identification of the algorithm or guideline used to make the assessment of risk.">
+				>
+				["at0155"] = <
+					text = <"Size">
+					description = <"*">
+				>
+				["at0156"] = <
+					text = <"Complete assessment and care plan staff">
+					description = <"*">
+				>
+				["at0157"] = <
+					text = <"Review assessment and care plan staff">
+					description = <"*">
+				>
+			>
+		>
+	>
