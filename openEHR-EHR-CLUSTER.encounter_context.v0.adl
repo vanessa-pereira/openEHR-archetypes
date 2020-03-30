@@ -6,6 +6,13 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["pt-pt"] = <
+			language = <[ISO_639-1::pt-pt]>
+			author = <
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -16,6 +23,10 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
+		["pt-pt"] = <
+			language = <[ISO_639-1::pt-pt]>
+			copyright = <"© openEHR Foundation">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"Register into openEHR composition the encounter context - id, type and reason of encounter. ">
@@ -92,6 +103,30 @@ ontology
 					description = <"Reason for encounter, should be provided by terminology server.">
 					FHIR_mapping = <"Encounter.reason">
 					HL7v2_mapping = <"EVN.4 / PV2.3">
+				>
+			>
+		>
+		["pt-pt"] = <
+			items = <
+				["at0000"] = <
+					text = <"Contexto de encontro">
+					description = <"Fornece informações extras sobre o contexto do encontro, sobre os casos internos usados no Pathfinder por tipos e razões para a consulta entre pessoal médico e paciente, juntamente com a identificação de marcação de consulta e ID de consulta. A terminologia deve ser carregada a partir do adaptador de terminologia.">
+				>
+				["at0001"] = <
+					text = <"ID de marcação de consulta">
+					description = <"Indentificador único de marcação de consulta.">
+				>
+				["at0002"] = <
+					text = <"ID de consulta">
+					description = <"Identificador único de consulta.">
+				>
+				["at0003"] = <
+					text = <"Tipo de consulta">
+					description = <"Tipo de consulta, deve ser fornecido por um servidor de terminologia.">
+				>
+				["at0004"] = <
+					text = <"Razão para consulta">
+					description = <"Razão para a consulta, deve ser fornecido por um servidor de terminologia.">
 				>
 			>
 		>
