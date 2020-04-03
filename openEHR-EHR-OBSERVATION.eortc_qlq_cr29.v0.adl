@@ -1,0 +1,1851 @@
+archetype (adl_version=1.4; uid=f551f259-0116-4cac-8d6e-a2a6e3c72e37)
+	openEHR-EHR-OBSERVATION.eortc_qlq_cr29.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["pt-pt"] = <
+			language = <[ISO_639-1::pt-pt]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2020-03-30">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Pathfinder - Better by Marand">
+		["email"] = <"vanessa.pereira@better.care">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["pt-pt"] = <
+			language = <[ISO_639-1::pt-pt]>
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"© QLQ-CR29 Copyright 2006 EORTC Quality of Life Group. All rights reserved. Version 2.1
+
+Whistance RN, et al. Clinical and psychometric validation of the EORTC QLQ-CR29 questionnaire module to assess health-related quality of life in patients with colorectal cancer. European journal of cancer. 2009 Nov;45(17):3017-26.">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"b02eb9fef81bc5fbb194a9fac24febd3">
+		["build_uid"] = <"f9885327-e201-3b22-9a3f-f61546f16660">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- EORTC QLQ-CR29
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {0..*; unordered} matches {
+					POINT_EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- During past week had urinate frequently during the day
+										value matches {
+											1|[local::at0038],
+											2|[local::at0039],
+											3|[local::at0040],
+											4|[local::at0041]
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- During past week had urinate frequently during the night
+										value matches {
+											1|[local::at0042],
+											2|[local::at0043],
+											3|[local::at0044],
+											4|[local::at0045]
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- During past week had any unintentional release (leakage) of urine
+										value matches {
+											1|[local::at0046],
+											2|[local::at0047],
+											3|[local::at0048],
+											4|[local::at0049]
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- During past week had pain when you urinated
+										value matches {
+											1|[local::at0050],
+											2|[local::at0051],
+											3|[local::at0052],
+											4|[local::at0053]
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- During past week had abdominal pain
+										value matches {
+											1|[local::at0054],
+											2|[local::at0055],
+											3|[local::at0056],
+											4|[local::at0057]
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- During past week had pain in your buttocks/anal area/rectum
+										value matches {
+											1|[local::at0058],
+											2|[local::at0059],
+											3|[local::at0060],
+											4|[local::at0061]
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {    -- During past week had a bloated feeling in abdomen
+										value matches {
+											1|[local::at0062],
+											2|[local::at0063],
+											3|[local::at0064],
+											4|[local::at0065]
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..1} matches {    -- During past week had blood in your stools
+										value matches {
+											1|[local::at0066],
+											2|[local::at0067],
+											3|[local::at0068],
+											4|[local::at0069]
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {    -- During past week had mucus in your stools
+										value matches {
+											1|[local::at0070],
+											2|[local::at0071],
+											3|[local::at0072],
+											4|[local::at0073]
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- During past week had dry mouth
+										value matches {
+											1|[local::at0074],
+											2|[local::at0075],
+											3|[local::at0076],
+											4|[local::at0077]
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {    -- During past week had lost hair as a result of treatment
+										value matches {
+											1|[local::at0078],
+											2|[local::at0079],
+											3|[local::at0080],
+											4|[local::at0081]
+										}
+									}
+									ELEMENT[at0015] occurrences matches {0..1} matches {    -- During past week had problems with sense of taste
+										value matches {
+											1|[local::at0082],
+											2|[local::at0083],
+											3|[local::at0084],
+											4|[local::at0085]
+										}
+									}
+									ELEMENT[at0016] occurrences matches {0..1} matches {    -- During past week were worried about health in the future
+										value matches {
+											1|[local::at0086],
+											2|[local::at0087],
+											3|[local::at0088],
+											4|[local::at0089]
+										}
+									}
+									ELEMENT[at0017] occurrences matches {0..1} matches {    -- During past week were worried about weight
+										value matches {
+											1|[local::at0090],
+											2|[local::at0091],
+											3|[local::at0092],
+											4|[local::at0093]
+										}
+									}
+									ELEMENT[at0018] occurrences matches {0..1} matches {    -- During past week felt physically less attractive as a result of disease or treatment
+										value matches {
+											1|[local::at0094],
+											2|[local::at0095],
+											3|[local::at0096],
+											4|[local::at0097]
+										}
+									}
+									ELEMENT[at0019] occurrences matches {0..1} matches {    -- During past week felt less feminine/masculine as a result of disease or treatment
+										value matches {
+											1|[local::at0098],
+											2|[local::at0099],
+											3|[local::at0100],
+											4|[local::at0101]
+										}
+									}
+									ELEMENT[at0020] occurrences matches {0..1} matches {    -- During past week had been been dissatisfied with body
+										value matches {
+											1|[local::at0102],
+											2|[local::at0103],
+											3|[local::at0104],
+											4|[local::at0105]
+										}
+									}
+									ELEMENT[at0021] occurrences matches {0..1} matches {    -- Have a stoma bag (colostomy/ileostomy)?
+										value matches {
+											DV_BOOLEAN matches {*}
+										}
+									}
+									ELEMENT[at0022] occurrences matches {0..1} matches {    -- During past week had unintentional release of gas/flatulence from stoma bag
+										value matches {
+											1|[local::at0106],
+											2|[local::at0107],
+											3|[local::at0108],
+											4|[local::at0109]
+										}
+									}
+									ELEMENT[at0023] occurrences matches {0..1} matches {    -- During past week had leakage of stools from stoma bag
+										value matches {
+											1|[local::at0110],
+											2|[local::at0111],
+											3|[local::at0112],
+											4|[local::at0113]
+										}
+									}
+									ELEMENT[at0166] occurrences matches {0..1} matches {    -- During past week had sore skin around stoma
+										value matches {
+											DV_ORDINAL matches {*}
+										}
+									}
+									ELEMENT[at0024] occurrences matches {0..1} matches {    -- During past week did frequent bag changes occur during the day
+										value matches {
+											1|[local::at0114],
+											2|[local::at0115],
+											3|[local::at0116],
+											4|[local::at0117]
+										}
+									}
+									ELEMENT[at0025] occurrences matches {0..1} matches {    -- During past week did frequent bag changes occur during the night
+										value matches {
+											1|[local::at0118],
+											2|[local::at0119],
+											3|[local::at0120],
+											4|[local::at0121]
+										}
+									}
+									ELEMENT[at0026] occurrences matches {0..1} matches {    -- During past week felt embarrassed because of stoma
+										value matches {
+											1|[local::at0122],
+											2|[local::at0123],
+											3|[local::at0124],
+											4|[local::at0125]
+										}
+									}
+									ELEMENT[at0027] occurrences matches {0..1} matches {    -- During past week had problems caring stoma
+										value matches {
+											1|[local::at0126],
+											2|[local::at0127],
+											3|[local::at0128],
+											4|[local::at0129]
+										}
+									}
+									ELEMENT[at0028] occurrences matches {0..1} matches {    -- During past week had unintentional release of gas/flatulence from back passage
+										value matches {
+											1|[local::at0130],
+											2|[local::at0131],
+											3|[local::at0132],
+											4|[local::at0133]
+										}
+									}
+									ELEMENT[at0029] occurrences matches {0..1} matches {    -- During past week had leakage of stools from back passage
+										value matches {
+											1|[local::at0134],
+											2|[local::at0135],
+											3|[local::at0136],
+											4|[local::at0137]
+										}
+									}
+									ELEMENT[at0030] occurrences matches {0..1} matches {    -- During past week had sore skin around anal area
+										value matches {
+											1|[local::at0138],
+											2|[local::at0139],
+											3|[local::at0140],
+											4|[local::at0141]
+										}
+									}
+									ELEMENT[at0031] occurrences matches {0..1} matches {    -- During past week had frequent bowel movements occur during the day
+										value matches {
+											1|[local::at0142],
+											2|[local::at0143],
+											3|[local::at0144],
+											4|[local::at0145]
+										}
+									}
+									ELEMENT[at0032] occurrences matches {0..1} matches {    -- During past week had frequent bowel movements occur during the night
+										value matches {
+											1|[local::at0146],
+											2|[local::at0147],
+											3|[local::at0148],
+											4|[local::at0149]
+										}
+									}
+									ELEMENT[at0033] occurrences matches {0..1} matches {    -- During past week felt embarrassed because of bowel movement
+										value matches {
+											1|[local::at0150],
+											2|[local::at0151],
+											3|[local::at0152],
+											4|[local::at0153]
+										}
+									}
+									ELEMENT[at0034] occurrences matches {0..1} matches {    -- Sex interest during past 4 weeks
+										value matches {
+											1|[local::at0154],
+											2|[local::at0155],
+											3|[local::at0156],
+											4|[local::at0157]
+										}
+									}
+									ELEMENT[at0035] occurrences matches {0..1} matches {    -- Difficulty getting or maintaining an erection during past 4 weeks
+										value matches {
+											1|[local::at0158],
+											2|[local::at0159],
+											3|[local::at0160],
+											4|[local::at0161]
+										}
+									}
+									ELEMENT[at0036] occurrences matches {0..1} matches {    -- Pain or discomfort during intercourse during past 4 weeks
+										value matches {
+											1|[local::at0162],
+											2|[local::at0163],
+											3|[local::at0164],
+											4|[local::at0165]
+										}
+									}
+									ELEMENT[at0167] occurrences matches {0..1} matches {    -- Total score
+										value matches {
+											DV_COUNT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0037] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0168] occurrences matches {0..1} matches {    -- Scoring method
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0169,    -- Raw score
+									at0170]    -- Linear transformation
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"EORTC QLQ-CR29">
+					description = <"EORTC_QLQ_CR29">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"During past week had urinate frequently during the day">
+					description = <"Original question:
+During the past week:
+Did you urinate frequently during the day?">
+					Scale = <"UF">
+					Question_number = <"31">
+				>
+				["at0005"] = <
+					text = <"During past week had urinate frequently during the night">
+					description = <"Original question:
+During the past week: Did you urinate frequently during the night?">
+					Scale = <"UF">
+					Question_number = <"32">
+				>
+				["at0006"] = <
+					text = <"During past week had any unintentional release (leakage) of urine">
+					description = <"Original question:
+During the past week: Have you had any unintentional release (leakage) of urine?">
+					Scale = <"UI">
+					Question_number = <"33">
+				>
+				["at0007"] = <
+					text = <"During past week had pain when you urinated">
+					description = <"Original question:
+During the past week: Did you have pain when you urinated?">
+					Scale = <"DY2">
+					Question_number = <"34">
+				>
+				["at0008"] = <
+					text = <"During past week had abdominal pain">
+					description = <"Original question:
+During the past week: Did you have abdominal pain?">
+					Scale = <"AP2">
+					Question_number = <"35">
+				>
+				["at0009"] = <
+					text = <"During past week had pain in your buttocks/anal area/rectum">
+					description = <"Original question:
+During the past week: Did you have pain in your buttocks/anal area/rectum?">
+					Scale = <"BP">
+					Question_number = <"36">
+				>
+				["at0010"] = <
+					text = <"During past week had a bloated feeling in abdomen">
+					description = <"Original question:
+During the past week: Did you have a bloated feeling in your abdomen?">
+					Scale = <"BF">
+					Question_number = <"37">
+				>
+				["at0011"] = <
+					text = <"During past week had blood in your stools">
+					description = <"Original question:
+During the past week: Have you had blood in your stools?">
+					Scale = <"BMS">
+					Question_number = <"38">
+				>
+				["at0012"] = <
+					text = <"During past week had mucus in your stools">
+					description = <"Original question:
+During the past week: Have you had mucus in your stools?">
+					Scale = <"BMS">
+					Question_number = <"39">
+				>
+				["at0013"] = <
+					text = <"During past week had dry mouth">
+					description = <"Original question:
+During the past week: Did you have a dry mouth?">
+					Scale = <"DM">
+					Question_number = <"40">
+				>
+				["at0014"] = <
+					text = <"During past week had lost hair as a result of treatment">
+					description = <"Original question:
+During the past week: Have you lost hair as a result of your treatment?">
+					Scale = <"HL">
+					Question_number = <"41">
+				>
+				["at0015"] = <
+					text = <"During past week had problems with sense of taste">
+					description = <"Original question:
+During the past week: Have you had problems with your sense of taste?">
+					Scale = <"TA">
+					Question_number = <"42">
+				>
+				["at0016"] = <
+					text = <"During past week were worried about health in the future">
+					description = <"Original question:
+During the past week: Were you worried about your health in the future?
+">
+					Scale = <"ANX">
+					Question_number = <"43">
+				>
+				["at0017"] = <
+					text = <"During past week were worried about weight">
+					description = <"Original question:
+During the past week: Have you worried about your weight?">
+					Scale = <"WEI">
+					Question_number = <"44">
+				>
+				["at0018"] = <
+					text = <"During past week felt physically less attractive as a result of disease or treatment">
+					description = <"Original question:
+During the past week: Have you felt physically less attractive as a result of your disease or treatment?
+">
+					Scale = <"BI">
+					Question_number = <"45">
+				>
+				["at0019"] = <
+					text = <"During past week felt less feminine/masculine as a result of disease or treatment">
+					description = <"Original question:
+During the past week: Have you been feeling less feminine/masculine as a result of your disease or treatment?">
+					Scale = <"BI">
+					Question_number = <"46">
+				>
+				["at0020"] = <
+					text = <"During past week had been been dissatisfied with body">
+					description = <"Original question:
+During the past week: Have you been dissatisfied with your body?">
+					Scale = <"BI">
+					Question_number = <"47">
+				>
+				["at0021"] = <
+					text = <"Have a stoma bag (colostomy/ileostomy)?">
+					description = <"Original question: 
+Do you have a stoma bag (colostomy/ileostomy)?">
+				>
+				["at0022"] = <
+					text = <"During past week had unintentional release of gas/flatulence from stoma bag">
+					description = <"Original question:
+During the past week: Have you had unintentional release of gas/flatulence from your stoma bag?">
+					comment = <"(Answer these questions ONLY IF YOU HAVE A STOMA BAG)">
+					Scale = <"FL">
+					Question_number = <"49">
+				>
+				["at0023"] = <
+					text = <"During past week had leakage of stools from stoma bag">
+					description = <"Original question:
+During the past week: Have you had leakage of stools from your stoma bag?">
+					comment = <"(Answer these questions ONLY IF YOU HAVE A STOMA BAG)">
+					Scale = <"FI2">
+					Question_number = <"50">
+				>
+				["at0024"] = <
+					text = <"During past week did frequent bag changes occur during the day">
+					description = <"Original question:
+During the past week: Did frequent bag changes occur during the day?">
+					comment = <"(Answer these questions ONLY IF YOU HAVE A STOMA BAG)">
+					Scale = <"SF2">
+					Question_number = <"52">
+				>
+				["at0025"] = <
+					text = <"During past week did frequent bag changes occur during the night">
+					description = <"Original question:
+During the past week: Did frequent bag changes occur during the night?">
+					comment = <"(Answer these questions ONLY IF YOU HAVE A STOMA BAG)">
+					Scale = <"SF2">
+					Question_number = <"53">
+				>
+				["at0026"] = <
+					text = <"During past week felt embarrassed because of stoma">
+					description = <"Original question:
+During the past week: Did you feel embarrassed because of your stoma?">
+					comment = <"(Answer these questions ONLY IF YOU HAVE A STOMA BAG)">
+					Scale = <"EMB">
+					Question_number = <"54">
+				>
+				["at0027"] = <
+					text = <"During past week had problems caring stoma">
+					description = <"Original question:
+During the past week: Did you have problems caring for your stoma?">
+					comment = <"(Answer these questions ONLY IF YOU HAVE A STOMA BAG)">
+					Scale = <"STO">
+					Question_number = <"55">
+				>
+				["at0028"] = <
+					text = <"During past week had unintentional release of gas/flatulence from back passage">
+					description = <"Original question:
+During the past week: Have you had unintentional release of gas/flatulence from your back passage?">
+					comment = <"(Answer these questions ONLY IF YOU DO NOT HAVE A STOMA BAG)">
+					Scale = <"FL">
+					Question_number = <"49">
+				>
+				["at0029"] = <
+					text = <"During past week had leakage of stools from back passage">
+					description = <"Original question:
+During the past week: Have you had leakage of stools from your back passage?">
+					comment = <"(Answer these questions ONLY IF YOU DO NOT HAVE A STOMA BAG)">
+					Scale = <"FI2">
+					Question_number = <"50">
+				>
+				["at0030"] = <
+					text = <"During past week had sore skin around anal area">
+					description = <"Original question:
+During the past week: Have you had sore skin around your anal area?">
+					comment = <"(Answer these questions ONLY IF YOU DO NOT HAVE A STOMA BAG)">
+					Scale = <"SS">
+					Question_number = <"51">
+				>
+				["at0031"] = <
+					text = <"During past week had frequent bowel movements occur during the day">
+					description = <"Original question:
+During the past week: Did frequent bowel movements occur during the day?">
+					comment = <"(Answer these questions ONLY IF YOU DO NOT HAVE A STOMA BAG)">
+					Scale = <"SF2">
+					Question_number = <"52">
+				>
+				["at0032"] = <
+					text = <"During past week had frequent bowel movements occur during the night">
+					description = <"Original question:
+During the past week: Did frequent bowel movements occur during the night?
+">
+					comment = <"(Answer these questions ONLY IF YOU DO NOT HAVE A STOMA BAG)">
+					Scale = <"SF2">
+					Question_number = <"53">
+				>
+				["at0033"] = <
+					text = <"During past week felt embarrassed because of bowel movement">
+					description = <"Original question:
+During the past week: Did you feel embarrassed because of your bowel movement?">
+					comment = <"(Answer these questions ONLY IF YOU DO NOT HAVE A STOMA BAG)">
+					Scale = <"EMB">
+					Question_number = <"54">
+				>
+				["at0034"] = <
+					text = <"Sex interest during past 4 weeks">
+					description = <"Original question:
+During the past 4 weeks: To what extent were you interested in sex?">
+					Scale = <"SEXF">
+					Question_number = <"56, 58">
+				>
+				["at0035"] = <
+					text = <"Difficulty getting or maintaining an erection during past 4 weeks">
+					description = <"Original question:
+During the past 4 weeks: Did you have difficulty getting or maintaining an erection?">
+					comment = <"(For men only)">
+					Scale = <"IMP">
+					Question_number = <"57">
+				>
+				["at0036"] = <
+					text = <"Pain or discomfort during intercourse during past 4 weeks">
+					description = <"Original question:
+During the past 4 weeks: Did you have pain or discomfort during intercourse?">
+					comment = <"(For woman only)">
+					Scale = <"DYS">
+					Question_number = <"59">
+				>
+				["at0037"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0038"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0039"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0040"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0041"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0042"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0043"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0044"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0045"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0046"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0047"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0048"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0049"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0050"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0051"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0052"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0053"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0054"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0055"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0056"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0057"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0058"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0059"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0060"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0061"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0062"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0063"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0064"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0065"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0066"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0067"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0068"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0069"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0070"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0071"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0072"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0073"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0074"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0075"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0076"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0077"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0078"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0079"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0080"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0081"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0082"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0083"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0084"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0085"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0086"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0087"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0088"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0089"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0090"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0091"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0092"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0093"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0094"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0095"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0096"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0097"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0098"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0099"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0100"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0101"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0102"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0103"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0104"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0105"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0106"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0107"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0108"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0109"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0110"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0111"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0112"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0113"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0114"] = <
+					text = <"Not at all">
+					description = <"*">
+				>
+				["at0115"] = <
+					text = <"A little">
+					description = <"*">
+				>
+				["at0116"] = <
+					text = <"Quite a bit">
+					description = <"*">
+				>
+				["at0117"] = <
+					text = <"Very much">
+					description = <"*">
+				>
+				["at0118"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0119"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0120"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0121"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0122"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0123"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0124"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0125"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0126"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0127"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0128"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0129"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0130"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0131"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0132"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0133"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0134"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0135"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0136"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0137"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0138"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0139"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0140"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0141"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0142"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0143"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0144"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0145"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0146"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0147"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0148"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0149"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0150"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0151"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0152"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0153"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0154"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0155"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0156"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0157"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0158"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0159"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0160"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0161"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0162"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0163"] = <
+					text = <"A little">
+					description = <"A little">
+				>
+				["at0164"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0165"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0166"] = <
+					text = <"During past week had sore skin around stoma">
+					description = <"Original question:
+During the past week: Have you had sore skin around your stoma?">
+					comment = <"(Answer these questions ONLY IF YOU HAVE A STOMA BAG)">
+					Scale = <"SS">
+					Question_number = <"51">
+				>
+				["at0167"] = <
+					text = <"Total score">
+					description = <"*">
+				>
+				["at0168"] = <
+					text = <"Scoring method">
+					description = <"*">
+				>
+				["at0169"] = <
+					text = <"Raw score">
+					description = <"*">
+				>
+				["at0170"] = <
+					text = <"Linear transformation">
+					description = <"*">
+				>
+			>
+		>
+		["pt-pt"] = <
+			items = <
+				["at0000"] = <
+					text = <"*EORTC QLQ-CR29 (en)">
+					description = <"*EORTC_QLQ_CR29 (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event (en)">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*During past week had urinate frequently during the day (en)">
+					description = <"*Original question:
+During the past week: (en)">
+				>
+				["at0005"] = <
+					text = <"*During past week had urinate frequently during the night (en)">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"*During past week had any unintentional release (leakage) of urine (en)">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"*During past week had pain when you urinated (en)">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"*During past week had abdominal pain (en)">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"*During past week had pain in your buttocks/anal area/rectum (en)">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"*During past week had a bloated feeling in abdomen (en)">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"*During past week had blood in your stools (en)">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"*During past week had mucus in your stools (en)">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"*During past week had dry mouth (en)">
+					description = <"*">
+				>
+				["at0014"] = <
+					text = <"*During past week had lost hair as a result of treatment (en)">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"*During past week had problems with sense of taste (en)">
+					description = <"*">
+				>
+				["at0016"] = <
+					text = <"*During past week were worried about health in the future (en)">
+					description = <"*">
+				>
+				["at0017"] = <
+					text = <"*During past week were worried about weight (en)">
+					description = <"*">
+				>
+				["at0018"] = <
+					text = <"*During past week felt physically less attractive as a result of disease or treatment (en)">
+					description = <"*">
+				>
+				["at0019"] = <
+					text = <"*During past week felt less feminine/masculine as a result of disease or treatment (en)">
+					description = <"*">
+				>
+				["at0020"] = <
+					text = <"*During past week had been been dissatisfied with body (en)">
+					description = <"*">
+				>
+				["at0021"] = <
+					text = <"*Have a stoma bag (colostomy/ileostomy)? (en)">
+					description = <"*">
+				>
+				["at0022"] = <
+					text = <"*During past week had unintentional release of gas/flatulence from stoma bag (en)">
+					description = <"*">
+				>
+				["at0023"] = <
+					text = <"*During past week had leakage of stools from stoma bag (en)">
+					description = <"*">
+				>
+				["at0024"] = <
+					text = <"*During past week did frequent bag changes occur during the day (en)">
+					description = <"*">
+				>
+				["at0025"] = <
+					text = <"*During past week did frequent bag changes occur during the night (en)">
+					description = <"*">
+				>
+				["at0026"] = <
+					text = <"*During past week felt embarrassed because of stoma (en)">
+					description = <"*">
+				>
+				["at0027"] = <
+					text = <"*During past week had problems caring stoma (en)">
+					description = <"*">
+				>
+				["at0028"] = <
+					text = <"*During past week had unintentional release of gas/flatulence from back passage (en)">
+					description = <"*">
+				>
+				["at0029"] = <
+					text = <"*During past week had leakage of stools from back passage (en)">
+					description = <"*">
+				>
+				["at0030"] = <
+					text = <"*During past week had sore skin around anal area (en)">
+					description = <"*">
+				>
+				["at0031"] = <
+					text = <"*During past week had frequent bowel movements occur during the day (en)">
+					description = <"*">
+				>
+				["at0032"] = <
+					text = <"*During past week had frequent bowel movements occur during the night (en)">
+					description = <"*">
+				>
+				["at0033"] = <
+					text = <"*During past week felt embarrassed because of bowel movement (en)">
+					description = <"*">
+				>
+				["at0034"] = <
+					text = <"*Sex interest during past 4 weeks (en)">
+					description = <"*">
+				>
+				["at0035"] = <
+					text = <"*Difficulty getting or maintaining an erection during past 4 weeks (en)">
+					description = <"*">
+				>
+				["at0036"] = <
+					text = <"*Pain or discomfort during intercourse during past 4 weeks (en)">
+					description = <"*">
+				>
+				["at0037"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0038"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0039"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0040"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0041"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0042"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0043"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0044"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0045"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0046"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0047"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0048"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0049"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0050"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0051"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0052"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0053"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0054"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0055"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0056"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0057"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0058"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0059"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0060"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0061"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0062"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0063"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0064"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0065"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0066"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0067"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0068"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0069"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0070"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0071"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0072"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0073"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0074"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0075"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0076"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0077"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0078"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0079"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0080"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0081"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0082"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0083"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0084"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0085"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0086"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0087"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0088"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0089"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0090"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0091"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0092"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0093"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0094"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0095"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0096"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0097"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0098"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0099"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0100"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0101"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0102"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0103"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0104"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0105"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0106"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0107"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0108"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0109"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0110"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0111"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0112"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0113"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0114"] = <
+					text = <"*Not at all (en)">
+					description = <"*">
+				>
+				["at0115"] = <
+					text = <"*A little (en)">
+					description = <"*">
+				>
+				["at0116"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*">
+				>
+				["at0117"] = <
+					text = <"*Very much (en)">
+					description = <"*">
+				>
+				["at0118"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0119"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0120"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0121"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0122"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0123"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0124"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0125"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0126"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0127"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0128"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0129"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0130"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0131"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0132"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0133"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0134"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0135"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0136"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0137"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0138"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0139"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0140"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0141"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0142"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0143"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0144"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0145"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0146"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0147"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0148"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0149"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0150"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0151"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0152"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0153"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0154"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0155"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0156"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0157"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0158"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0159"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0160"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0161"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0162"] = <
+					text = <"*Not at all (en)">
+					description = <"*Not at all (en)">
+				>
+				["at0163"] = <
+					text = <"*A little (en)">
+					description = <"*A little (en)">
+				>
+				["at0164"] = <
+					text = <"*Quite a bit (en)">
+					description = <"*Quite a bit (en)">
+				>
+				["at0165"] = <
+					text = <"*Very much (en)">
+					description = <"*Very much (en)">
+				>
+				["at0166"] = <
+					text = <"*DV_ORDINAL (en)">
+					description = <"*">
+				>
+				["at0167"] = <
+					text = <"*DV_COUNT (en)">
+					description = <"*">
+				>
+				["at0168"] = <
+					text = <"*DV_CODED_TEXT (en)">
+					description = <"*">
+				>
+				["at0169"] = <
+					text = <"*Raw score (en)">
+					description = <"*">
+				>
+				["at0170"] = <
+					text = <"*Linear transformation (en)">
+					description = <"*">
+				>
+			>
+		>
+	>

@@ -1,0 +1,720 @@
+archetype (adl_version=1.4; uid=7178f9b9-dc84-4e84-893f-cdca807f031d)
+	openEHR-EHR-OBSERVATION.mskcc_bowel_function_instrument.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2020-04-03">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Pathfinder - Better">
+		["email"] = <"vanessa.pereira@better.care">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To evaluate bowel function after sphincter-preserving surgery for rectal cancer.">
+			keywords = <"Memorial Sloan Kettering Cancer Centre Bowel Function Instrument, MSKCC BFI, MSKCC, cancer, rectal, colorectal", ...>
+			use = <"To record the evaluate bowel function after sphincter-preserving surgery for rectal cancer.
+It is based on the MSKCC Bowel Function Instrument – Draft 1. (doi:10.1007/s10350-004-0942-z )">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Temple, L. K., Bacik, J., Savatta, S. G., Gottesman, L., Paty, P. B., Weiser, M. R., … Wong, D. W. (2005). The Development of a Validated Instrument to Evaluate Bowel Function After Sphincter-Preserving Surgery for Rectal Cancer. Diseases of the Colon & Rectum, 48(7), 1353–1365. doi:10.1007/s10350-004-0942-z 
+Chen TY, Emmertsen KJ, Laurberg S. What Are the Best Questionnaires To Capture Anorectal Function After Surgery in Rectal Cancer?. Curr Colorectal Cancer Rep. 2015;11:37–43. doi:10.1007/s11888-014-0217-6">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"2dd7867beacb78b4bdf0ed414a155d79">
+		["build_uid"] = <"f340e34c-981b-3426-931e-4ba968b67604">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- MSKCC Bowel Function Instrument
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {0..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Bowel movements
+										value matches {
+											C_DV_QUANTITY <
+												
+												list = <
+													["1"] = <
+														units = <"1/d">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Solid food increased number of bowel movements
+										value matches {
+											1|[local::at0023],
+											2|[local::at0024],
+											3|[local::at0025],
+											4|[local::at0026],
+											5|[local::at0027]
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Drank liquids increased number of bowel movements
+										value matches {
+											1|[local::at0028],
+											2|[local::at0029],
+											3|[local::at0030],
+											4|[local::at0031],
+											5|[local::at0032]
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- Totally empty bowels after bowel movement
+										value matches {
+											1|[local::at0033],
+											2|[local::at0034],
+											3|[local::at0035],
+											4|[local::at0036],
+											5|[local::at0037]
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Get to the toilet on time
+										value matches {
+											1|[local::at0038],
+											2|[local::at0039],
+											3|[local::at0040],
+											4|[local::at0041],
+											5|[local::at0042]
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- Another bowel movement within 15 min of last bowel movement
+										value matches {
+											1|[local::at0043],
+											2|[local::at0044],
+											3|[local::at0045],
+											4|[local::at0046],
+											5|[local::at0047]
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {    -- Know difference between gas and bowel movement
+										value matches {
+											1|[local::at0048],
+											2|[local::at0049],
+											3|[local::at0050],
+											4|[local::at0051],
+											5|[local::at0052]
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..1} matches {    -- Used medicines to decrease the number of bowel movements
+										value matches {
+											1|[local::at0053],
+											2|[local::at0054],
+											3|[local::at0055],
+											4|[local::at0056],
+											5|[local::at0057]
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {    -- Had diarrhea
+										value matches {
+											1|[local::at0058],
+											2|[local::at0059],
+											3|[local::at0060],
+											4|[local::at0061],
+											5|[local::at0062]
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Had loose stool
+										value matches {
+											1|[local::at0063],
+											2|[local::at0064],
+											3|[local::at0065],
+											4|[local::at0066],
+											5|[local::at0067]
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {    -- Able to wait 15 min for toilet
+										value matches {
+											1|[local::at0068],
+											2|[local::at0069],
+											3|[local::at0070],
+											4|[local::at0071],
+											5|[local::at0072]
+										}
+									}
+									ELEMENT[at0015] occurrences matches {0..1} matches {    -- Able to control passage of gas
+										value matches {
+											1|[local::at0073],
+											2|[local::at0074],
+											3|[local::at0075],
+											4|[local::at0076],
+											5|[local::at0077]
+										}
+									}
+									ELEMENT[at0016] occurrences matches {0..1} matches {    -- Limited the types of solid foods to control bowel movements
+										value matches {
+											1|[local::at0078],
+											2|[local::at0079],
+											3|[local::at0080],
+											4|[local::at0081],
+											5|[local::at0082]
+										}
+									}
+									ELEMENT[at0017] occurrences matches {0..1} matches {    -- Limited the types of liquids to control bowel movements
+										value matches {
+											1|[local::at0083],
+											2|[local::at0084],
+											3|[local::at0085],
+											4|[local::at0086],
+											5|[local::at0087]
+										}
+									}
+									ELEMENT[at0018] occurrences matches {0..1} matches {    -- Soil undergarments during day
+										value matches {
+											1|[local::at0088],
+											2|[local::at0089],
+											3|[local::at0090],
+											4|[local::at0091],
+											5|[local::at0092]
+										}
+									}
+									ELEMENT[at0019] occurrences matches {0..1} matches {    -- Use tissue, napkin, pad during day
+										value matches {
+											1|[local::at0093],
+											2|[local::at0094],
+											3|[local::at0095],
+											4|[local::at0096],
+											5|[local::at0097]
+										}
+									}
+									ELEMENT[at0020] occurrences matches {0..1} matches {    -- Soil undergarments in bed
+										value matches {
+											1|[local::at0098],
+											2|[local::at0099],
+											3|[local::at0100],
+											4|[local::at0101],
+											5|[local::at0102]
+										}
+									}
+									ELEMENT[at0021] occurrences matches {0..1} matches {    -- Alter activities because of bowel function
+										value matches {
+											1|[local::at0103],
+											2|[local::at0104],
+											3|[local::at0105],
+											4|[local::at0106],
+											5|[local::at0107]
+										}
+									}
+									ELEMENT[at0110] occurrences matches {0..1} matches {    -- Total score
+										value matches {
+											DV_COUNT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0108] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0109] occurrences matches {0..1} matches {    -- Scoring method
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"MSKCC Bowel Function Instrument">
+					description = <"Questionnaire for assessing bowel function after sphincter-preserving surgery for rectal cancer.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Bowel movements">
+					description = <"Original question:
+Over the last 4 weeks, how many bowel movement do you generally have in 24 hours?">
+					Question_number = <"1">
+				>
+				["at0005"] = <
+					text = <"Solid food increased number of bowel movements">
+					description = <"Original question:
+Over the last 4 weeks: Do certain solid foods increase the number of bowel movements in a day?">
+					Question_number = <"2">
+				>
+				["at0006"] = <
+					text = <"Drank liquids increased number of bowel movements">
+					description = <"Original question:
+Over the last 4 weeks: Do certain liquids that you drink increase the number of bowel movements in a day?">
+					Question_number = <"3">
+				>
+				["at0007"] = <
+					text = <"Totally empty bowels after bowel movement">
+					description = <"Original question:
+Over the last 4 weeks: Do you feel like you have totally emptied your bowels after a bowel movement?">
+					Question_number = <"4">
+				>
+				["at0008"] = <
+					text = <"Get to the toilet on time">
+					description = <"Original question:
+Over the last 4 weeks: Do you get to the toilet on time?">
+					Question_number = <"5">
+				>
+				["at0009"] = <
+					text = <"Another bowel movement within 15 min of last bowel movement">
+					description = <"Original question:
+Over the last 4 weeks: Do you have another bowel movement within 15 minutes of your last bowel movement?">
+					Question_number = <"6">
+				>
+				["at0010"] = <
+					text = <"Know difference between gas and bowel movement">
+					description = <"Original question:
+Over the last 4 weeks: Do you know the difference between having to pass gas (air) and needing to have a bowel movement?">
+					Question_number = <"7">
+				>
+				["at0011"] = <
+					text = <"Used medicines to decrease the number of bowel movements">
+					description = <"Original question:
+Over the last 4 weeks: Have you used medicines to decrease the number of bowel movements (drugs like Imodium®, Lomotil®)?">
+					Question_number = <"8">
+				>
+				["at0012"] = <
+					text = <"Had diarrhea">
+					description = <"Original question:
+Over the last 4 weeks: Have you had diarrhea (no form, watery stool)?">
+					Question_number = <"9">
+				>
+				["at0013"] = <
+					text = <"Had loose stool">
+					description = <"Original question:
+Over the last 4 weeks: Have you had loose stool (slight form, but mushy)?">
+					Question_number = <"10">
+				>
+				["at0014"] = <
+					text = <"Able to wait 15 min for toilet">
+					description = <"Original question:
+Over the last 4 weeks: Have you been able to wait 15 minutes to get to the toilet when you feel like you are going to have a bowel movement?">
+					Question_number = <"11">
+				>
+				["at0015"] = <
+					text = <"Able to control passage of gas">
+					description = <"Original question:
+Over the last 4 weeks: Have you been able to control the passage of gas (air)?">
+					Question_number = <"12">
+				>
+				["at0016"] = <
+					text = <"Limited the types of solid foods to control bowel movements">
+					description = <"Original question:
+Over the last 4 weeks: Have you limited the types of solid foods you eat to control your bowel movements?">
+					Question_number = <"13">
+				>
+				["at0017"] = <
+					text = <"Limited the types of liquids to control bowel movements">
+					description = <"Original question:
+Over the last 4 weeks: Have you limited the types of liquids you drink to control your bowel movements?">
+					Question_number = <"14">
+				>
+				["at0018"] = <
+					text = <"Soil undergarments during day">
+					description = <"Original question:
+Over the last 4 weeks: Have you had soilage (leakage of stool) of your undergarments during the day?">
+					Question_number = <"15">
+				>
+				["at0019"] = <
+					text = <"Use tissue, napkin, pad during day">
+					description = <"Original question:
+Over the last 4 weeks: Have you used a tissue, napkin, and/or pad in your undergarments during the day in case of stool leakage?">
+					Question_number = <"16">
+				>
+				["at0020"] = <
+					text = <"Soil undergarments in bed">
+					description = <"Original question:
+Over the last 4 weeks: Have you had soilage (leakage of stool) of your undergarments when you go to bed?">
+					Question_number = <"17">
+				>
+				["at0021"] = <
+					text = <"Alter activities because of bowel function">
+					description = <"Original question:
+Over the last 4 weeks: Have you had to alter your activities because of your bowel function?">
+					Question_number = <"18">
+				>
+				["at0023"] = <
+					text = <"Always">
+					description = <"Always">
+				>
+				["at0024"] = <
+					text = <"Most of the time">
+					description = <"Most of the time">
+				>
+				["at0025"] = <
+					text = <"Sometimes">
+					description = <"Sometimes">
+				>
+				["at0026"] = <
+					text = <"Rarely">
+					description = <"Rarely">
+				>
+				["at0027"] = <
+					text = <"Never">
+					description = <"Never">
+				>
+				["at0028"] = <
+					text = <"Always">
+					description = <"Always">
+				>
+				["at0029"] = <
+					text = <"Most of the time">
+					description = <"Most of the time">
+				>
+				["at0030"] = <
+					text = <"Sometimes">
+					description = <"Sometimes">
+				>
+				["at0031"] = <
+					text = <"Rarely">
+					description = <"Rarely">
+				>
+				["at0032"] = <
+					text = <"Never">
+					description = <"Never">
+				>
+				["at0033"] = <
+					text = <"Always">
+					description = <"Always">
+				>
+				["at0034"] = <
+					text = <"Most of the time">
+					description = <"Most of the time">
+				>
+				["at0035"] = <
+					text = <"Sometimes">
+					description = <"Sometimes">
+				>
+				["at0036"] = <
+					text = <"Rarely">
+					description = <"Rarely">
+				>
+				["at0037"] = <
+					text = <"Never">
+					description = <"Never">
+				>
+				["at0038"] = <
+					text = <"Always">
+					description = <"Always">
+				>
+				["at0039"] = <
+					text = <"Most of the time">
+					description = <"Most of the time">
+				>
+				["at0040"] = <
+					text = <"Sometimes">
+					description = <"Sometimes">
+				>
+				["at0041"] = <
+					text = <"Rarely">
+					description = <"Rarely">
+				>
+				["at0042"] = <
+					text = <"Never">
+					description = <"Never">
+				>
+				["at0043"] = <
+					text = <"Always">
+					description = <"Always">
+				>
+				["at0044"] = <
+					text = <"Most of the time">
+					description = <"Most of the time">
+				>
+				["at0045"] = <
+					text = <"Sometimes">
+					description = <"Sometimes">
+				>
+				["at0046"] = <
+					text = <"Rarely">
+					description = <"Rarely">
+				>
+				["at0047"] = <
+					text = <"Never">
+					description = <"Never">
+				>
+				["at0048"] = <
+					text = <"Always">
+					description = <"Always">
+				>
+				["at0049"] = <
+					text = <"Most of the time">
+					description = <"Most of the time">
+				>
+				["at0050"] = <
+					text = <"Sometimes">
+					description = <"Sometimes">
+				>
+				["at0051"] = <
+					text = <"Rarely">
+					description = <"Rarely">
+				>
+				["at0052"] = <
+					text = <"Never">
+					description = <"Never">
+				>
+				["at0053"] = <
+					text = <"Always">
+					description = <"Always">
+				>
+				["at0054"] = <
+					text = <"Most of the time">
+					description = <"Most of the time">
+				>
+				["at0055"] = <
+					text = <"Sometimes">
+					description = <"Sometimes">
+				>
+				["at0056"] = <
+					text = <"Rarely">
+					description = <"Rarely">
+				>
+				["at0057"] = <
+					text = <"Never">
+					description = <"Never">
+				>
+				["at0058"] = <
+					text = <"Always">
+					description = <"Always">
+				>
+				["at0059"] = <
+					text = <"Most of the time">
+					description = <"Most of the time">
+				>
+				["at0060"] = <
+					text = <"Sometimes">
+					description = <"Sometimes">
+				>
+				["at0061"] = <
+					text = <"Rarely">
+					description = <"Rarely">
+				>
+				["at0062"] = <
+					text = <"Never">
+					description = <"Never">
+				>
+				["at0063"] = <
+					text = <"Always">
+					description = <"Always">
+				>
+				["at0064"] = <
+					text = <"Most of the time">
+					description = <"Most of the time">
+				>
+				["at0065"] = <
+					text = <"Sometimes">
+					description = <"Sometimes">
+				>
+				["at0066"] = <
+					text = <"Rarely">
+					description = <"Rarely">
+				>
+				["at0067"] = <
+					text = <"Never">
+					description = <"Never">
+				>
+				["at0068"] = <
+					text = <"Always">
+					description = <"Always">
+				>
+				["at0069"] = <
+					text = <"Most of the time">
+					description = <"Most of the time">
+				>
+				["at0070"] = <
+					text = <"Sometimes">
+					description = <"Sometimes">
+				>
+				["at0071"] = <
+					text = <"Rarely">
+					description = <"Rarely">
+				>
+				["at0072"] = <
+					text = <"Never">
+					description = <"Never">
+				>
+				["at0073"] = <
+					text = <"Always">
+					description = <"Always">
+				>
+				["at0074"] = <
+					text = <"Most of the time">
+					description = <"Most of the time">
+				>
+				["at0075"] = <
+					text = <"Sometimes">
+					description = <"Sometimes">
+				>
+				["at0076"] = <
+					text = <"Rarely">
+					description = <"Rarely">
+				>
+				["at0077"] = <
+					text = <"Never">
+					description = <"Never">
+				>
+				["at0078"] = <
+					text = <"Always">
+					description = <"Always">
+				>
+				["at0079"] = <
+					text = <"Most of the time">
+					description = <"Most of the time">
+				>
+				["at0080"] = <
+					text = <"Sometimes">
+					description = <"Sometimes">
+				>
+				["at0081"] = <
+					text = <"Rarely">
+					description = <"Rarely">
+				>
+				["at0082"] = <
+					text = <"Never">
+					description = <"Never">
+				>
+				["at0083"] = <
+					text = <"Always">
+					description = <"Always">
+				>
+				["at0084"] = <
+					text = <"Most of the time">
+					description = <"Most of the time">
+				>
+				["at0085"] = <
+					text = <"Sometimes">
+					description = <"Sometimes">
+				>
+				["at0086"] = <
+					text = <"Rarely">
+					description = <"Rarely">
+				>
+				["at0087"] = <
+					text = <"Never">
+					description = <"Never">
+				>
+				["at0088"] = <
+					text = <"Always">
+					description = <"Always">
+				>
+				["at0089"] = <
+					text = <"Most of the time">
+					description = <"Most of the time">
+				>
+				["at0090"] = <
+					text = <"Sometimes">
+					description = <"Sometimes">
+				>
+				["at0091"] = <
+					text = <"Rarely">
+					description = <"Rarely">
+				>
+				["at0092"] = <
+					text = <"Never">
+					description = <"Never">
+				>
+				["at0093"] = <
+					text = <"Always">
+					description = <"Always">
+				>
+				["at0094"] = <
+					text = <"Most of the time">
+					description = <"Most of the time">
+				>
+				["at0095"] = <
+					text = <"Sometimes">
+					description = <"Sometimes">
+				>
+				["at0096"] = <
+					text = <"Rarely">
+					description = <"Rarely">
+				>
+				["at0097"] = <
+					text = <"Never">
+					description = <"Never">
+				>
+				["at0098"] = <
+					text = <"Always">
+					description = <"Always">
+				>
+				["at0099"] = <
+					text = <"Most of the time">
+					description = <"Most of the time">
+				>
+				["at0100"] = <
+					text = <"Sometimes">
+					description = <"Sometimes">
+				>
+				["at0101"] = <
+					text = <"Rarely">
+					description = <"Rarely">
+				>
+				["at0102"] = <
+					text = <"Never">
+					description = <"Never">
+				>
+				["at0103"] = <
+					text = <"Always">
+					description = <"Always">
+				>
+				["at0104"] = <
+					text = <"Most of the time">
+					description = <"Most of the time">
+				>
+				["at0105"] = <
+					text = <"Sometimes">
+					description = <"Sometimes">
+				>
+				["at0106"] = <
+					text = <"Rarely">
+					description = <"Rarely">
+				>
+				["at0107"] = <
+					text = <"Never">
+					description = <"Never">
+				>
+				["at0108"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0109"] = <
+					text = <"Scoring method">
+					description = <"*">
+				>
+				["at0110"] = <
+					text = <"Total score">
+					description = <"*">
+				>
+			>
+		>
+	>
