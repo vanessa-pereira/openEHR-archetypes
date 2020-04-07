@@ -345,6 +345,10 @@ definition
 							}
 						}
 					}
+					allow_archetype CLUSTER[at0171] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
 				}
 			}
 		}
@@ -1157,6 +1161,10 @@ During the past week: Have you had sore skin around your stoma?">
 					text = <"Linear transformation">
 					description = <"*">
 				>
+				["at0171"] = <
+					text = <"Extension">
+					description = <"*">
+				>
 			>
 		>
 		["pt-pt"] = <
@@ -1844,6 +1852,10 @@ During the past week: (en)">
 				>
 				["at0170"] = <
 					text = <"*Linear transformation (en)">
+					description = <"*">
+				>
+				["at0171"] = <
+					text = <"*CLUSTER_SLOT (en)">
 					description = <"*">
 				>
 			>

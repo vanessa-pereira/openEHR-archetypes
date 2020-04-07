@@ -34,7 +34,7 @@ https://eprovide.mapi-trust.org/instruments/eortc-quality-of-life-questionnaire-
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"b89e6142bb414f383510f6199ec7f5d9">
+		["MD5-CAM-1.0.1"] = <"595b7b0f47858f72578cb58fd4c54cb8">
 		["build_uid"] = <"88545523-6f18-3577-b22e-18bf4f2bce5d">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 	>
@@ -243,6 +243,10 @@ definition
 								}
 							}
 						}
+					}
+					allow_archetype CLUSTER[at0114] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
 					}
 				}
 			}
@@ -771,6 +775,10 @@ During the past 4 weeks: Has the disease or treatment affected your sex life (fo
 				["at0113"] = <
 					text = <"Very much">
 					description = <"Very much">
+				>
+				["at0114"] = <
+					text = <"Extension">
+					description = <"*">
 				>
 			>
 		>

@@ -32,7 +32,7 @@ Chen TY, Emmertsen KJ, Laurberg S. What Are the Best Questionnaires To Capture A
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"2dd7867beacb78b4bdf0ed414a155d79">
+		["MD5-CAM-1.0.1"] = <"bcbc59cb205cc99bdea2f538134b07ee">
 		["build_uid"] = <"f340e34c-981b-3426-931e-4ba968b67604">
 	>
 
@@ -41,7 +41,7 @@ definition
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {0..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+					POINT_EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
@@ -229,6 +229,10 @@ definition
 						value matches {
 							DV_TEXT matches {*}
 						}
+					}
+					allow_archetype CLUSTER[at0111] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
 					}
 				}
 			}
@@ -713,6 +717,10 @@ Over the last 4 weeks: Have you had to alter your activities because of your bow
 				>
 				["at0110"] = <
 					text = <"Total score">
+					description = <"*">
+				>
+				["at0111"] = <
+					text = <"Extension">
 					description = <"*">
 				>
 			>

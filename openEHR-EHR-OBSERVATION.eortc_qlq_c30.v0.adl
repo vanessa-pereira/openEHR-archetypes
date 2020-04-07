@@ -55,7 +55,7 @@ Tradução em português referente a https://estudogeral.sib.uc.pt/bitstream/103
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"064d8ed24d9f472c1ea4c80d15a6fde9">
+		["MD5-CAM-1.0.1"] = <"1b4a4e569fd7acbc05f04b618029d61a">
 		["build_uid"] = <"d59c1748-8197-3d76-8e5a-82b35eac9baa">
 	>
 
@@ -341,6 +341,10 @@ definition
 								}
 							}
 						}
+					}
+					allow_archetype CLUSTER[at0165] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
 					}
 				}
 			}
@@ -1092,7 +1096,7 @@ How would you rate your overall quality of life during the past week?">
 				>
 				["at0162"] = <
 					text = <"Scoring method">
-					description = <"*">
+					description = <"Scoring method options.">
 				>
 				["at0163"] = <
 					text = <"Raw score">
@@ -1101,6 +1105,11 @@ How would you rate your overall quality of life during the past week?">
 				["at0164"] = <
 					text = <"Linear transformation">
 					description = <"Apply the linear transformation to 0-100 to obtain the score S,Functional scales, Symptom scales / items and Global health status / QoL. Range is the difference between the maximum possible value of RS and the minimum possible value.  Check archetype \"references\" information for full explanation.">
+				>
+				["at0165"] = <
+					text = <"Extension">
+					description = <"Additional information required to capture local content or to align with other reference models/formalisms. ">
+					comment = <"For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents. ">
 				>
 			>
 		>
@@ -1787,7 +1796,7 @@ How would you rate your overall quality of life during the past week? (en)">
 				>
 				["at0162"] = <
 					text = <"Método de pontuação">
-					description = <"*">
+					description = <"Opção para qual o método de pontuação que irá ser usado.">
 				>
 				["at0163"] = <
 					text = <"Resultado bruto">
@@ -1796,6 +1805,11 @@ How would you rate your overall quality of life during the past week? (en)">
 				["at0164"] = <
 					text = <"Transformação linear">
 					description = <"*">
+				>
+				["at0165"] = <
+					text = <"Extensão">
+					description = <"Informações adicionais necessárias para capturar conteúdo local ou alinhar-se com outros modelos de referência.">
+					comment = <"Por exemplo: requisitos de informações locais ou metadados adicionais para alinhar com os equivalentes FHIR ou CIMI.">
 				>
 			>
 		>
