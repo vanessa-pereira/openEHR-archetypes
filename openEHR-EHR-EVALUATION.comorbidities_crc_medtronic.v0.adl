@@ -1,0 +1,224 @@
+archetype (adl_version=1.4; uid=aeaae2ea-b955-4bce-b79a-19441c396860)
+	openEHR-EHR-EVALUATION.comorbidities_crc_medtronic.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2020-04-07">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Pathfinder - Better">
+		["email"] = <"vanessa.pereira@better.care">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"863160381715414f333aacccc9b2b18c">
+		["build_uid"] = <"11eb4e7e-db92-37c9-876e-0c13b7e18453">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Comorbidities colorectal cancer
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Heart disease
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {true, false; false}
+							}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- High blood pressure
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {true, false; false}
+							}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Leg pain walking due to poor blood circulation
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {true, false; false}
+							}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- Lung disease
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {true, false; false}
+							}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Diabetes
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {true, false; false}
+							}
+						}
+					}
+					ELEMENT[at0014] occurrences matches {0..1} matches {    -- Kidney disease
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {true, false; false}
+							}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Liver disease
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {true, false; false}
+							}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Problems caused by stroke
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {true, false; false}
+							}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..1} matches {    -- Nervous system disease
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {true, false; false}
+							}
+						}
+					}
+					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Other cancer (within last 5 years)
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {true, false; false}
+							}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- Depression
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {true, false; false}
+							}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {    -- Arthritis
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {true, false; false}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0002] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0015] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	terminologies_available = <"ICD10", ...>
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Comorbidities colorectal cancer">
+					description = <"Associated diseases for colorectal cancer under the Medtronic IHU Cohorts project.">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Heart disease">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"High blood pressure">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"Leg pain walking due to poor blood circulation">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Lung disease">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Diabetes">
+					description = <"*">
+				>
+				["at0008"] = <
+					text = <"Liver disease">
+					description = <"*">
+				>
+				["at0009"] = <
+					text = <"Problems caused by stroke">
+					description = <"*">
+				>
+				["at0010"] = <
+					text = <"Nervous system disease">
+					description = <"*">
+				>
+				["at0011"] = <
+					text = <"Other cancer (within last 5 years)">
+					description = <"*">
+				>
+				["at0012"] = <
+					text = <"Depression">
+					description = <"*">
+				>
+				["at0013"] = <
+					text = <"Arthritis">
+					description = <"*">
+				>
+				["at0014"] = <
+					text = <"Kidney disease">
+					description = <"*">
+				>
+				["at0015"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+			>
+		>
+	>
+	term_bindings = <
+		["ICD10"] = <
+			items = <
+				["at0003"] = <[ICD10(2020-ICD-10-CM)::I51.9]>
+				["at0004"] = <[ICD10(2020-ICD-10-CM)::I10]>
+				["at0005"] = <[ICD10(2020-ICD-10-CM)::I73.9]>
+				["at0006"] = <[ICD10(2020-ICD-10-CM)::J44.9]>
+				["at0008"] = <[ICD10(2020-ICD-10-CM)::K76.9]>
+				["at0014"] = <[ICD10(2020-ICD-10-CM)::N18.9]>
+				["at0009"] = <[ICD10(2020-ICD-10-CM)::G96.9]>
+				["at0011"] = <[ICD10(2020-ICD-10-CM)::C80.1]>
+				["at0012"] = <[ICD10(2020-ICD-10-CM)::F32.89]>
+				["at0013"] = <[ICD10(2020-ICD-10-CM)::M13.80]>
+			>
+		>
+	>
