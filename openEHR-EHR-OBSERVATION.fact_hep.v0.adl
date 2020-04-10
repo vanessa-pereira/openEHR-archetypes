@@ -1,0 +1,1803 @@
+archetype (adl_version=1.4; uid=3b8065e3-e376-411a-a0ea-deee0d3ab981)
+	openEHR-EHR-OBSERVATION.fact_hep.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2020-04-09">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Pathfinder - Better">
+		["email"] = <"vanessa.pereira@better.care">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"The FACT-Hep consists of 45 questions: 27 from Functional Assessment of Cancer Therapy-General (FACTG), assessing physical, emotional, functional, and social/family functioning, and 18 from the site-specific hepatobiliary subscale (HBS). Total scores are calculated for the HBS, FACT-G Trial Outcome Index (TOI; sum of physical, functional, and disease-specific [HBS in this case] subscales), and FACT-Hep (ie, HBS plus FACT-G).">
+			keywords = <"FACT-Hep, cancer, QOL, quality of life, Hepatobiliary, Therapy-Hepatobiliary, assessment, liver, bile duct, pancreas", ...>
+			use = <"To record the cancer specific measures of patients with hepatobiliary cancer. Original FACT-HEP assessment can be found at https://www.facit.org/LiteratureRetrieve.aspx?ID=42269
+It is based on the version 4.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Original assessment can be found at https://www.facit.org/LiteratureRetrieve.aspx?ID=42269
+Scoring and interpretations materials can be found at https://www.facit.org/LiteratureRetrieve.aspx?ID=50420
+Klein, Jonathan, et al. \"Prospective longitudinal assessment of quality of life for liver cancer patients treated with stereotactic body radiation therapy.\" International Journal of Radiation Oncology* Biology* Physics 93.1 (2015): 16-25.">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"4db8b51b1fe954ff4f27579788441aa9">
+		["build_uid"] = <"69c5190f-a878-3c8b-9e29-20022d8b7b31">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- FACT-Hep
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {0..*; unordered} matches {
+					POINT_EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Lack of energy
+										value matches {
+											0|[local::at0056],
+											1|[local::at0057],
+											2|[local::at0058],
+											3|[local::at0059],
+											4|[local::at0060]
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Nausea
+										value matches {
+											0|[local::at0061],
+											1|[local::at0062],
+											2|[local::at0063],
+											3|[local::at0064],
+											4|[local::at0065]
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Trouble on meeting family needs due to physical condition
+										value matches {
+											0|[local::at0066],
+											1|[local::at0067],
+											2|[local::at0068],
+											3|[local::at0069],
+											4|[local::at0070]
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- Pain
+										value matches {
+											0|[local::at0071],
+											1|[local::at0072],
+											2|[local::at0073],
+											3|[local::at0074],
+											4|[local::at0075]
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Bothered by side effects of treatment
+										value matches {
+											0|[local::at0076],
+											1|[local::at0077],
+											2|[local::at0078],
+											3|[local::at0079],
+											4|[local::at0080]
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- Feel ill
+										value matches {
+											0|[local::at0081],
+											1|[local::at0082],
+											2|[local::at0083],
+											3|[local::at0084],
+											4|[local::at0085]
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {    -- Forced to spend time in bed
+										value matches {
+											0|[local::at0086],
+											1|[local::at0087],
+											2|[local::at0088],
+											3|[local::at0089],
+											4|[local::at0090]
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..1} matches {    -- Feel close to friends
+										value matches {
+											0|[local::at0091],
+											1|[local::at0092],
+											2|[local::at0093],
+											3|[local::at0094],
+											4|[local::at0095]
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {    -- Get emotional support from family
+										value matches {
+											0|[local::at0096],
+											1|[local::at0097],
+											2|[local::at0098],
+											3|[local::at0099],
+											4|[local::at0100]
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Get support from friends
+										value matches {
+											0|[local::at0101],
+											1|[local::at0102],
+											2|[local::at0103],
+											3|[local::at0104],
+											4|[local::at0105]
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {    -- Family accepted illness
+										value matches {
+											0|[local::at0106],
+											1|[local::at0107],
+											2|[local::at0108],
+											3|[local::at0109],
+											4|[local::at0110]
+										}
+									}
+									ELEMENT[at0015] occurrences matches {0..1} matches {    -- Satisfied with family communication about illness
+										value matches {
+											0|[local::at0111],
+											1|[local::at0112],
+											2|[local::at0113],
+											3|[local::at0114],
+											4|[local::at0115]
+										}
+									}
+									ELEMENT[at0016] occurrences matches {0..1} matches {    -- Feel close to partner
+										value matches {
+											0|[local::at0116],
+											1|[local::at0117],
+											2|[local::at0118],
+											3|[local::at0119],
+											4|[local::at0120]
+										}
+									}
+									ELEMENT[at0017] occurrences matches {0..1} matches {    -- Satisfied with sex life
+										value matches {
+											0|[local::at0121],
+											1|[local::at0122],
+											2|[local::at0123],
+											3|[local::at0124],
+											4|[local::at0125]
+										}
+									}
+									ELEMENT[at0018] occurrences matches {0..1} matches {    -- Feel sad
+										value matches {
+											0|[local::at0126],
+											1|[local::at0127],
+											2|[local::at0128],
+											3|[local::at0129],
+											4|[local::at0130]
+										}
+									}
+									ELEMENT[at0019] occurrences matches {0..1} matches {    -- Satisfied with copying with illness
+										value matches {
+											0|[local::at0131],
+											1|[local::at0132],
+											2|[local::at0133],
+											3|[local::at0134],
+											4|[local::at0135]
+										}
+									}
+									ELEMENT[at0020] occurrences matches {0..1} matches {    -- Losing hope to fight against illness
+										value matches {
+											0|[local::at0136],
+											1|[local::at0137],
+											2|[local::at0138],
+											3|[local::at0139],
+											4|[local::at0140]
+										}
+									}
+									ELEMENT[at0021] occurrences matches {0..1} matches {    -- Feel nervous
+										value matches {
+											0|[local::at0141],
+											1|[local::at0142],
+											2|[local::at0143],
+											3|[local::at0144],
+											4|[local::at0145]
+										}
+									}
+									ELEMENT[at0022] occurrences matches {0..1} matches {    -- Worry about dying
+										value matches {
+											0|[local::at0146],
+											1|[local::at0147],
+											2|[local::at0148],
+											3|[local::at0149],
+											4|[local::at0150]
+										}
+									}
+									ELEMENT[at0023] occurrences matches {0..1} matches {    -- Worry that condition will get worse
+										value matches {
+											0|[local::at0151],
+											1|[local::at0152],
+											2|[local::at0153],
+											3|[local::at0154],
+											4|[local::at0155]
+										}
+									}
+									ELEMENT[at0024] occurrences matches {0..1} matches {    -- Able to work (including work at home)
+										value matches {
+											0|[local::at0156],
+											1|[local::at0157],
+											2|[local::at0158],
+											3|[local::at0159],
+											4|[local::at0160]
+										}
+									}
+									ELEMENT[at0025] occurrences matches {0..1} matches {    -- Work is fulfilling
+										value matches {
+											0|[local::at0161],
+											1|[local::at0162],
+											2|[local::at0163],
+											3|[local::at0164],
+											4|[local::at0165]
+										}
+									}
+									ELEMENT[at0026] occurrences matches {0..1} matches {    -- Able to enjoy life
+										value matches {
+											0|[local::at0166],
+											1|[local::at0167],
+											2|[local::at0168],
+											3|[local::at0169],
+											4|[local::at0170]
+										}
+									}
+									ELEMENT[at0027] occurrences matches {0..1} matches {    -- Accepted illness
+										value matches {
+											0|[local::at0171],
+											1|[local::at0172],
+											2|[local::at0173],
+											3|[local::at0174],
+											4|[local::at0175]
+										}
+									}
+									ELEMENT[at0028] occurrences matches {0..1} matches {    -- Sleeping well
+										value matches {
+											0|[local::at0176],
+											1|[local::at0177],
+											2|[local::at0178],
+											3|[local::at0179],
+											4|[local::at0180]
+										}
+									}
+									ELEMENT[at0029] occurrences matches {0..1} matches {    -- Enjoying things usually done for fun
+										value matches {
+											0|[local::at0181],
+											1|[local::at0182],
+											2|[local::at0183],
+											3|[local::at0184],
+											4|[local::at0185]
+										}
+									}
+									ELEMENT[at0030] occurrences matches {0..1} matches {    -- Content with quality of life right now
+										value matches {
+											0|[local::at0186],
+											1|[local::at0187],
+											2|[local::at0188],
+											3|[local::at0189],
+											4|[local::at0190]
+										}
+									}
+									ELEMENT[at0031] occurrences matches {0..1} matches {    -- Swelling or cramps in stomach area
+										value matches {
+											0|[local::at0191],
+											1|[local::at0192],
+											2|[local::at0193],
+											3|[local::at0194],
+											4|[local::at0195]
+										}
+									}
+									ELEMENT[at0032] occurrences matches {0..1} matches {    -- Losing weight
+										value matches {
+											0|[local::at0196],
+											1|[local::at0197],
+											2|[local::at0198],
+											3|[local::at0199],
+											4|[local::at0200]
+										}
+									}
+									ELEMENT[at0033] occurrences matches {0..1} matches {    -- Have control of bowels
+										value matches {
+											0|[local::at0201],
+											1|[local::at0202],
+											2|[local::at0203],
+											3|[local::at0204],
+											4|[local::at0205]
+										}
+									}
+									ELEMENT[at0034] occurrences matches {0..1} matches {    -- Can digest food well
+										value matches {
+											0|[local::at0206],
+											1|[local::at0207],
+											2|[local::at0208],
+											3|[local::at0209],
+											4|[local::at0210]
+										}
+									}
+									ELEMENT[at0035] occurrences matches {0..1} matches {    -- Diarrhea
+										value matches {
+											0|[local::at0211],
+											1|[local::at0212],
+											2|[local::at0213],
+											3|[local::at0214],
+											4|[local::at0215]
+										}
+									}
+									ELEMENT[at0036] occurrences matches {0..1} matches {    -- Have good appetite
+										value matches {
+											0|[local::at0216],
+											1|[local::at0217],
+											2|[local::at0218],
+											3|[local::at0219],
+											4|[local::at0220]
+										}
+									}
+									ELEMENT[at0037] occurrences matches {0..1} matches {    -- Unhappy about appearance change
+										value matches {
+											0|[local::at0221],
+											1|[local::at0222],
+											2|[local::at0223],
+											3|[local::at0224],
+											4|[local::at0225]
+										}
+									}
+									ELEMENT[at0038] occurrences matches {0..1} matches {    -- Back pain
+										value matches {
+											0|[local::at0226],
+											1|[local::at0227],
+											2|[local::at0228],
+											3|[local::at0229],
+											4|[local::at0230]
+										}
+									}
+									ELEMENT[at0039] occurrences matches {0..1} matches {    -- Bothered by constipation
+										value matches {
+											0|[local::at0231],
+											1|[local::at0232],
+											2|[local::at0233],
+											3|[local::at0234],
+											4|[local::at0235]
+										}
+									}
+									ELEMENT[at0040] occurrences matches {0..1} matches {    -- Feel fatigued
+										value matches {
+											0|[local::at0236],
+											1|[local::at0237],
+											2|[local::at0238],
+											3|[local::at0239],
+											4|[local::at0240]
+										}
+									}
+									ELEMENT[at0041] occurrences matches {0..1} matches {    -- Able to do usual activities
+										value matches {
+											0|[local::at0241],
+											1|[local::at0242],
+											2|[local::at0243],
+											3|[local::at0244],
+											4|[local::at0245]
+										}
+									}
+									ELEMENT[at0042] occurrences matches {0..1} matches {    -- Jaundice
+										value matches {
+											0|[local::at0246],
+											1|[local::at0247],
+											2|[local::at0248],
+											3|[local::at0249],
+											4|[local::at0250]
+										}
+									}
+									ELEMENT[at0043] occurrences matches {0..1} matches {    -- Have had fever
+										value matches {
+											0|[local::at0251],
+											1|[local::at0252],
+											2|[local::at0253],
+											3|[local::at0254],
+											4|[local::at0255]
+										}
+									}
+									ELEMENT[at0044] occurrences matches {0..1} matches {    -- Have had itching
+										value matches {
+											0|[local::at0256],
+											1|[local::at0257],
+											2|[local::at0258],
+											3|[local::at0259],
+											4|[local::at0260]
+										}
+									}
+									ELEMENT[at0045] occurrences matches {0..1} matches {    -- Changes on food taste
+										value matches {
+											0|[local::at0261],
+											1|[local::at0262],
+											2|[local::at0263],
+											3|[local::at0264],
+											4|[local::at0265]
+										}
+									}
+									ELEMENT[at0046] occurrences matches {0..1} matches {    -- Have had chills
+										value matches {
+											0|[local::at0266],
+											1|[local::at0267],
+											2|[local::at0268],
+											3|[local::at0269],
+											4|[local::at0270]
+										}
+									}
+									ELEMENT[at0047] occurrences matches {0..1} matches {    -- Dry mouth
+										value matches {
+											0|[local::at0271],
+											1|[local::at0272],
+											2|[local::at0273],
+											3|[local::at0274],
+											4|[local::at0275]
+										}
+									}
+									ELEMENT[at0048] occurrences matches {0..1} matches {    -- Discomfort or pain in stomach area
+										value matches {
+											0|[local::at0276],
+											1|[local::at0277],
+											2|[local::at0278],
+											3|[local::at0279],
+											4|[local::at0280]
+										}
+									}
+									ELEMENT[at0055] occurrences matches {0..1} matches {    -- Total score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..180|}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0049] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0050] occurrences matches {0..1} matches {    -- Scoring method
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0052,    -- FACT-Hep Trial Outcome Index (TOI)
+									at0053,    -- FACT-G total score
+									at0054]    -- FACT-Hep total score
+								}
+							}
+						}
+					}
+					allow_archetype CLUSTER[at0051] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"FACT-Hep">
+					description = <"Functional Assessment of Cancer Therapy-Hepatobiliary. 45-Item measure of physical, role, emotional, and social/family functioning, as well additional concern and global quality of life in patients with hepatobiliary cancer (liver, bile duct and pancreas)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Lack of energy">
+					description = <"Original question: In the past 7 days - I have a lack of energy">
+					comment = <"Section: Physical well-being.">
+					Question_number = <"1">
+					Item_code = <"GP1">
+					Scale = <"PWB">
+				>
+				["at0005"] = <
+					text = <"Nausea">
+					description = <"Original question: In the past 7 days - I have nausea">
+					comment = <"Section: Physical well-being.">
+					Question_number = <"2">
+					Item_code = <"GP2">
+					Scale = <"PWB">
+				>
+				["at0006"] = <
+					text = <"Trouble on meeting family needs due to physical condition">
+					description = <"Original question: In the past 7 days - Because of my physical condition, I have trouble meeting the needs of my family">
+					comment = <"Section: Physical well-being.">
+					Question_number = <"3">
+					Item_code = <"GP3">
+					Scale = <"PWB">
+				>
+				["at0007"] = <
+					text = <"Pain">
+					description = <"Original question: In the past 7 days - I have pain">
+					comment = <"Section: Physical well-being.">
+					Question_number = <"4">
+					Item_code = <"GP4">
+					Scale = <"PWB">
+				>
+				["at0008"] = <
+					text = <"Bothered by side effects of treatment">
+					description = <"Original question: In the past 7 days - I am bothered by side effects of treatment">
+					comment = <"Section: Physical well-being.">
+					Question_number = <"5">
+					Item_code = <"GP5">
+					Scale = <"PWB">
+				>
+				["at0009"] = <
+					text = <"Feel ill">
+					description = <"Original question: In the past 7 days - I feel ill">
+					comment = <"Section: Physical well-being.">
+					Question_number = <"6">
+					Item_code = <"GP6">
+					Scale = <"PWB">
+				>
+				["at0010"] = <
+					text = <"Forced to spend time in bed">
+					description = <"Original question: In the past 7 days - I am forced to spend time in bed">
+					comment = <"Section: Physical well-being.">
+					Question_number = <"7">
+					Item_code = <"GP7">
+					Scale = <"PWB">
+				>
+				["at0011"] = <
+					text = <"Feel close to friends">
+					description = <"Original question: In the past 7 days - I feel close to my friends">
+					comment = <"Section: Social/Family well-being.">
+					Question_number = <"8">
+					Item_code = <"GS1">
+					Scale = <"SWB">
+				>
+				["at0012"] = <
+					text = <"Get emotional support from family">
+					description = <"Original question: In the past 7 days - I get emotional support from my family">
+					comment = <"Section: Social/Family well-being.">
+					Question_number = <"9">
+					Item_code = <"GS2">
+					Scale = <"SWB">
+				>
+				["at0013"] = <
+					text = <"Get support from friends">
+					description = <"Original question: In the past 7 days - I get support from my friends">
+					comment = <"Section: Social/Family well-being.">
+					Question_number = <"10">
+					Item_code = <"GS3">
+					Scale = <"SWB">
+				>
+				["at0014"] = <
+					text = <"Family accepted illness">
+					description = <"Original question: In the past 7 days - My family has accepted my illness">
+					comment = <"Section: Social/Family well-being.">
+					Question_number = <"11">
+					Item_code = <"GS4">
+					Scale = <"SWB">
+				>
+				["at0015"] = <
+					text = <"Satisfied with family communication about illness">
+					description = <"Original question: In the past 7 days - I am satisfied with family communication about my illness">
+					comment = <"Section: Social/Family well-being.">
+					Question_number = <"12">
+					Item_code = <"GS5">
+					Scale = <"SWB">
+				>
+				["at0016"] = <
+					text = <"Feel close to partner">
+					description = <"Original question: In the past 7 days - I feel close to my partner (or the person who is my main support)">
+					comment = <"Section: Social/Family well-being.">
+					Question_number = <"13">
+					Item_code = <"GS6">
+					Scale = <"SWB">
+				>
+				["at0017"] = <
+					text = <"Satisfied with sex life">
+					description = <"Original question: In the past 7 days - I am satisfied with my sex life">
+					comment = <"Section: Social/Family well-being.">
+					Question_number = <"14">
+					Item_code = <"GS7">
+					Scale = <"SWB">
+				>
+				["at0018"] = <
+					text = <"Feel sad">
+					description = <"Original question: In the past 7 days - I feel sad">
+					comment = <"Section: Emotional well-being.">
+					Question_number = <"15">
+					Item_code = <"GE1">
+					Scale = <"EWB">
+				>
+				["at0019"] = <
+					text = <"Satisfied with copying with illness">
+					description = <"Original question: In the past 7 days - I am satisfied with how I am coping with my illness">
+					comment = <"Section: Emotional well-being.">
+					Question_number = <"16">
+					Item_code = <"GE2">
+					Scale = <"EWB">
+				>
+				["at0020"] = <
+					text = <"Losing hope to fight against illness">
+					description = <"Original question: In the past 7 days - I am losing hope in the fight against my illness">
+					comment = <"Section: Emotional well-being.">
+					Question_number = <"17">
+					Item_code = <"GE3">
+					Scale = <"EWB">
+				>
+				["at0021"] = <
+					text = <"Feel nervous">
+					description = <"Original question: In the past 7 days - I feel nervous">
+					comment = <"Section: Emotional well-being.">
+					Question_number = <"18">
+					Item_code = <"GE4">
+					Scale = <"EWB">
+				>
+				["at0022"] = <
+					text = <"Worry about dying">
+					description = <"Original question: In the past 7 days - I worry about dying">
+					comment = <"Section: Emotional well-being.">
+					Question_number = <"19">
+					Item_code = <"GE5">
+					Scale = <"EWB">
+				>
+				["at0023"] = <
+					text = <"Worry that condition will get worse">
+					description = <"Original question: In the past 7 days - I worry that my condition will get worse">
+					comment = <"Section: Emotional well-being.">
+					Question_number = <"20">
+					Item_code = <"GE6">
+					Scale = <"EWB">
+				>
+				["at0024"] = <
+					text = <"Able to work (including work at home)">
+					description = <"Original question: In the past 7 days - I am able to work (include work at home)">
+					comment = <"Section: Functional well-being.">
+					Question_number = <"21">
+					Item_code = <"GF1">
+					Scale = <"FWB">
+				>
+				["at0025"] = <
+					text = <"Work is fulfilling">
+					description = <"Original question: In the past 7 days - My work (include work at home) is fulfilling">
+					comment = <"Section: Functional well-being.">
+					Question_number = <"22">
+					Item_code = <"GF2">
+					Scale = <"FWB">
+				>
+				["at0026"] = <
+					text = <"Able to enjoy life">
+					description = <"Original question: In the past 7 days - I am able to enjoy life">
+					comment = <"Section: Functional well-being.">
+					Question_number = <"23">
+					Item_code = <"GF3">
+					Scale = <"FWB">
+				>
+				["at0027"] = <
+					text = <"Accepted illness">
+					description = <"Original question: In the past 7 days - I have accepted my illness">
+					comment = <"Section: Functional well-being.">
+					Question_number = <"24">
+					Item_code = <"GF4">
+					Scale = <"FWB">
+				>
+				["at0028"] = <
+					text = <"Sleeping well">
+					description = <"Original question: In the past 7 days - I am sleeping well">
+					comment = <"Section: Functional well-being.">
+					Question_number = <"25">
+					Item_code = <"GF5">
+					Scale = <"FWB">
+				>
+				["at0029"] = <
+					text = <"Enjoying things usually done for fun">
+					description = <"Original question: In the past 7 days - I am enjoying the things I usually do for fun">
+					comment = <"Section: Functional well-being.">
+					Question_number = <"26">
+					Item_code = <"GF6">
+					Scale = <"FWB">
+				>
+				["at0030"] = <
+					text = <"Content with quality of life right now">
+					description = <"Original question: In the past 7 days - I am content with the quality of my life right now">
+					comment = <"Section: Functional well-being.">
+					Question_number = <"27">
+					Item_code = <"GF7">
+					Scale = <"FWB">
+				>
+				["at0031"] = <
+					text = <"Swelling or cramps in stomach area">
+					description = <"Original question: In the past 7 days - I have swelling or cramps in my stomach area">
+					comment = <"Section: Additional concerns.">
+					Question_number = <"28">
+					Item_code = <"C1">
+					Scale = <"HCS">
+				>
+				["at0032"] = <
+					text = <"Losing weight">
+					description = <"Original question: In the past 7 days - I am losing weight">
+					comment = <"Section: Additional concerns.">
+					Question_number = <"29">
+					Item_code = <"C2">
+					Scale = <"HCS">
+				>
+				["at0033"] = <
+					text = <"Have control of bowels">
+					description = <"Original question: In the  past 7 days - I have control of my bowels">
+					comment = <"Section: Additional concerns.">
+					Question_number = <"30">
+					Item_code = <"C3">
+					Scale = <"HCS">
+				>
+				["at0034"] = <
+					text = <"Can digest food well">
+					description = <"Original question: In the past 7 days - I can digest my food well">
+					comment = <"Section: Additional concerns.">
+					Question_number = <"31">
+					Item_code = <"C4">
+					Scale = <"HCS">
+				>
+				["at0035"] = <
+					text = <"Diarrhea">
+					description = <"Original question: In the past 7 days - I have diarrhea (diarrhoea)">
+					comment = <"Section: Additional concerns.">
+					Question_number = <"32">
+					Item_code = <"C5">
+					Scale = <"HCS">
+				>
+				["at0036"] = <
+					text = <"Have good appetite">
+					description = <"Original question: In the past 7 days - I have a good appetite">
+					comment = <"Section: Additional concerns.">
+					Question_number = <"33">
+					Item_code = <"C6">
+					Scale = <"HCS">
+				>
+				["at0037"] = <
+					text = <"Unhappy about appearance change">
+					description = <"Original question: In the past 7 days - I am unhappy about a change in my appearance">
+					comment = <"Section: Additional concerns.">
+					Question_number = <"34">
+					Item_code = <"Hep1">
+					Scale = <"HCS">
+				>
+				["at0038"] = <
+					text = <"Back pain">
+					description = <"Original question: In the past 7 days - I have pain in my back">
+					comment = <"Section: Additional concerns.">
+					Question_number = <"35">
+					Item_code = <"Cns7">
+					Scale = <"HCS">
+				>
+				["at0039"] = <
+					text = <"Bothered by constipation">
+					description = <"Original question: In the past 7 days - I am bothered by constipation">
+					comment = <"Section: Additional concerns.">
+					Question_number = <"36">
+					Item_code = <"Cx6">
+					Scale = <"HCS">
+				>
+				["at0040"] = <
+					text = <"Feel fatigued">
+					description = <"Original question: In the past 7 days - I feel fatigued">
+					comment = <"Section: Additional concerns.">
+					Question_number = <"37">
+					Item_code = <"Hl7">
+					Scale = <"HCS">
+				>
+				["at0041"] = <
+					text = <"Able to do usual activities">
+					description = <"Original question: In the past 7 days - I am able to do my usual activities">
+					comment = <"Section: Additional concerns.">
+					Question_number = <"38">
+					Item_code = <"An7">
+					Scale = <"HCS">
+				>
+				["at0042"] = <
+					text = <"Jaundice">
+					description = <"Original question: In the past 7 days - I am bothered by jaundice or yellow color to my skin">
+					comment = <"Section: Additional concerns.">
+					Question_number = <"39">
+					Item_code = <"Hep2">
+					Scale = <"HCS">
+				>
+				["at0043"] = <
+					text = <"Have had fever">
+					description = <"Original question: In the past 7 days - I have had fevers (episodes of high body temperature)">
+					comment = <"Section: Additional concerns.">
+					Question_number = <"40">
+					Item_code = <"Hep3">
+					Scale = <"HCS">
+				>
+				["at0044"] = <
+					text = <"Have had itching">
+					description = <"Original question: In the past 7 days - I have had itching">
+					comment = <"Section: Additional concerns.">
+					Question_number = <"41">
+					Item_code = <"Hep4">
+					Scale = <"HCS">
+				>
+				["at0045"] = <
+					text = <"Changes on food taste">
+					description = <"Original question: In the past 7 days - I have had a change in the way food tastes">
+					comment = <"Section: Additional concerns.">
+					Question_number = <"42">
+					Item_code = <"Hep5">
+					Scale = <"HCS">
+				>
+				["at0046"] = <
+					text = <"Have had chills">
+					description = <"Original question: In the past 7 days - I have had chills">
+					comment = <"Section: Additional concerns.">
+					Question_number = <"43">
+					Item_code = <"Hep6">
+					Scale = <"HCS">
+				>
+				["at0047"] = <
+					text = <"Dry mouth">
+					description = <"Original question: In the past 7 days - My mouth is dry">
+					comment = <"Section: Additional concerns.">
+					Question_number = <"44">
+					Item_code = <"HN2">
+					Scale = <"HCS">
+				>
+				["at0048"] = <
+					text = <"Discomfort or pain in stomach area">
+					description = <"Original question: In the past 7 days - I have discomfort or pain in my stomach area">
+					comment = <"Section: Additional concerns.">
+					Question_number = <"45">
+					Item_code = <"Hep8">
+					Scale = <"HCS">
+				>
+				["at0049"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0050"] = <
+					text = <"Scoring method">
+					description = <"*">
+				>
+				["at0051"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0052"] = <
+					text = <"FACT-Hep Trial Outcome Index (TOI)">
+					description = <"FACT-Hep TOI = (PWB score + FWB score + HCS score) | Score range: 0-128.">
+				>
+				["at0053"] = <
+					text = <"FACT-G total score">
+					description = <"FACT-G score = (PWB score + SWB score + EWB score + FWB score) | Score range: 0-108.">
+				>
+				["at0054"] = <
+					text = <"FACT-Hep total score">
+					description = <"FACT-Hep total score =  (PWB score + SWB score + EWB score + FWB score + HCS score) | Score range: 0-180.">
+				>
+				["at0055"] = <
+					text = <"Total score">
+					description = <"Total score from from the different subscales. The higher the score, the better the QOL.">
+					comment = <"To comply with the scoring method - there's 3 different method scores.">
+				>
+				["at0056"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0057"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0058"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0059"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0060"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0061"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0062"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0063"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0064"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0065"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0066"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0067"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0068"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0069"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0070"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0071"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0072"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0073"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0074"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0075"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0076"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0077"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0078"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0079"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0080"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0081"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0082"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0083"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0084"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0085"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0086"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0087"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0088"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0089"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0090"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0091"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0092"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0093"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0094"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0095"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0096"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0097"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0098"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0099"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0100"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0101"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0102"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0103"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0104"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0105"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0106"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0107"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0108"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0109"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0110"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0111"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0112"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0113"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0114"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0115"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0116"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0117"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0118"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0119"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0120"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0121"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0122"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0123"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0124"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0125"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0126"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0127"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0128"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0129"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0130"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0131"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0132"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0133"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0134"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0135"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0136"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0137"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0138"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0139"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0140"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0141"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0142"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0143"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0144"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0145"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0146"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0147"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0148"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0149"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0150"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0151"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0152"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0153"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0154"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0155"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0156"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0157"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0158"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0159"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0160"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0161"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0162"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0163"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0164"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0165"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0166"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0167"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0168"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0169"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0170"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0171"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0172"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0173"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0174"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0175"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0176"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0177"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0178"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0179"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0180"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0181"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0182"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0183"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0184"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0185"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0186"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0187"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0188"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0189"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0190"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0191"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0192"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0193"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0194"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0195"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0196"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0197"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0198"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0199"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0200"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0201"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0202"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0203"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0204"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0205"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0206"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0207"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0208"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0209"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0210"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0211"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0212"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0213"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0214"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0215"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0216"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0217"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0218"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0219"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0220"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0221"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0222"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0223"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0224"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0225"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0226"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0227"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0228"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0229"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0230"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0231"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0232"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0233"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0234"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0235"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0236"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0237"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0238"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0239"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0240"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0241"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0242"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0243"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0244"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0245"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0246"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0247"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0248"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0249"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0250"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0251"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0252"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0253"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0254"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0255"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0256"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0257"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0258"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0259"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0260"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0261"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0262"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0263"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0264"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0265"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0266"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0267"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0268"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0269"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0270"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0271"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0272"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0273"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0274"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0275"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+				["at0276"] = <
+					text = <"Not at all">
+					description = <"Not at all">
+				>
+				["at0277"] = <
+					text = <"A little bit">
+					description = <"A little bit">
+				>
+				["at0278"] = <
+					text = <"Somewhat">
+					description = <"Somewhat">
+				>
+				["at0279"] = <
+					text = <"Quite a bit">
+					description = <"Quite a bit">
+				>
+				["at0280"] = <
+					text = <"Very much">
+					description = <"Very much">
+				>
+			>
+		>
+	>
