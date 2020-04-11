@@ -29,6 +29,10 @@ description
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			purpose = <"Evaluating quality of life in patients with colorectal cancer. ">
+			keywords = <"screening, quality of life, cancer, depression, mood, assessment, mental health, QOL, QLQ, EORTC, QLQ-CR29, CR29", ...>
+			use = <"The colorectal cancer module is meant for use among colorectal cancer patients varying in disease stage and treatment modality (i.e. radiotherapy or chemo-radiation, ultra-low anterior resection, minimal access surgery and new chemotherapy regimens). 
+It should always be complemented by the QLQ-C30.">
 		>
 	>
 	other_details = <
@@ -40,7 +44,7 @@ Whistance RN, et al. Clinical and psychometric validation of the EORTC QLQ-CR29 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"b02eb9fef81bc5fbb194a9fac24febd3">
+		["MD5-CAM-1.0.1"] = <"e244c7244759a78186a79219ea082194">
 		["build_uid"] = <"f9885327-e201-3b22-9a3f-f61546f16660">
 	>
 
@@ -360,7 +364,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"EORTC QLQ-CR29">
-					description = <"EORTC_QLQ_CR29">
+					description = <"33 item assessment for evaluating quality of life in patients with colorectal cancer varying in disease stage and treatment modality (i.e. radiotherapy or chemo-radiation, ultra-low anterior resection, minimal access surgery and new chemotherapy regimens).">
 				>
 				["at0001"] = <
 					text = <"History">
