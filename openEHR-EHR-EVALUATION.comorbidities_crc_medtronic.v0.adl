@@ -6,6 +6,15 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+				["name"] = <"Bassem Khouzam">
+				["email"] = <"bassem.khouzam@medtronic.com">
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -19,6 +28,10 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -26,7 +39,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"863160381715414f333aacccc9b2b18c">
+		["MD5-CAM-1.0.1"] = <"4cdeaeb567670fe9ab13ed2db760a91a">
 		["build_uid"] = <"11eb4e7e-db92-37c9-876e-0c13b7e18453">
 	>
 
@@ -153,51 +166,119 @@ ontology
 				>
 				["at0003"] = <
 					text = <"Heart disease">
-					description = <"*">
+					description = <"Heart disease (For example, angina, heart attack, or heart failure)">
 				>
 				["at0004"] = <
 					text = <"High blood pressure">
-					description = <"*">
+					description = <"High blood pressure">
 				>
 				["at0005"] = <
 					text = <"Leg pain walking due to poor blood circulation">
-					description = <"*">
+					description = <"Leg pain when walking due to poor circulation">
 				>
 				["at0006"] = <
 					text = <"Lung disease">
-					description = <"*">
+					description = <"Lung disease (For example, asthma, chronic bronchitis, or emphysema)">
 				>
 				["at0007"] = <
 					text = <"Diabetes">
-					description = <"*">
+					description = <"Diabetes">
 				>
 				["at0008"] = <
 					text = <"Liver disease">
-					description = <"*">
+					description = <"Liver disease">
 				>
 				["at0009"] = <
 					text = <"Problems caused by stroke">
-					description = <"*">
+					description = <"Problems caused by stroke">
 				>
 				["at0010"] = <
 					text = <"Nervous system disease">
-					description = <"*">
+					description = <"Disease of the nervous system (For example, Parkinson’s disease or multiple sclerosis)">
 				>
 				["at0011"] = <
 					text = <"Other cancer (within last 5 years)">
-					description = <"*">
+					description = <"Other cancer (within the last 5 years)">
 				>
 				["at0012"] = <
 					text = <"Depression">
-					description = <"*">
+					description = <"Depression">
 				>
 				["at0013"] = <
 					text = <"Arthritis">
-					description = <"*">
+					description = <"Arthritis">
 				>
 				["at0014"] = <
 					text = <"Kidney disease">
+					description = <"Kidney disease">
+				>
+				["at0015"] = <
+					text = <"Extension">
 					description = <"*">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Comorbidités cancer colorectal">
+					description = <"Maladies associées pour le cancer colorectal dans le cadre du projet Medtronic IHU Cohorts.">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Maladie cardiaque">
+					description = <"Maladie cardiaque (angine de poitrine, infarctus, insuffisance cardiaque…)">
+				>
+				["at0004"] = <
+					text = <"Hypertension artérielle">
+					description = <"Hypertension artérielle">
+				>
+				["at0005"] = <
+					text = <"Jambes douloureuses à la marche car mauvaise circulation sanguine">
+					description = <"Jambes douloureuses à la marche du fait d'une mauvaise circulation sanguine">
+				>
+				["at0006"] = <
+					text = <"Maladie respiratoire">
+					description = <"Maladie respiratoire (asthme, BPCO, emphysème…)">
+				>
+				["at0007"] = <
+					text = <"Diabète">
+					description = <"Diabète">
+				>
+				["at0008"] = <
+					text = <"Maladie du foie">
+					description = <"Maladie du foie">
+				>
+				["at0009"] = <
+					text = <"Séquelles suite à un AVC">
+					description = <"Séquelles suite à un AVC">
+				>
+				["at0010"] = <
+					text = <"Maladie du système nerveux">
+					description = <"Maladie du système nerveux (maladie de Parkinson, sclérose en plaques…)">
+				>
+				["at0011"] = <
+					text = <"Autre cancer">
+					description = <"Autre cancer (au cours des 5 dernières années)">
+				>
+				["at0012"] = <
+					text = <"Dépression">
+					description = <"Dépression">
+				>
+				["at0013"] = <
+					text = <"Arthrose">
+					description = <"Arthrose">
+				>
+				["at0014"] = <
+					text = <"Insuffisance rénale">
+					description = <"Insuffisance rénale">
 				>
 				["at0015"] = <
 					text = <"Extension">

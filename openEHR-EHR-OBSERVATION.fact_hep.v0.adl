@@ -6,6 +6,16 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+				["name"] = <"Bassem Khouzam">
+				["organisation"] = <"Medtronic">
+				["email"] = <"bassem.khouzam@medtronic.com">
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -23,6 +33,10 @@ description
 			use = <"To record the cancer specific measures of patients with hepatobiliary cancer. Original FACT-HEP assessment can be found at https://www.facit.org/LiteratureRetrieve.aspx?ID=42269
 It is based on the version 4.">
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -33,7 +47,7 @@ Klein, Jonathan, et al. \"Prospective longitudinal assessment of quality of life
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4db8b51b1fe954ff4f27579788441aa9">
+		["MD5-CAM-1.0.1"] = <"e09ab00abde8a08e15f8a83081ee0908">
 		["build_uid"] = <"69c5190f-a878-3c8b-9e29-20022d8b7b31">
 	>
 
@@ -1797,6 +1811,1231 @@ ontology
 				["at0280"] = <
 					text = <"Very much">
 					description = <"Very much">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"FACT-Hep">
+					description = <"Évaluation fonctionnelle de la thérapie anticancéreuse - hépatobiliaire. Mesure de 45 items de la fonction physique, du rôle, du fonctionnement émotionnel et social/familial, ainsi que des préoccupations supplémentaires et de la qualité de vie globale des patients atteints d'un cancer hépatobiliaire (foie, canal biliaire et pancréas)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event (en)">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Dans les 7 derniers jours, manque d'énergie">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: je manque d'énergie">
+					comment = <"Section : Bien-être physique.">
+				>
+				["at0005"] = <
+					text = <"Dans les 7 derniers jours, nausées">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: J’ai des nausées">
+					comment = <"Section : Bien-être physique.">
+				>
+				["at0006"] = <
+					text = <"Dans les 7 derniers jours, difficulté à répondre aux besoins de sa famille">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: À cause de mon état physique, j’ai du mal à répondre aux besoins de ma famille">
+					comment = <"Section : Bien-être physique.">
+				>
+				["at0007"] = <
+					text = <"Dans les 7 derniers jours, douleurs">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: J’ai des douleurs">
+					comment = <"Section : Bien-être physique.">
+				>
+				["at0008"] = <
+					text = <"Dans les 7 derniers jours, incommodé par les effets secondaires du traitement">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je suis incommodé(e) par les effets secondaires du traitement">
+					comment = <"Section : Bien-être physique.">
+				>
+				["at0009"] = <
+					text = <"Dans les 7 derniers jours, sentiment d'être malade">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je me sens malade">
+					comment = <"Section : Bien-être physique.">
+				>
+				["at0010"] = <
+					text = <"Dans les 7 derniers jours, obligation d'être allongé">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je suis obligé(e) de passer du temps allongé(e) ">
+					comment = <"Section : Bien-être physique.">
+				>
+				["at0011"] = <
+					text = <"Dans les 7 derniers jours, sentiment d'être proche de ses amis">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je me sens proche de mes amis">
+					comment = <"Section : Bien-être social/familial.">
+				>
+				["at0012"] = <
+					text = <"Dans les 7 derniers jours, soutien moral de la famille">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Ma famille me soutient moralement">
+					comment = <"Section : Bien-être social/familial.">
+				>
+				["at0013"] = <
+					text = <"Dans les 7 derniers jours, soutien des amis">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Mes amis me soutiennent">
+					comment = <"Section : Bien-être social/familial.">
+				>
+				["at0014"] = <
+					text = <"Dans les 7 derniers jours, acceptation de la maladie par sa famille">
+					description = <"Question d'origine:
+Tenant en compte les 7 derniers jours: Ma famille a accepté ma maladie">
+					comment = <"Section : Bien-être social/familial.">
+				>
+				["at0015"] = <
+					text = <"Dans les 7 derniers jours, communication satisfaisante sur sa maladie">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je suis satisfait(e) de la communication avec ma famille au sujet de ma maladie">
+					comment = <"Section : Bien-être social/familial.">
+				>
+				["at0016"] = <
+					text = <"Dans les 7 derniers jours, sentiment d'être proche de son partenaire">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je me sens proche de mon (ma) partenaire (ou de la personne qui est mon principal soutien)">
+					comment = <"Section : Bien-être social/familial.">
+				>
+				["at0017"] = <
+					text = <"Dans les 7 derniers jours, satisfaction de sa vie sexuelle">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je suis satisfait(e) de ma vie sexuelle">
+					comment = <"Section : Bien-être social/familial.">
+				>
+				["at0018"] = <
+					text = <"Dans les 7 derniers jours, sentiment d'être triste">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je me sens triste">
+					comment = <"Section : Bien-être émotionnel.">
+				>
+				["at0019"] = <
+					text = <"Dans les 7 derniers jours, satisfaction de sa façon de faire face à sa maladie">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je suis satisfait(e) de la façon dont je fais face à ma
+maladie">
+					comment = <"Section : Bien-être émotionnel.">
+				>
+				["at0020"] = <
+					text = <"Dans les 7 derniers jours, perte d'espoir dans le combat contre sa maladie">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je perds espoir dans le combat contre ma maladie">
+					comment = <"Section : Bien-être émotionnel.">
+				>
+				["at0021"] = <
+					text = <"Dans les 7 derniers jours, sentiment de nervosité">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je me sens nerveux (nerveuse)">
+					comment = <"Section : Bien-être émotionnel.">
+				>
+				["at0022"] = <
+					text = <"Dans les 7 derniers jours, inquiétude de mourir">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je suis préoccupé(e) par l’idée de mourir">
+					comment = <"Section : Bien-être émotionnel.">
+				>
+				["at0023"] = <
+					text = <"Dans les 7 derniers jours, inquiétude que sa santé s'aggrave">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je suis préoccupé(e) à l’idée que mon état de santé
+puisse s’aggraver">
+					comment = <"Section : Bien-être émotionnel.">
+				>
+				["at0024"] = <
+					text = <"Dans les 7 derniers jours, capacité à travailler (y compris à domicile)">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je suis capable de travailler (y compris le travail
+à la maison)">
+					comment = <"Section : Bien-être fonctionnel.">
+				>
+				["at0025"] = <
+					text = <"Dans les 7 derniers jours, satisfaction du travail accompli">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Mon travail (y compris le travail à la maison) me
+donne de la satisfaction">
+					comment = <"Section : Bien-être fonctionnel.">
+				>
+				["at0026"] = <
+					text = <"Dans les 7 derniers jours, capacité à profiter de la vie">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je suis capable de profiter de la vie">
+					comment = <"Section : Bien-être fonctionnel.">
+				>
+				["at0027"] = <
+					text = <"Dans les 7 derniers jours, acceptation de sa maladie">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: J’ai accepté ma maladie">
+					comment = <"Section : Bien-être fonctionnel.">
+				>
+				["at0028"] = <
+					text = <"Dans les 7 derniers jours, bon sommeil">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je dors bien">
+					comment = <"Section : Bien-être fonctionnel.">
+				>
+				["at0029"] = <
+					text = <"Dans les 7 derniers jours, plaisir dans les loisirs habituels">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: J’apprécie mes loisirs habituels">
+					comment = <"Section : Bien-être fonctionnel.">
+				>
+				["at0030"] = <
+					text = <"Dans les 7 derniers jours, satisfaction de sa qualité de vie actuelle">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je suis satisfait(e) de ma qualité de vie actuelle">
+					comment = <"Section : Bien-être fonctionnel.">
+				>
+				["at0031"] = <
+					text = <"Dans les 7 derniers jours, gonflement ou crampes d'estomac">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je souffre de gonflements ou de crampes d'estomac">
+					comment = <"Section : Autres préoccupations.">
+				>
+				["at0032"] = <
+					text = <"Dans les 7 derniers jours, perte de poids">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je perds du poids">
+					comment = <"Section : Préoccupations supplémentaires.">
+				>
+				["at0033"] = <
+					text = <"Dans les 7 derniers jours, contôle des selles">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je peux contrôler mes selles">
+					comment = <"Section : Préoccupations supplémentaires.">
+				>
+				["at0034"] = <
+					text = <"Dans les 7 derniers jours, bonne digestion des aliments">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je parviens à bien digérer ce que je mange">
+					comment = <"Section : Préoccupations supplémentaires.">
+				>
+				["at0035"] = <
+					text = <"Dans les 7 derniers jours, diarrhée">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: J'ai de la diarrhée">
+					comment = <"Section : Préoccupations supplémentaires.">
+				>
+				["at0036"] = <
+					text = <"Dans les 7 derniers jours, bon appétit">
+					description = <"Question d'origine:
+Tenant en compte les 7 derniers jours: J'ai bon appétit">
+					comment = <"Section : Préoccupations supplémentaires.">
+				>
+				["at0037"] = <
+					text = <"Dans les 7 derniers jours, gêne dans le changement d'apparence">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je me sens gêné(e) par le changement dans mon
+apparence physique">
+					comment = <"Section : Préoccupations supplémentaires.">
+				>
+				["at0038"] = <
+					text = <"Dans les 7 derniers jours, douleur de dos">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: J'ai mal au dos">
+					comment = <"Section : Préoccupations supplémentaires.">
+				>
+				["at0039"] = <
+					text = <"Dans les 7 derniers jours,  gêne due à la constipation">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: La constipation me gêne">
+					comment = <"Section : Préoccupations supplémentaires.">
+				>
+				["at0040"] = <
+					text = <"Dans les 7 derniers jours, sensation de fatigue">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je me sens épuisé(e) ">
+					comment = <"Section : Préoccupations supplémentaires.">
+				>
+				["at0041"] = <
+					text = <"Dans les 7 derniers jours, capacitéde faire ses activités habituelles">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je suis capable de faire mes activités habituelles">
+					comment = <"Section : Préoccupations supplémentaires.">
+				>
+				["at0042"] = <
+					text = <"Dans les 7 derniers jours, gêne due à la jaunisse">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: La jaunisse ou la coloration jaune de ma peau
+me gêne">
+					comment = <"Section : Préoccupations supplémentaires.">
+				>
+				["at0043"] = <
+					text = <"Dans les 7 derniers jours, fièvre">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: J'ai eu des accès de fièvre">
+					comment = <"Section : Préoccupations supplémentaires.">
+				>
+				["at0044"] = <
+					text = <"Dans les 7 derniers jours, démangeaisons">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: J'ai eu des démangeaisons">
+					comment = <"Section : Préoccupations supplémentaires.">
+				>
+				["at0045"] = <
+					text = <"Dans les 7 derniers jours, changement du goût des aliments">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Mon sens du goût a changé">
+					comment = <"Section : Préoccupations supplémentaires.">
+				>
+				["at0046"] = <
+					text = <"Dans les 7 derniers jours, frissons">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: J’ai eu des frissons">
+					comment = <"Section : Préoccupations supplémentaires.">
+				>
+				["at0047"] = <
+					text = <"Dans les 7 derniers jours, bouche sèche">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: J’ai la bouche sèche">
+					comment = <"Section : Préoccupations supplémentaires.">
+				>
+				["at0048"] = <
+					text = <"Dans les 7 derniers jours, douleurs ou malaise au ventre">
+					description = <"Question d'origine:
+Dans les 7 derniers jours: Je ressens des malaises ou des douleurs au ventre">
+					comment = <"Section : Préoccupations supplémentaires.">
+				>
+				["at0049"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0050"] = <
+					text = <"Méthode de calcul du score">
+					description = <"*">
+				>
+				["at0051"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+				["at0052"] = <
+					text = <"Indice de résultat des essais FACT-Hep (TOI)">
+					description = <"FACT-Hep TOI = (score PWB + score FWB + score HCS) | Fourchette de scores : 0-128.">
+				>
+				["at0053"] = <
+					text = <"Score total FACT-G">
+					description = <"Score FACT-G = (score PWB + score SWB + score EWB + score FWB) | Fourchette de scores : 0-108.">
+				>
+				["at0054"] = <
+					text = <"Score total FACT-Hep">
+					description = <"Score total FACT-Hep = (score PWB + score SWB + score EWB + score FWB + score HCS) | Fourchette de scores : 0-180.">
+				>
+				["at0055"] = <
+					text = <"Score total">
+					description = <"Score total des différentes sous-échelles. Plus le score est élevé, meilleure est la qualité de vie.">
+					comment = <"Pour se conformer à la méthode de notation, il existe trois méthodes de notation différentes.">
+				>
+				["at0056"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0057"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0058"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0059"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0060"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0061"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0062"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0063"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0064"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0065"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0066"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0067"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0068"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0069"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0070"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0071"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0072"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0073"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0074"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0075"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0076"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0077"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0078"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0079"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0080"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0081"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0082"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0083"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0084"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0085"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0086"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0087"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0088"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0089"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0090"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0091"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0092"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0093"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0094"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0095"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0096"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0097"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0098"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0099"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0100"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0101"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0102"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0103"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0104"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0105"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0106"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0107"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0108"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0109"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0110"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0111"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0112"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0113"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0114"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0115"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0116"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0117"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0118"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0119"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0120"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0121"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0122"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0123"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0124"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0125"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0126"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0127"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0128"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0129"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0130"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0131"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0132"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0133"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0134"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0135"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0136"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0137"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0138"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0139"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0140"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0141"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0142"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0143"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0144"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0145"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0146"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0147"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0148"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0149"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0150"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0151"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0152"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0153"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0154"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0155"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0156"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0157"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0158"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0159"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0160"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0161"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0162"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0163"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0164"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0165"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0166"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0167"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0168"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0169"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0170"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0171"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0172"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0173"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0174"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0175"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0176"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0177"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0178"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0179"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0180"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0181"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0182"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0183"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0184"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0185"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0186"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0187"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0188"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0189"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0190"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0191"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0192"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0193"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0194"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0195"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0196"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0197"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0198"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0199"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0200"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0201"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0202"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0203"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0204"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0205"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0206"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0207"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0208"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0209"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0210"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0211"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0212"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0213"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0214"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0215"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0216"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0217"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0218"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0219"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0220"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0221"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0222"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0223"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0224"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0225"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0226"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0227"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0228"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0229"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0230"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0231"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0232"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0233"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0234"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0235"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0236"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0237"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0238"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0239"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0240"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0241"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0242"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0243"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0244"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0245"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0246"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0247"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0248"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0249"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0250"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0251"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0252"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0253"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0254"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0255"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0256"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0257"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0258"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0259"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0260"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0261"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0262"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0263"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0264"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0265"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0266"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0267"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0268"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0269"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0270"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0271"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0272"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0273"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0274"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0275"] = <
+					text = <"Énormément">
+					description = <"Énormément">
+				>
+				["at0276"] = <
+					text = <"Pas du tout">
+					description = <"Pas du tout">
+				>
+				["at0277"] = <
+					text = <"Un peu">
+					description = <"Un peu">
+				>
+				["at0278"] = <
+					text = <"Moyennement">
+					description = <"Moyennement">
+				>
+				["at0279"] = <
+					text = <"Beaucoup">
+					description = <"Beaucoup">
+				>
+				["at0280"] = <
+					text = <"Énormément">
+					description = <"Énormément">
 				>
 			>
 		>
