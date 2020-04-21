@@ -25,6 +25,7 @@ description
 		["email"] = <"vanessa.pereira@better.care">
 	>
 	lifecycle_state = <"unmanaged">
+	other_contributors = <"Elodie Léost, Medtronic, France", ...>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -47,7 +48,7 @@ Klein, Jonathan, et al. \"Prospective longitudinal assessment of quality of life
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e09ab00abde8a08e15f8a83081ee0908">
+		["MD5-CAM-1.0.1"] = <"43e7740add970cdbd82ee9a539d623ec">
 		["build_uid"] = <"69c5190f-a878-3c8b-9e29-20022d8b7b31">
 	>
 
@@ -60,7 +61,7 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Lack of energy
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- In the past 7 days had lack of energy
 										value matches {
 											0|[local::at0056],
 											1|[local::at0057],
@@ -69,7 +70,7 @@ definition
 											4|[local::at0060]
 										}
 									}
-									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Nausea
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- In the past 7 days had nausea
 										value matches {
 											0|[local::at0061],
 											1|[local::at0062],
@@ -78,7 +79,7 @@ definition
 											4|[local::at0065]
 										}
 									}
-									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Trouble on meeting family needs due to physical condition
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- In the past 7 days had trouble on meeting family needs due to physical condition
 										value matches {
 											0|[local::at0066],
 											1|[local::at0067],
@@ -87,7 +88,7 @@ definition
 											4|[local::at0070]
 										}
 									}
-									ELEMENT[at0007] occurrences matches {0..1} matches {    -- Pain
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- In the past 7 days had pain
 										value matches {
 											0|[local::at0071],
 											1|[local::at0072],
@@ -96,7 +97,7 @@ definition
 											4|[local::at0075]
 										}
 									}
-									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Bothered by side effects of treatment
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- In the past 7 days was bothered by side effects of treatment
 										value matches {
 											0|[local::at0076],
 											1|[local::at0077],
@@ -105,7 +106,7 @@ definition
 											4|[local::at0080]
 										}
 									}
-									ELEMENT[at0009] occurrences matches {0..1} matches {    -- Feel ill
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- In the past 7 days felt ill
 										value matches {
 											0|[local::at0081],
 											1|[local::at0082],
@@ -114,7 +115,7 @@ definition
 											4|[local::at0085]
 										}
 									}
-									ELEMENT[at0010] occurrences matches {0..1} matches {    -- Forced to spend time in bed
+									ELEMENT[at0010] occurrences matches {0..1} matches {    -- In the past 7 days was forced to spend time in bed
 										value matches {
 											0|[local::at0086],
 											1|[local::at0087],
@@ -123,7 +124,7 @@ definition
 											4|[local::at0090]
 										}
 									}
-									ELEMENT[at0011] occurrences matches {0..1} matches {    -- Feel close to friends
+									ELEMENT[at0011] occurrences matches {0..1} matches {    -- In the past 7 days felt close to friends
 										value matches {
 											0|[local::at0091],
 											1|[local::at0092],
@@ -132,7 +133,7 @@ definition
 											4|[local::at0095]
 										}
 									}
-									ELEMENT[at0012] occurrences matches {0..1} matches {    -- Get emotional support from family
+									ELEMENT[at0012] occurrences matches {0..1} matches {    -- In the past 7 days got emotional support from family
 										value matches {
 											0|[local::at0096],
 											1|[local::at0097],
@@ -141,7 +142,7 @@ definition
 											4|[local::at0100]
 										}
 									}
-									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Get support from friends
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- In the past 7 days got support from friends
 										value matches {
 											0|[local::at0101],
 											1|[local::at0102],
@@ -150,7 +151,7 @@ definition
 											4|[local::at0105]
 										}
 									}
-									ELEMENT[at0014] occurrences matches {0..1} matches {    -- Family accepted illness
+									ELEMENT[at0014] occurrences matches {0..1} matches {    -- In the past 7 days family has accepted illness
 										value matches {
 											0|[local::at0106],
 											1|[local::at0107],
@@ -159,7 +160,7 @@ definition
 											4|[local::at0110]
 										}
 									}
-									ELEMENT[at0015] occurrences matches {0..1} matches {    -- Satisfied with family communication about illness
+									ELEMENT[at0015] occurrences matches {0..1} matches {    -- In the past 7 days was satisfied with family communication about illness
 										value matches {
 											0|[local::at0111],
 											1|[local::at0112],
@@ -168,7 +169,7 @@ definition
 											4|[local::at0115]
 										}
 									}
-									ELEMENT[at0016] occurrences matches {0..1} matches {    -- Feel close to partner
+									ELEMENT[at0016] occurrences matches {0..1} matches {    -- In the past 7 days felt close to partner
 										value matches {
 											0|[local::at0116],
 											1|[local::at0117],
@@ -177,7 +178,7 @@ definition
 											4|[local::at0120]
 										}
 									}
-									ELEMENT[at0017] occurrences matches {0..1} matches {    -- Satisfied with sex life
+									ELEMENT[at0017] occurrences matches {0..1} matches {    -- In the past 7 days was satisfied with sex life
 										value matches {
 											0|[local::at0121],
 											1|[local::at0122],
@@ -186,7 +187,7 @@ definition
 											4|[local::at0125]
 										}
 									}
-									ELEMENT[at0018] occurrences matches {0..1} matches {    -- Feel sad
+									ELEMENT[at0018] occurrences matches {0..1} matches {    -- In the past 7 days felt sad
 										value matches {
 											0|[local::at0126],
 											1|[local::at0127],
@@ -195,7 +196,7 @@ definition
 											4|[local::at0130]
 										}
 									}
-									ELEMENT[at0019] occurrences matches {0..1} matches {    -- Satisfied with copying with illness
+									ELEMENT[at0019] occurrences matches {0..1} matches {    -- In the past 7 days was satisfied with copying with illness
 										value matches {
 											0|[local::at0131],
 											1|[local::at0132],
@@ -204,7 +205,7 @@ definition
 											4|[local::at0135]
 										}
 									}
-									ELEMENT[at0020] occurrences matches {0..1} matches {    -- Losing hope to fight against illness
+									ELEMENT[at0020] occurrences matches {0..1} matches {    -- In the past 7 days had losing hope to fight against illness
 										value matches {
 											0|[local::at0136],
 											1|[local::at0137],
@@ -213,7 +214,7 @@ definition
 											4|[local::at0140]
 										}
 									}
-									ELEMENT[at0021] occurrences matches {0..1} matches {    -- Feel nervous
+									ELEMENT[at0021] occurrences matches {0..1} matches {    -- In the past 7 days felt nervous
 										value matches {
 											0|[local::at0141],
 											1|[local::at0142],
@@ -222,7 +223,7 @@ definition
 											4|[local::at0145]
 										}
 									}
-									ELEMENT[at0022] occurrences matches {0..1} matches {    -- Worry about dying
+									ELEMENT[at0022] occurrences matches {0..1} matches {    -- In the past 7 days was worried about dying
 										value matches {
 											0|[local::at0146],
 											1|[local::at0147],
@@ -231,7 +232,7 @@ definition
 											4|[local::at0150]
 										}
 									}
-									ELEMENT[at0023] occurrences matches {0..1} matches {    -- Worry that condition will get worse
+									ELEMENT[at0023] occurrences matches {0..1} matches {    -- In the past 7 days was worried that condition will get worse
 										value matches {
 											0|[local::at0151],
 											1|[local::at0152],
@@ -240,7 +241,7 @@ definition
 											4|[local::at0155]
 										}
 									}
-									ELEMENT[at0024] occurrences matches {0..1} matches {    -- Able to work (including work at home)
+									ELEMENT[at0024] occurrences matches {0..1} matches {    -- In the past 7 days was able to work (including work at home)
 										value matches {
 											0|[local::at0156],
 											1|[local::at0157],
@@ -249,7 +250,7 @@ definition
 											4|[local::at0160]
 										}
 									}
-									ELEMENT[at0025] occurrences matches {0..1} matches {    -- Work is fulfilling
+									ELEMENT[at0025] occurrences matches {0..1} matches {    -- In the past 7 days felt that work was fulfilling
 										value matches {
 											0|[local::at0161],
 											1|[local::at0162],
@@ -258,7 +259,7 @@ definition
 											4|[local::at0165]
 										}
 									}
-									ELEMENT[at0026] occurrences matches {0..1} matches {    -- Able to enjoy life
+									ELEMENT[at0026] occurrences matches {0..1} matches {    -- In the past 7 days was able to enjoy life
 										value matches {
 											0|[local::at0166],
 											1|[local::at0167],
@@ -267,7 +268,7 @@ definition
 											4|[local::at0170]
 										}
 									}
-									ELEMENT[at0027] occurrences matches {0..1} matches {    -- Accepted illness
+									ELEMENT[at0027] occurrences matches {0..1} matches {    -- In the past 7 days had accepted illness
 										value matches {
 											0|[local::at0171],
 											1|[local::at0172],
@@ -276,7 +277,7 @@ definition
 											4|[local::at0175]
 										}
 									}
-									ELEMENT[at0028] occurrences matches {0..1} matches {    -- Sleeping well
+									ELEMENT[at0028] occurrences matches {0..1} matches {    -- In the past 7 days slept well
 										value matches {
 											0|[local::at0176],
 											1|[local::at0177],
@@ -285,7 +286,7 @@ definition
 											4|[local::at0180]
 										}
 									}
-									ELEMENT[at0029] occurrences matches {0..1} matches {    -- Enjoying things usually done for fun
+									ELEMENT[at0029] occurrences matches {0..1} matches {    -- In the past 7 days enjoyed things usually done for fun
 										value matches {
 											0|[local::at0181],
 											1|[local::at0182],
@@ -294,7 +295,7 @@ definition
 											4|[local::at0185]
 										}
 									}
-									ELEMENT[at0030] occurrences matches {0..1} matches {    -- Content with quality of life right now
+									ELEMENT[at0030] occurrences matches {0..1} matches {    -- In the past 7 days was content with quality of life right now
 										value matches {
 											0|[local::at0186],
 											1|[local::at0187],
@@ -303,7 +304,7 @@ definition
 											4|[local::at0190]
 										}
 									}
-									ELEMENT[at0031] occurrences matches {0..1} matches {    -- Swelling or cramps in stomach area
+									ELEMENT[at0031] occurrences matches {0..1} matches {    -- In the past 7 days had swelling or cramps in stomach area
 										value matches {
 											0|[local::at0191],
 											1|[local::at0192],
@@ -312,7 +313,7 @@ definition
 											4|[local::at0195]
 										}
 									}
-									ELEMENT[at0032] occurrences matches {0..1} matches {    -- Losing weight
+									ELEMENT[at0032] occurrences matches {0..1} matches {    -- In the past 7 days had losing weight
 										value matches {
 											0|[local::at0196],
 											1|[local::at0197],
@@ -321,7 +322,7 @@ definition
 											4|[local::at0200]
 										}
 									}
-									ELEMENT[at0033] occurrences matches {0..1} matches {    -- Have control of bowels
+									ELEMENT[at0033] occurrences matches {0..1} matches {    -- In the past 7 days had control of bowels
 										value matches {
 											0|[local::at0201],
 											1|[local::at0202],
@@ -330,7 +331,7 @@ definition
 											4|[local::at0205]
 										}
 									}
-									ELEMENT[at0034] occurrences matches {0..1} matches {    -- Can digest food well
+									ELEMENT[at0034] occurrences matches {0..1} matches {    -- In the past 7 days could digest food well
 										value matches {
 											0|[local::at0206],
 											1|[local::at0207],
@@ -339,7 +340,7 @@ definition
 											4|[local::at0210]
 										}
 									}
-									ELEMENT[at0035] occurrences matches {0..1} matches {    -- Diarrhea
+									ELEMENT[at0035] occurrences matches {0..1} matches {    -- In the past 7 days had diarrhea
 										value matches {
 											0|[local::at0211],
 											1|[local::at0212],
@@ -348,7 +349,7 @@ definition
 											4|[local::at0215]
 										}
 									}
-									ELEMENT[at0036] occurrences matches {0..1} matches {    -- Have good appetite
+									ELEMENT[at0036] occurrences matches {0..1} matches {    -- In the past 7 days had good appetite
 										value matches {
 											0|[local::at0216],
 											1|[local::at0217],
@@ -357,7 +358,7 @@ definition
 											4|[local::at0220]
 										}
 									}
-									ELEMENT[at0037] occurrences matches {0..1} matches {    -- Unhappy about appearance change
+									ELEMENT[at0037] occurrences matches {0..1} matches {    -- In the past 7 days was unhappy about appearance change
 										value matches {
 											0|[local::at0221],
 											1|[local::at0222],
@@ -366,7 +367,7 @@ definition
 											4|[local::at0225]
 										}
 									}
-									ELEMENT[at0038] occurrences matches {0..1} matches {    -- Back pain
+									ELEMENT[at0038] occurrences matches {0..1} matches {    -- In the past 7 days had back pain
 										value matches {
 											0|[local::at0226],
 											1|[local::at0227],
@@ -375,7 +376,7 @@ definition
 											4|[local::at0230]
 										}
 									}
-									ELEMENT[at0039] occurrences matches {0..1} matches {    -- Bothered by constipation
+									ELEMENT[at0039] occurrences matches {0..1} matches {    -- In the past 7 days was bothered by constipation
 										value matches {
 											0|[local::at0231],
 											1|[local::at0232],
@@ -384,7 +385,7 @@ definition
 											4|[local::at0235]
 										}
 									}
-									ELEMENT[at0040] occurrences matches {0..1} matches {    -- Feel fatigued
+									ELEMENT[at0040] occurrences matches {0..1} matches {    -- In the past 7 days felt fatigued
 										value matches {
 											0|[local::at0236],
 											1|[local::at0237],
@@ -393,7 +394,7 @@ definition
 											4|[local::at0240]
 										}
 									}
-									ELEMENT[at0041] occurrences matches {0..1} matches {    -- Able to do usual activities
+									ELEMENT[at0041] occurrences matches {0..1} matches {    -- In the past 7 days was able to do usual activities
 										value matches {
 											0|[local::at0241],
 											1|[local::at0242],
@@ -402,7 +403,7 @@ definition
 											4|[local::at0245]
 										}
 									}
-									ELEMENT[at0042] occurrences matches {0..1} matches {    -- Jaundice
+									ELEMENT[at0042] occurrences matches {0..1} matches {    -- In the past 7 days was bothered by jaundice
 										value matches {
 											0|[local::at0246],
 											1|[local::at0247],
@@ -411,7 +412,7 @@ definition
 											4|[local::at0250]
 										}
 									}
-									ELEMENT[at0043] occurrences matches {0..1} matches {    -- Have had fever
+									ELEMENT[at0043] occurrences matches {0..1} matches {    -- In the past 7 days had fever
 										value matches {
 											0|[local::at0251],
 											1|[local::at0252],
@@ -420,7 +421,7 @@ definition
 											4|[local::at0255]
 										}
 									}
-									ELEMENT[at0044] occurrences matches {0..1} matches {    -- Have had itching
+									ELEMENT[at0044] occurrences matches {0..1} matches {    -- In the past 7 days had itching
 										value matches {
 											0|[local::at0256],
 											1|[local::at0257],
@@ -429,7 +430,7 @@ definition
 											4|[local::at0260]
 										}
 									}
-									ELEMENT[at0045] occurrences matches {0..1} matches {    -- Changes on food taste
+									ELEMENT[at0045] occurrences matches {0..1} matches {    -- In the past 7 days had changes on food taste
 										value matches {
 											0|[local::at0261],
 											1|[local::at0262],
@@ -438,7 +439,7 @@ definition
 											4|[local::at0265]
 										}
 									}
-									ELEMENT[at0046] occurrences matches {0..1} matches {    -- Have had chills
+									ELEMENT[at0046] occurrences matches {0..1} matches {    -- In the past 7 days had chills
 										value matches {
 											0|[local::at0266],
 											1|[local::at0267],
@@ -447,7 +448,7 @@ definition
 											4|[local::at0270]
 										}
 									}
-									ELEMENT[at0047] occurrences matches {0..1} matches {    -- Dry mouth
+									ELEMENT[at0047] occurrences matches {0..1} matches {    -- In the past 7 days had dry mouth
 										value matches {
 											0|[local::at0271],
 											1|[local::at0272],
@@ -456,7 +457,7 @@ definition
 											4|[local::at0275]
 										}
 									}
-									ELEMENT[at0048] occurrences matches {0..1} matches {    -- Discomfort or pain in stomach area
+									ELEMENT[at0048] occurrences matches {0..1} matches {    -- In the past 7 days had discomfort or pain in stomach area
 										value matches {
 											0|[local::at0276],
 											1|[local::at0277],
@@ -524,7 +525,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"Lack of energy">
+					text = <"In the past 7 days had lack of energy">
 					description = <"Original question: In the past 7 days - I have a lack of energy">
 					comment = <"Section: Physical well-being.">
 					Question_number = <"1">
@@ -532,7 +533,7 @@ ontology
 					Scale = <"PWB">
 				>
 				["at0005"] = <
-					text = <"Nausea">
+					text = <"In the past 7 days had nausea">
 					description = <"Original question: In the past 7 days - I have nausea">
 					comment = <"Section: Physical well-being.">
 					Question_number = <"2">
@@ -540,7 +541,7 @@ ontology
 					Scale = <"PWB">
 				>
 				["at0006"] = <
-					text = <"Trouble on meeting family needs due to physical condition">
+					text = <"In the past 7 days had trouble on meeting family needs due to physical condition">
 					description = <"Original question: In the past 7 days - Because of my physical condition, I have trouble meeting the needs of my family">
 					comment = <"Section: Physical well-being.">
 					Question_number = <"3">
@@ -548,7 +549,7 @@ ontology
 					Scale = <"PWB">
 				>
 				["at0007"] = <
-					text = <"Pain">
+					text = <"In the past 7 days had pain">
 					description = <"Original question: In the past 7 days - I have pain">
 					comment = <"Section: Physical well-being.">
 					Question_number = <"4">
@@ -556,7 +557,7 @@ ontology
 					Scale = <"PWB">
 				>
 				["at0008"] = <
-					text = <"Bothered by side effects of treatment">
+					text = <"In the past 7 days was bothered by side effects of treatment">
 					description = <"Original question: In the past 7 days - I am bothered by side effects of treatment">
 					comment = <"Section: Physical well-being.">
 					Question_number = <"5">
@@ -564,7 +565,7 @@ ontology
 					Scale = <"PWB">
 				>
 				["at0009"] = <
-					text = <"Feel ill">
+					text = <"In the past 7 days felt ill">
 					description = <"Original question: In the past 7 days - I feel ill">
 					comment = <"Section: Physical well-being.">
 					Question_number = <"6">
@@ -572,7 +573,7 @@ ontology
 					Scale = <"PWB">
 				>
 				["at0010"] = <
-					text = <"Forced to spend time in bed">
+					text = <"In the past 7 days was forced to spend time in bed">
 					description = <"Original question: In the past 7 days - I am forced to spend time in bed">
 					comment = <"Section: Physical well-being.">
 					Question_number = <"7">
@@ -580,7 +581,7 @@ ontology
 					Scale = <"PWB">
 				>
 				["at0011"] = <
-					text = <"Feel close to friends">
+					text = <"In the past 7 days felt close to friends">
 					description = <"Original question: In the past 7 days - I feel close to my friends">
 					comment = <"Section: Social/Family well-being.">
 					Question_number = <"8">
@@ -588,7 +589,7 @@ ontology
 					Scale = <"SWB">
 				>
 				["at0012"] = <
-					text = <"Get emotional support from family">
+					text = <"In the past 7 days got emotional support from family">
 					description = <"Original question: In the past 7 days - I get emotional support from my family">
 					comment = <"Section: Social/Family well-being.">
 					Question_number = <"9">
@@ -596,7 +597,7 @@ ontology
 					Scale = <"SWB">
 				>
 				["at0013"] = <
-					text = <"Get support from friends">
+					text = <"In the past 7 days got support from friends">
 					description = <"Original question: In the past 7 days - I get support from my friends">
 					comment = <"Section: Social/Family well-being.">
 					Question_number = <"10">
@@ -604,7 +605,7 @@ ontology
 					Scale = <"SWB">
 				>
 				["at0014"] = <
-					text = <"Family accepted illness">
+					text = <"In the past 7 days family has accepted illness">
 					description = <"Original question: In the past 7 days - My family has accepted my illness">
 					comment = <"Section: Social/Family well-being.">
 					Question_number = <"11">
@@ -612,7 +613,7 @@ ontology
 					Scale = <"SWB">
 				>
 				["at0015"] = <
-					text = <"Satisfied with family communication about illness">
+					text = <"In the past 7 days was satisfied with family communication about illness">
 					description = <"Original question: In the past 7 days - I am satisfied with family communication about my illness">
 					comment = <"Section: Social/Family well-being.">
 					Question_number = <"12">
@@ -620,7 +621,7 @@ ontology
 					Scale = <"SWB">
 				>
 				["at0016"] = <
-					text = <"Feel close to partner">
+					text = <"In the past 7 days felt close to partner">
 					description = <"Original question: In the past 7 days - I feel close to my partner (or the person who is my main support)">
 					comment = <"Section: Social/Family well-being.">
 					Question_number = <"13">
@@ -628,7 +629,7 @@ ontology
 					Scale = <"SWB">
 				>
 				["at0017"] = <
-					text = <"Satisfied with sex life">
+					text = <"In the past 7 days was satisfied with sex life">
 					description = <"Original question: In the past 7 days - I am satisfied with my sex life">
 					comment = <"Section: Social/Family well-being.">
 					Question_number = <"14">
@@ -636,7 +637,7 @@ ontology
 					Scale = <"SWB">
 				>
 				["at0018"] = <
-					text = <"Feel sad">
+					text = <"In the past 7 days felt sad">
 					description = <"Original question: In the past 7 days - I feel sad">
 					comment = <"Section: Emotional well-being.">
 					Question_number = <"15">
@@ -644,7 +645,7 @@ ontology
 					Scale = <"EWB">
 				>
 				["at0019"] = <
-					text = <"Satisfied with copying with illness">
+					text = <"In the past 7 days was satisfied with copying with illness">
 					description = <"Original question: In the past 7 days - I am satisfied with how I am coping with my illness">
 					comment = <"Section: Emotional well-being.">
 					Question_number = <"16">
@@ -652,7 +653,7 @@ ontology
 					Scale = <"EWB">
 				>
 				["at0020"] = <
-					text = <"Losing hope to fight against illness">
+					text = <"In the past 7 days had losing hope to fight against illness">
 					description = <"Original question: In the past 7 days - I am losing hope in the fight against my illness">
 					comment = <"Section: Emotional well-being.">
 					Question_number = <"17">
@@ -660,7 +661,7 @@ ontology
 					Scale = <"EWB">
 				>
 				["at0021"] = <
-					text = <"Feel nervous">
+					text = <"In the past 7 days felt nervous">
 					description = <"Original question: In the past 7 days - I feel nervous">
 					comment = <"Section: Emotional well-being.">
 					Question_number = <"18">
@@ -668,7 +669,7 @@ ontology
 					Scale = <"EWB">
 				>
 				["at0022"] = <
-					text = <"Worry about dying">
+					text = <"In the past 7 days was worried about dying">
 					description = <"Original question: In the past 7 days - I worry about dying">
 					comment = <"Section: Emotional well-being.">
 					Question_number = <"19">
@@ -676,7 +677,7 @@ ontology
 					Scale = <"EWB">
 				>
 				["at0023"] = <
-					text = <"Worry that condition will get worse">
+					text = <"In the past 7 days was worried that condition will get worse">
 					description = <"Original question: In the past 7 days - I worry that my condition will get worse">
 					comment = <"Section: Emotional well-being.">
 					Question_number = <"20">
@@ -684,7 +685,7 @@ ontology
 					Scale = <"EWB">
 				>
 				["at0024"] = <
-					text = <"Able to work (including work at home)">
+					text = <"In the past 7 days was able to work (including work at home)">
 					description = <"Original question: In the past 7 days - I am able to work (include work at home)">
 					comment = <"Section: Functional well-being.">
 					Question_number = <"21">
@@ -692,7 +693,7 @@ ontology
 					Scale = <"FWB">
 				>
 				["at0025"] = <
-					text = <"Work is fulfilling">
+					text = <"In the past 7 days felt that work was fulfilling">
 					description = <"Original question: In the past 7 days - My work (include work at home) is fulfilling">
 					comment = <"Section: Functional well-being.">
 					Question_number = <"22">
@@ -700,7 +701,7 @@ ontology
 					Scale = <"FWB">
 				>
 				["at0026"] = <
-					text = <"Able to enjoy life">
+					text = <"In the past 7 days was able to enjoy life">
 					description = <"Original question: In the past 7 days - I am able to enjoy life">
 					comment = <"Section: Functional well-being.">
 					Question_number = <"23">
@@ -708,7 +709,7 @@ ontology
 					Scale = <"FWB">
 				>
 				["at0027"] = <
-					text = <"Accepted illness">
+					text = <"In the past 7 days had accepted illness">
 					description = <"Original question: In the past 7 days - I have accepted my illness">
 					comment = <"Section: Functional well-being.">
 					Question_number = <"24">
@@ -716,7 +717,7 @@ ontology
 					Scale = <"FWB">
 				>
 				["at0028"] = <
-					text = <"Sleeping well">
+					text = <"In the past 7 days slept well">
 					description = <"Original question: In the past 7 days - I am sleeping well">
 					comment = <"Section: Functional well-being.">
 					Question_number = <"25">
@@ -724,7 +725,7 @@ ontology
 					Scale = <"FWB">
 				>
 				["at0029"] = <
-					text = <"Enjoying things usually done for fun">
+					text = <"In the past 7 days enjoyed things usually done for fun">
 					description = <"Original question: In the past 7 days - I am enjoying the things I usually do for fun">
 					comment = <"Section: Functional well-being.">
 					Question_number = <"26">
@@ -732,7 +733,7 @@ ontology
 					Scale = <"FWB">
 				>
 				["at0030"] = <
-					text = <"Content with quality of life right now">
+					text = <"In the past 7 days was content with quality of life right now">
 					description = <"Original question: In the past 7 days - I am content with the quality of my life right now">
 					comment = <"Section: Functional well-being.">
 					Question_number = <"27">
@@ -740,7 +741,7 @@ ontology
 					Scale = <"FWB">
 				>
 				["at0031"] = <
-					text = <"Swelling or cramps in stomach area">
+					text = <"In the past 7 days had swelling or cramps in stomach area">
 					description = <"Original question: In the past 7 days - I have swelling or cramps in my stomach area">
 					comment = <"Section: Additional concerns.">
 					Question_number = <"28">
@@ -748,7 +749,7 @@ ontology
 					Scale = <"HCS">
 				>
 				["at0032"] = <
-					text = <"Losing weight">
+					text = <"In the past 7 days had losing weight">
 					description = <"Original question: In the past 7 days - I am losing weight">
 					comment = <"Section: Additional concerns.">
 					Question_number = <"29">
@@ -756,7 +757,7 @@ ontology
 					Scale = <"HCS">
 				>
 				["at0033"] = <
-					text = <"Have control of bowels">
+					text = <"In the past 7 days had control of bowels">
 					description = <"Original question: In the  past 7 days - I have control of my bowels">
 					comment = <"Section: Additional concerns.">
 					Question_number = <"30">
@@ -764,7 +765,7 @@ ontology
 					Scale = <"HCS">
 				>
 				["at0034"] = <
-					text = <"Can digest food well">
+					text = <"In the past 7 days could digest food well">
 					description = <"Original question: In the past 7 days - I can digest my food well">
 					comment = <"Section: Additional concerns.">
 					Question_number = <"31">
@@ -772,7 +773,7 @@ ontology
 					Scale = <"HCS">
 				>
 				["at0035"] = <
-					text = <"Diarrhea">
+					text = <"In the past 7 days had diarrhea">
 					description = <"Original question: In the past 7 days - I have diarrhea (diarrhoea)">
 					comment = <"Section: Additional concerns.">
 					Question_number = <"32">
@@ -780,7 +781,7 @@ ontology
 					Scale = <"HCS">
 				>
 				["at0036"] = <
-					text = <"Have good appetite">
+					text = <"In the past 7 days had good appetite">
 					description = <"Original question: In the past 7 days - I have a good appetite">
 					comment = <"Section: Additional concerns.">
 					Question_number = <"33">
@@ -788,7 +789,7 @@ ontology
 					Scale = <"HCS">
 				>
 				["at0037"] = <
-					text = <"Unhappy about appearance change">
+					text = <"In the past 7 days was unhappy about appearance change">
 					description = <"Original question: In the past 7 days - I am unhappy about a change in my appearance">
 					comment = <"Section: Additional concerns.">
 					Question_number = <"34">
@@ -796,7 +797,7 @@ ontology
 					Scale = <"HCS">
 				>
 				["at0038"] = <
-					text = <"Back pain">
+					text = <"In the past 7 days had back pain">
 					description = <"Original question: In the past 7 days - I have pain in my back">
 					comment = <"Section: Additional concerns.">
 					Question_number = <"35">
@@ -804,7 +805,7 @@ ontology
 					Scale = <"HCS">
 				>
 				["at0039"] = <
-					text = <"Bothered by constipation">
+					text = <"In the past 7 days was bothered by constipation">
 					description = <"Original question: In the past 7 days - I am bothered by constipation">
 					comment = <"Section: Additional concerns.">
 					Question_number = <"36">
@@ -812,7 +813,7 @@ ontology
 					Scale = <"HCS">
 				>
 				["at0040"] = <
-					text = <"Feel fatigued">
+					text = <"In the past 7 days felt fatigued">
 					description = <"Original question: In the past 7 days - I feel fatigued">
 					comment = <"Section: Additional concerns.">
 					Question_number = <"37">
@@ -820,7 +821,7 @@ ontology
 					Scale = <"HCS">
 				>
 				["at0041"] = <
-					text = <"Able to do usual activities">
+					text = <"In the past 7 days was able to do usual activities">
 					description = <"Original question: In the past 7 days - I am able to do my usual activities">
 					comment = <"Section: Additional concerns.">
 					Question_number = <"38">
@@ -828,7 +829,7 @@ ontology
 					Scale = <"HCS">
 				>
 				["at0042"] = <
-					text = <"Jaundice">
+					text = <"In the past 7 days was bothered by jaundice">
 					description = <"Original question: In the past 7 days - I am bothered by jaundice or yellow color to my skin">
 					comment = <"Section: Additional concerns.">
 					Question_number = <"39">
@@ -836,7 +837,7 @@ ontology
 					Scale = <"HCS">
 				>
 				["at0043"] = <
-					text = <"Have had fever">
+					text = <"In the past 7 days had fever">
 					description = <"Original question: In the past 7 days - I have had fevers (episodes of high body temperature)">
 					comment = <"Section: Additional concerns.">
 					Question_number = <"40">
@@ -844,7 +845,7 @@ ontology
 					Scale = <"HCS">
 				>
 				["at0044"] = <
-					text = <"Have had itching">
+					text = <"In the past 7 days had itching">
 					description = <"Original question: In the past 7 days - I have had itching">
 					comment = <"Section: Additional concerns.">
 					Question_number = <"41">
@@ -852,7 +853,7 @@ ontology
 					Scale = <"HCS">
 				>
 				["at0045"] = <
-					text = <"Changes on food taste">
+					text = <"In the past 7 days had changes on food taste">
 					description = <"Original question: In the past 7 days - I have had a change in the way food tastes">
 					comment = <"Section: Additional concerns.">
 					Question_number = <"42">
@@ -860,7 +861,7 @@ ontology
 					Scale = <"HCS">
 				>
 				["at0046"] = <
-					text = <"Have had chills">
+					text = <"In the past 7 days had chills">
 					description = <"Original question: In the past 7 days - I have had chills">
 					comment = <"Section: Additional concerns.">
 					Question_number = <"43">
@@ -868,7 +869,7 @@ ontology
 					Scale = <"HCS">
 				>
 				["at0047"] = <
-					text = <"Dry mouth">
+					text = <"In the past 7 days had dry mouth">
 					description = <"Original question: In the past 7 days - My mouth is dry">
 					comment = <"Section: Additional concerns.">
 					Question_number = <"44">
@@ -876,7 +877,7 @@ ontology
 					Scale = <"HCS">
 				>
 				["at0048"] = <
-					text = <"Discomfort or pain in stomach area">
+					text = <"In the past 7 days had discomfort or pain in stomach area">
 					description = <"Original question: In the past 7 days - I have discomfort or pain in my stomach area">
 					comment = <"Section: Additional concerns.">
 					Question_number = <"45">
