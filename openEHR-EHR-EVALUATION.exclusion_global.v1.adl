@@ -42,8 +42,8 @@ language
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
 			author = <
-				["email"] = <"bassem.khouzam@medtronic.com">
 				["name"] = <"Bassem Khouzam">
+				["email"] = <"bassem.khouzam@medtronic.com">
 			>
 		>
 	>
@@ -167,7 +167,7 @@ Exclusion statement, Deprecated Archetype [Internet]. openEHR Foundation, openEH
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f201b8863f953219b8d360d0e39711aa">
+		["MD5-CAM-1.0.1"] = <"be7ddaeb47111911fda0d0db363d8279">
 		["build_uid"] = <"730396fd-141c-4ecc-924d-41d9d122e264">
 		["revision"] = <"1.1.3">
 	>
@@ -469,7 +469,7 @@ ontology
 		["fr"] = <
 			items = <
 				["at0000"] = <
-					text = <"Exclusion - global">
+					text = <"Exclusion - globale">
 					description = <"Une déclaration globale d'exclusion concernant tous les problèmes/diagnostics, les antécédents familiaux, les médicaments, les procédures, les effets indésirables ou autres éléments cliniques qui ne sont pas présents actuellement ou qui ne l'ont pas été dans le passé.">
 				>
 				["at0001"] = <
@@ -477,29 +477,29 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"Global exclusion statement">
+					text = <"Déclaration sur l'exclusion globale">
 					description = <"Une déclaration globale d'exclusion concernant tous les problèmes/diagnostics, les antécédents familiaux, les médicaments, les procédures, les effets indésirables ou autres éléments cliniques.">
 					comment = <"Par exemple : \"Aucun diagnostic antérieur\", \"Aucun antécédent familial connu\", \"Aucun antécédent connu d'effets indésirables\", \"N'a jamais pris de médicaments\" ou \"Aucune opération connue ou procédure importante\".">
 				>
 				["at0003"] = <
-					text = <"*Global exclusion of problems/diagnoses (en)">
-					description = <"*Overall statement of exclusion of all problems or diagnoses at the time of recording. (en)">
+					text = <"Exclusion globale des problèmes/diagnostics">
+					description = <"Une déclaration globale d'exclusion de tous les problèmes ou diagnostics au moment de l'enregistrement.">
 				>
 				["at0004"] = <
-					text = <"*Global exclusion of family history (en)">
-					description = <"*Overall statement of exclusion of all significant health-related problems in relatives or family members of the individual at the time of recording. (en)">
+					text = <"Exclusion globale de l'histoire familiale">
+					description = <"Déclaration globale d'exclusion de tous les problèmes de santé importants chez les parents ou les membres de la famille de la personne au moment de l'enregistrement.">
 				>
 				["at0005"] = <
-					text = <"*Global exclusion of medication use (en)">
-					description = <"*Overall statement of exclusion about the use of all medications at the time of recording. (en)">
+					text = <"Exclusion globale de la consommation de médicaments">
+					description = <"Déclaration globale d'exclusion concernant l'utilisation de tous les médicaments au moment de l'enregistrement.">
 				>
 				["at0006"] = <
-					text = <"*Global exclusion of procedures (en)">
-					description = <"*Overall statement of exclusion about all procedures at the time of recording. (en)">
+					text = <"Exclusion globale des procédures">
+					description = <"Déclaration globale d'exclusion concernant toutes les procédures au moment de l'enregistrement.">
 				>
 				["at0007"] = <
-					text = <"*Global exclusion of adverse reactions (en)">
-					description = <"*Overall statement of exclusion about all adverse reactions at the time of recording. (en)">
+					text = <"Exclusion globale des effets indésirables">
+					description = <"Déclaration globale d'exclusion concernant tous les effets indésirables au moment de l'enregistrement.">
 				>
 				["at0008"] = <
 					text = <"Tree">
@@ -511,7 +511,7 @@ ontology
 					comment = <"Par exemple : Exigences locales en matière d'information ou métadonnées supplémentaires pour s'aligner sur les équivalents FHIR ou CIMI.">
 				>
 				["at0011"] = <
-					text = <"Comment">
+					text = <"Commentaire">
 					description = <"Commentaire supplémentaire non couvert dans d'autres domaines.">
 				>
 			>

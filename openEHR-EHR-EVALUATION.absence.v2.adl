@@ -1,8 +1,9 @@
-﻿archetype (adl_version=1.4; uid=f5adea69-7b6c-4f99-968d-a8e33a7e2f63)
+archetype (adl_version=1.4; uid=f5adea69-7b6c-4f99-968d-a8e33a7e2f63)
 	openEHR-EHR-EVALUATION.absence.v2
 
 concept
-	[at0000]	-- Absence of information
+	[at0000]
+
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -21,18 +22,30 @@ language
 				["email"] = <"vladimir.pizzo@hsl.org.br">
 			>
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+				["name"] = <"Bassem Khouzam">
+				["organisation"] = <"Medtronic">
+				["email"] = <"bassem.khouzam@medtronic.com">
+			>
+		>
 	>
+
 description
 	original_author = <
+		["date"] = <"2013-03-12">
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Ocean Informatics">
 		["email"] = <"heather.leslie@oceaninformatics.com">
-		["date"] = <"2013-03-12">
 	>
+	lifecycle_state = <"published">
+	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital, Norway","Koray Atalag, University of Auckland, New Zealand","Gustavo Bacelar-Silva, Healthcare Designs, Brazil (openEHR Editor)","Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)","Lars Bitsch-Larsen, Haukeland University hospital, Norway","Einar Fosse, National Centre for Integrated Care and Telemedicine, Norway","Sebastian Garde, Ocean Informatics, Germany","Heather Grain, Llewelyn Grain Informatics, Australia","Sam Heard, Ocean Informatics, Australia","Lars Karlsen, DIPS ASA, Norway","Lars Morgan Karlsen, DIPS ASA, Norway","Shinji Kobayashi, Kyoto University, Japan","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)","Andrej Orel, Marand d.o.o., Slovenia","Nyree Taylor, Ocean Informatics, Australia","Richard Townley-O'Neill, Australian Digital Health Agency, Australia","John Tore Valand, Helse Bergen, Norway">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"Um die Aufzeichnung oder den Austausch einer expliziten Aussage eines Arztes zu ermöglichen, dass bestimmte Gesundheitsinformationen zum Zeitpunkt der Erfassung nicht für die Dokumentation in der Krankenakte oder einem Aktenauszug zur Verfügung stehen.">
+			keywords = <"Abwesenheit","Fehlen","Nichtvorhandensein","Information","Auskunft","unerwünscht","Nebenwirkung","Problem","Diagnose","Medikament","Verfahren","Schutzimpfung","Impfung">
 			use = <"Um die Aufzeichnung oder den Austausch einer Aussage eines Arztes zu ermöglichen, dass bestimmte Gesundheitsinformationen zum Zeitpunkt der Erfassung nicht für die Dokumentation in der Krankenakte oder einem Aktenauszug zur Verfügung stehen. 
 
 Dieser Datensatz ist die 3. Komponente einer Familie von Aussagen - Aussagen über das sichere Vorhandensein von Informationen, Aussagen über den expliziten Ausschluss von z.B. Krankheiten oder Medikamenteneinnahmen und Aussagen über die Abwesenheit bezüglich z.B. einer Erkrankung oder Medikamenteneinnahme:
@@ -47,7 +60,6 @@ Dieser Archetyp ist dazu vorgesehen, innerhalb von SLOTS in fortbestehenden COMP
 Die Aussagen über fehlende Informationen können nur zum Zeitpunkt der Dokumentation als aktuell und korrekt angesehen werden. 
 
 Die Archetypen dieser Familie ermöglichen es auf \"Flags\", beispielsweise zum Ausdrücken von Negationen, zu verzichten.">
-			keywords = <"Abwesenheit", "Fehlen", "Nichtvorhandensein", "Information", "Auskunft", "unerwünscht", "Nebenwirkung", "Problem", "Diagnose", "Medikament", "Verfahren", "Schutzimpfung", "Impfung">
 			misuse = <"Nicht zur Dokumentation von Nebenwirkungen, Medikamenteneinnahmen, Verfahren, Problemen oder Diagnosen entwickelt - für diesen Zweck bitte die dafür vorgesehenen Archetypen verwenden.
 
 Nicht zur Dokumentation von ausgeschlossenen Nebenwirkungen, Medikamenteneinnahmen, Verfahren, Problemen oder Diagnosen entwickelt - für diesen Zweck bitte die Spezialisierungen des Archetyps EVALUATION.exclusion verwenden.">
@@ -55,6 +67,7 @@ Nicht zur Dokumentation von ausgeschlossenen Nebenwirkungen, Medikamenteneinnahm
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
 			purpose = <"Para permitir o registro ou mudança de uma declaração explícita por um clínico que especificou que informações de saúde não estão disponíveis para inclusão no registro de saúde ou para registrar sua extração no momento do registro.">
+			keywords = <"ausência","informação","adversa","reação","problema","diagnóstico","medicação","procedimento","vacinação","reação adversa">
 			use = <"Utilizar para permitir o registro ou mudança de uma declaração explícita de um sistema de informação especificado que não está disponível para inclusão no prontuário médico ou fragmento no momento do registro.
 
 Esta declaração é o terceiro componente de uma família de declarações - declarações de presença positiva, declarações de exclusão positiva e declarações de ausência:
@@ -67,7 +80,6 @@ Este arquétipo foi desenvolvido especificamete para o caso de uso em que o clí
 Declarações de ausência somente podem ser consideradas correntes a acuradas no momento do registro.
 
 Este arquétipo foi projetado especificamente para evitar a necessidade de usar flags para expressar negação em qualquer entrada no relato de saúde.">
-			keywords = <"ausência", "informação", "adversa", "reação", "problema", "diagnóstico", "medicação", "procedimento", "vacinação", "reação adversa">
 			misuse = <"Não deve ser utilizado para registrar a presença ou ausência de reações adversas, uso de medicações, procedimentos, problemas ou diagnósticos - usar arquétipos específicos para estas finalidades.
 
 Não dever ser utilizado para registrar a exclusão de reações adversas, uso de medicações, procedimentos, problemas ou diagnósticos - utilizar especializações específicas do arquétipo EVALUATION.exclusion para esta finalidade.">
@@ -75,6 +87,8 @@ Não dever ser utilizado para registrar a exclusão de reações adversas, uso d
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To enable recording or exchange of an explicit statement by a clinician that specified health information is not available for inclusion in the health record or record extract at the time of recording.">
+			keywords = <"absence","information","adverse","reaction","problem","diagnosis","medication","procedure","vaccination","adverse reaction">
+			copyright = <"© openEHR Foundation">
 			use = <"Use to enable recording or exchange of an explicit statement that specified health information is not available for inclusion in the health record or record extract at the time of recording. 
 
 This statement is the third component of a family of statements - statements of positive presence, statements of positive exclusion and statements of absence:
@@ -87,15 +101,15 @@ This archetype has been developed specifically for the use case where a clinicia
 Absence statements can only be considered to be current and accurate at the time of recording.
 
 This archetype has been designed specifically to avoid the need to use of flags to express negation about any entry within the health record.">
-			keywords = <"absence", "information", "adverse", "reaction", "problem", "diagnosis", "medication", "procedure", "vaccination", "adverse reaction">
 			misuse = <"Not to be used to record the presence of adverse reactions, medication use, procedures, problems or diagnoses - use specific archetypes for this purpose.
 
 Not to be used to record the exclusion of adverse reactions, medication use, procedures, problems or diagnoses - use specific specialisations of the EVALUATION.exclusion archetype for this purpose.">
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"published">
-	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital, Norway", "Koray Atalag, University of Auckland, New Zealand", "Gustavo Bacelar-Silva, Healthcare Designs, Brazil (openEHR Editor)", "Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)", "Lars Bitsch-Larsen, Haukeland University hospital, Norway", "Einar Fosse, National Centre for Integrated Care and Telemedicine, Norway", "Sebastian Garde, Ocean Informatics, Germany", "Heather Grain, Llewelyn Grain Informatics, Australia", "Sam Heard, Ocean Informatics, Australia", "Lars Karlsen, DIPS ASA, Norway", "Lars Morgan Karlsen, DIPS ASA, Norway", "Shinji Kobayashi, Kyoto University, Japan", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Andrej Orel, Marand d.o.o., Slovenia", "Nyree Taylor, Ocean Informatics, Australia", "Richard Townley-O'Neill, Australian Digital Health Agency, Australia", "John Tore Valand, Helse Bergen, Norway">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -103,22 +117,22 @@ Not to be used to record the exclusion of adverse reactions, medication use, pro
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"FA64598AE8138478AC93FA9A83572288">
+		["MD5-CAM-1.0.1"] = <"5988f235260cb3cdda2bb3c4700e10ed">
 		["build_uid"] = <"7be917a3-b2b3-43f4-9f16-6115738d69c4">
 		["revision"] = <"2.0.0">
 	>
 
 definition
-	EVALUATION[at0000] matches {	-- Absence of information
+	EVALUATION[at0000] matches {    -- Absence of information
 		data matches {
-			ITEM_TREE[at0001] matches {	-- Tree
+			ITEM_TREE[at0001] matches {    -- Tree
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0002] matches {	-- Absence statement
+					ELEMENT[at0002] matches {    -- Absence statement
 						value matches {
 							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0005] occurrences matches {0..*} matches {	-- Reason for absence
+					ELEMENT[at0005] occurrences matches {0..*} matches {    -- Reason for absence
 						value matches {
 							DV_TEXT matches {*}
 						}
@@ -127,14 +141,14 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0003] matches {	-- Tree
+			ITEM_TREE[at0003] matches {    -- Tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0004] occurrences matches {0..1} matches {	-- Last updated
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Last updated
 						value matches {
 							DV_DATE_TIME matches {*}
 						}
 					}
-					allow_archetype CLUSTER[at0006] occurrences matches {0..*} matches {	-- Extension
+					allow_archetype CLUSTER[at0006] occurrences matches {0..*} matches {    -- Extension
 						include
 							archetype_id/value matches {/.*/}
 					}
@@ -142,8 +156,6 @@ definition
 			}
 		}
 	}
-
-
 
 ontology
 	term_definitions = <
@@ -249,6 +261,41 @@ ontology
 					text = <"Erweiterung">
 					description = <"Zusätzliche Informationen zur Erfassung lokaler Inhalte oder Anpassung an andere Referenzmodelle/Formalismen.">
 					comment = <"Kommentar: Zum Beispiel: Lokaler Informationsbedarf oder zusätzliche Metadaten zur Anpassung an FHIR-Ressourcen oder CIMI-Modelle.">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Absence d'information">
+					description = <"Déclaration selon laquelle les informations de santé spécifiées ne sont pas disponibles pour être incluses dans le dossier ou l'extrait de santé au moment de l'enregistrement.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Déclaration d'absence">
+					description = <"Déclaration positive selon laquelle aucune information n'est disponible.">
+					comment = <"Par exemple : \"Aucune information disponible sur les effets indésirables\" ; \"Aucune information disponible sur les problèmes ou les diagnostics\" ; \"Aucune information disponible sur les procédures précédentes effectuées\" ; ou \"Aucune information disponible sur les médicaments utilisés\".">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Dernière mise à jour">
+					description = <"La date à laquelle l'absence a été mise à jour pour la dernière fois.">
+				>
+				["at0005"] = <
+					text = <"Motif de l'absence">
+					description = <"Description de la raison pour laquelle aucune information n'est disponible.">
+					comment = <"Par exemple : le patient est inconscient ou refuse de fournir des informations. Il est souhaitable, si possible, de coder la raison avec une terminologie.">
+				>
+				["at0006"] = <
+					text = <"Extension">
+					description = <"Informations supplémentaires requises pour saisir le contenu local ou pour s'aligner sur d'autres modèles/formalismes de référence.">
+					comment = <"Par exemple : exigences locales en matière d'information ou métadonnées supplémentaires à aligner sur les équivalents FHIR ou CIMI.">
 				>
 			>
 		>

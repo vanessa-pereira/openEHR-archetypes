@@ -25,7 +25,7 @@ description
 		["email"] = <"vanessa.pereira@better.care">
 	>
 	lifecycle_state = <"unmanaged">
-	other_contributors = <"Danielle Santos Alves - Federal University of Pernambuco / Pathfinder - Better by Marand", ...>
+	other_contributors = <"Danielle Santos Alves - Federal University of Pernambuco / Pathfinder - Better by Marand","Elodie Léost, Medtronic, France">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>

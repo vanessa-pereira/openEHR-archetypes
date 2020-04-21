@@ -71,8 +71,8 @@ language
 			language = <[ISO_639-1::fr]>
 			author = <
 				["name"] = <"Bassem Khouzam">
-				["email"] = <"bassem.khouzam@medtronic.com">
 				["organisation"] = <"Medtronic">
+				["email"] = <"bassem.khouzam@medtronic.com">
 			>
 		>
 		["es"] = <
@@ -128,29 +128,6 @@ Nicht zur Darstellung von Berichten eines Diagnosedienstes, z.B. Bildgebung oder
 
 Nicht zur Darstellung von der gleichnamige FHIR-Ressource geeignet- dort liegt eine Diskrepanz vor.">
 		>
-		["sv"] = <
-			language = <[ISO_639-1::sv]>
-			purpose = <"Att registrera detaljer av en enskild interaktion, kontakt eller en vårdhändelse mellan vårdtagare och vårdgivare inom hälso-och sjukvården. Interaktionen kan både vara genom ett fysiskt möte eller på distans.">
-			keywords = <"vårdtillfälle","kontakt","besök","vårdhändelse">
-			use = <"Används för att registrera detaljer från en enskild interaktion, kontakt eller vårdhändelse mellan vårdtagare och vårdgivare. 
- 
-Kontakten kan ske genom ett fysiskt möte eller via telefon eller annat elektroniskt medium. Uppgifter om mötesform kan vid behov läggas till i egenskaperna i referensmodellen Composition/mode. 
-
-De huvudsakliga avsnitts- och innehållskomponenterna har avsiktligt lämnats utan begränsning. Det tillåter ifyllning med SECTION eller ENTRY-arketyper som är lämpliga för det kliniska syftet.
-
-Trots att det inte finns någon begränsning för kliniskt innehåll ger specifikationen för COMPOSITION.Encounter ett signifikant värde genom att tillåta detaljerade förfrågningar om alla händelser i en patientjournal.
-
-Fältet Extra information kan användas till att lägga till valfri kontextuell information, exempelvis episoduppgifter eller uppgifter som möjliggör samordning eller anpassning till andra modellformalismer som FHIR eller CIMI samt detaljerade beskrivningar av deltagare.
-
-Typiska exempel är ett klinikbesök, en observation av sjuksköterska eller en telemedicinsk konsultation.">
-			misuse = <"Ska inte användas för att registrera detaljer om en hel vårdepisod. 
-
-Ska inte användas för beständig patientinformation som exempelvis en problemlista eller medicinsk sammanfattning.
-
-Ska inte användas för att presentera en rapport från en diagnostisk tjänst, exempelvis en röntgenbild eller laboratorietest.
-
-Ska inte användas för att presentera FHIR-resursen med samma namn. Det finns en motsättning mellan räckvidd och avsikt.">
-		>
 		["fi"] = <
 			language = <[ISO_639-1::fi]>
 			purpose = <"*To record the document level details of a single interaction, contact or care event between a subject of care and healthcare provider(s) for the provision of healthcare service(s). This can be either a face-to-face or remote interaction.(en)">
@@ -175,6 +152,35 @@ Not to be used to represent the report of a diagnostic service, such as imaging 
 
 Not to be used to represent the FHIR resource of the same name - there is a mismatch scope and intent.(en)">
 		>
+		["sv"] = <
+			language = <[ISO_639-1::sv]>
+			purpose = <"Att registrera detaljer av en enskild interaktion, kontakt eller en vårdhändelse mellan vårdtagare och vårdgivare inom hälso-och sjukvården. Interaktionen kan både vara genom ett fysiskt möte eller på distans.">
+			keywords = <"vårdtillfälle","kontakt","besök","vårdhändelse">
+			use = <"Används för att registrera detaljer från en enskild interaktion, kontakt eller vårdhändelse mellan vårdtagare och vårdgivare. 
+ 
+Kontakten kan ske genom ett fysiskt möte eller via telefon eller annat elektroniskt medium. Uppgifter om mötesform kan vid behov läggas till i egenskaperna i referensmodellen Composition/mode. 
+
+De huvudsakliga avsnitts- och innehållskomponenterna har avsiktligt lämnats utan begränsning. Det tillåter ifyllning med SECTION eller ENTRY-arketyper som är lämpliga för det kliniska syftet.
+
+Trots att det inte finns någon begränsning för kliniskt innehåll ger specifikationen för COMPOSITION.Encounter ett signifikant värde genom att tillåta detaljerade förfrågningar om alla händelser i en patientjournal.
+
+Fältet Extra information kan användas till att lägga till valfri kontextuell information, exempelvis episoduppgifter eller uppgifter som möjliggör samordning eller anpassning till andra modellformalismer som FHIR eller CIMI samt detaljerade beskrivningar av deltagare.
+
+Typiska exempel är ett klinikbesök, en observation av sjuksköterska eller en telemedicinsk konsultation.">
+			misuse = <"Ska inte användas för att registrera detaljer om en hel vårdepisod. 
+
+Ska inte användas för beständig patientinformation som exempelvis en problemlista eller medicinsk sammanfattning.
+
+Ska inte användas för att presentera en rapport från en diagnostisk tjänst, exempelvis en röntgenbild eller laboratorietest.
+
+Ska inte användas för att presentera FHIR-resursen med samma namn. Det finns en motsättning mellan räckvidd och avsikt.">
+		>
+		["ko"] = <
+			language = <[ISO_639-1::ko]>
+			purpose = <"외래기록, 경과기록, 간호기록과 일반적인 노트 등과 같은 환자를 대면한 후 작성하는 기록">
+			keywords = <"*경과(ko)","*노트(ko)","*외래(ko)">
+			copyright = <"© openEHR Foundation">
+		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
 			purpose = <"Registrar los detalles documentales de una única interacción, contacto o evento de cuidado entre un sujeto de cuidados y uno o más proveedores de uno o más servicios de salud. Esta interacción puede ser presencial o remota.">
@@ -192,12 +198,6 @@ Son ejemplos típicos una visita a consultorio, una observación de enfermería 
 No debe ser utilizado para almacenar información sumaria persistente de un paciente, tale como una lista de problemas o un resumen de medicamentos.
 No debe ser utilizado para representar el informe de un servicio diagnóstico, tal como un estudio de imágenes o una pruena de laboratorio.
 No debe ser utilizado para representar el recurso FHIR del mismo nombre ya que existe una diapridad de alcance y propósito.">
-		>
-		["ko"] = <
-			language = <[ISO_639-1::ko]>
-			purpose = <"외래기록, 경과기록, 간호기록과 일반적인 노트 등과 같은 환자를 대면한 후 작성하는 기록">
-			keywords = <"*경과(ko)","*노트(ko)","*외래(ko)">
-			copyright = <"© openEHR Foundation">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -223,12 +223,6 @@ Não deve ser utilizado para representar o relato de um serviço diagnóstico co
 
 Não deve ser utilizado para representar recurso FHIR do mesmo nome - há uma incompatibilidade de objetivo e intenção.">
 		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			purpose = <"تسجيل المقابلة على هيئة ملاحظة تقدم الحالة">
-			keywords = <"التقدم","ملاحظة","المقابلة">
-			copyright = <"© openEHR Foundation">
-		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record the document level details of a single interaction, contact or care event between a subject of care and healthcare provider(s) for the provision of healthcare service(s). This can be either a face-to-face or remote interaction.">
@@ -253,6 +247,12 @@ Not to be used to carry persistent, summarised patient information, such as a pr
 Not to be used to represent the report of a diagnostic service, such as imaging or laboratory testing.
 
 Not to be used to represent the FHIR resource of the same name - there is a mismatch scope and intent.">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"تسجيل المقابلة على هيئة ملاحظة تقدم الحالة">
+			keywords = <"التقدم","ملاحظة","المقابلة">
+			copyright = <"© openEHR Foundation">
 		>
 		["it"] = <
 			language = <[ISO_639-1::it]>
@@ -280,18 +280,6 @@ Non deve essere utilizzato per rappresentare l'omonima risorsa FHIR - c'è un di
 			language = <[ISO_639-1::fr]>
 			copyright = <"© openEHR Foundation">
 		>
-		["es"] = <
-			language = <[ISO_639-1::es]>
-			purpose = <"Registrar, a nivel de documento, una única interacción, contacto o evento de cuidado, entre un sujeto de cuidado (paciente) y un proveedor de servicios de salud (profesional médico, de enfermería, etc.). Puede ser una interacción cara a cara o remota.">
-			keywords = <"encuentro","contacto","visita","evento de cuidado">
-			use = <"Se debe usar como una definición de documento genérico para registrar información de una única interacción o contacto con un proveedor de salud. Esta definición no especifica la estructura interna de secciones y entradas. Dicha especificación debería hacerse mediante especializaciones del arquetipo o mediante plantillas operativas (Operational Templates - OPT).">
-			misuse = <"No se debe utilizar para registrar información de un episodio de salud entero.
-
-No debe contener información persistente o resúmenes, como lista de problemas o medicación.
-
-No se debe usar para registrar resultados de laboratorio o imagenología.
-">
-		>
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
 			purpose = <"Om de documentniveau-details van een enkele interactie, contact of zorggebeurtenis tussen een onderwerp van zorg en een zorgverlener vast te leggen voor de voorziening van zorgverlening. Dit kan face-to-face-contact zijn of interactie op afstand.">
@@ -316,6 +304,18 @@ Niet te gebruiken om een rapport van een diagnostische dienst te representeren, 
 
 Niet te gebruiken om een FHIR-bron met eenzelfde naam te representeren - dan is er een conflict in de scope en doelstelling.">
 		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"Registrar, a nivel de documento, una única interacción, contacto o evento de cuidado, entre un sujeto de cuidado (paciente) y un proveedor de servicios de salud (profesional médico, de enfermería, etc.). Puede ser una interacción cara a cara o remota.">
+			keywords = <"encuentro","contacto","visita","evento de cuidado">
+			use = <"Se debe usar como una definición de documento genérico para registrar información de una única interacción o contacto con un proveedor de salud. Esta definición no especifica la estructura interna de secciones y entradas. Dicha especificación debería hacerse mediante especializaciones del arquetipo o mediante plantillas operativas (Operational Templates - OPT).">
+			misuse = <"No se debe utilizar para registrar información de un episodio de salud entero.
+
+No debe contener información persistente o resúmenes, como lista de problemas o medicación.
+
+No se debe usar para registrar resultados de laboratorio o imagenología.
+">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
@@ -324,7 +324,7 @@ Niet te gebruiken om een FHIR-bron met eenzelfde naam te representeren - dan is 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"463388a46c439ed9d5e3404437da3bf2">
+		["MD5-CAM-1.0.1"] = <"5eac461ca3ca60aced9f00c3868ea0d7">
 		["build_uid"] = <"a25deeff-00a9-456d-9e52-83e206b2d5d7">
 		["revision"] = <"1.0.5">
 	>
@@ -554,7 +554,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"*Extension (en)">
+					text = <"Extension">
 					description = <"Informations supplémentaires requises pour saisir le contexte local ou pour s'aligner sur d'autres modèles/formalismes de référence.">
 					comment = <"Par exemple: les informations sur les services hospitaliers locaux ou des métadonnées supplémentaires pour s'aligner sur les équivalents FHIR ou CIMI. ">
 				>

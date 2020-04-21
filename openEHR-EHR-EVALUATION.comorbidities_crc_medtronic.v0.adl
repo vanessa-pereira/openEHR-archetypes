@@ -24,6 +24,7 @@ description
 		["email"] = <"vanessa.pereira@better.care">
 	>
 	lifecycle_state = <"unmanaged">
+	other_contributors = <"Elodie Léost, Medtronic, France", ...>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>

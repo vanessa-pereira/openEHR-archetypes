@@ -33,9 +33,9 @@ language
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
 			author = <
-				["email"] = <"bassem.khouzam@medtronic.com">
 				["name"] = <"Bassem Khouzam">
 				["organisation"] = <"Medtronic">
+				["email"] = <"bassem.khouzam@medtronic.com">
 			>
 		>
 	>
@@ -222,7 +222,7 @@ Wood DM, Mould MG, Ong SB, Baker EH. \"Pack year\" smoking histories: what about
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"02920254ac5ea79b8b7b1cdac3efee2f">
+		["MD5-CAM-1.0.1"] = <"a5c011b533ec59c5b0e96aade4f72f7f">
 		["build_uid"] = <"9b03a6c4-476a-4cb8-852d-75b74a75618d">
 		["revision"] = <"1.1.1-alpha">
 	>
@@ -1531,246 +1531,246 @@ Definitionen av vad som menas med ett \"Slutdatum\" kan variera enormt och kan p
 		["fr"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Tobacco smoking summary (en)">
-					description = <"*Summary or persistent information about the tobacco smoking habits of an individual. (en)">
+					text = <"Résumé sur le tabagisme">
+					description = <"Informations sommaires ou persistantes sur les habitudes tabagiques d'un individu.">
 				>
 				["at0001"] = <
 					text = <"Tree">
 					description = <"@ internal @">
 				>
 				["at0003"] = <
-					text = <"*Current smoker (en)">
-					description = <"*Individual is a current smoker of tobacco. (en)">
+					text = <"Fumeur actuel">
+					description = <"L'individu est un fumeur actuel de tabac.">
 				>
 				["at0005"] = <
-					text = <"*Former smoker (en)">
-					description = <"*Individual has previously smoked tobacco but is not a current smoker. (en)">
+					text = <"Ancien fumeur">
+					description = <"L'individu a déjà fumé du tabac mais n'est pas un fumeur actuel.">
 				>
 				["at0006"] = <
-					text = <"*Never smoked (en)">
-					description = <"*Individual has never smoked any type of tobacco. (en)">
+					text = <"Jamais fumé">
+					description = <"L'individu n'a jamais fumé de tabac, quel qu'en soit le type.">
 				>
 				["at0013"] = <
-					text = <"*Episode start date (en)">
-					description = <"*Date when this episode commenced. (en)">
-					comment = <"*Can be a partial date, for example, only a year. (en)">
+					text = <"Date de début de l'épisode">
+					description = <"Date à laquelle cet épisode a commencé.">
+					comment = <"Il peut s'agir d'une date partielle, par exemple, seulement une année.">
 				>
 				["at0014"] = <
-					text = <"*Quit date (en)">
-					description = <"*Date when the individual last smoked the specified type of tobacco. (en)">
-					comment = <"*Can be a partial date, for example, only a year. Definitions for a 'Quit date' vary enormously and can be defined using the 'Quit data definition' data element in the Protocol section of this archetype. This date will be identical to the 'Episode end date' for the most recent episode. This date could be used by decision support guidance to determine if the  individual is at risk of relapse, for example in the first 12 months since quitting. (en)">
+					text = <"Date de cessation">
+					description = <"Date à laquelle l'individu a fumé pour la dernière fois le type de tabac spécifié.">
+					comment = <"Peut être une date partielle, par exemple, seulement une année. Les définitions d'une \"date de cessation\" varient énormément et peuvent être définies en utilisant l'élément de données \"Définition des données de cessation\" dans la section Protocole de cet archétype. Cette date sera identique à la \"date de fin d'épisode\" pour l'épisode le plus récent. Cette date pourrait être utilisée par les guides d'aide à la décision pour déterminer si la personne risque de rechuter, par exemple au cours des 12 premiers mois depuis qu'elle a cessé de fumer.">
 				>
 				["at0015"] = <
-					text = <"*Regular smoking commenced (en)">
-					description = <"*The date or partial date when the individual first started frequent or regular, but usually non-daily, smoking of tobacco of any type. (en)">
-					comment = <"*Can be a partial date, for example, only a year. For example, this date could represent when the individual commenced smoking every Friday night or at parties.  (en)">
+					text = <"Début du tabagisme régulier">
+					description = <"La date ou une partie de la date à laquelle l'individu a commencé à fumer fréquemment ou régulièrement un type de tabac quelconque, généralement de façon non quotidienne.">
+					comment = <"Il peut s'agir d'une date partielle, par exemple, un an seulement. Par exemple, cette date pourrait représenter la date à laquelle la personne a commencé à fumer tous les vendredis soir ou lors de fêtes. ">
 				>
 				["at0016"] = <
-					text = <"*Overall quit date (en)">
-					description = <"*The date when the individual last ceased using tobacco of any type. (en)">
-					comment = <"*Can be a partial date, for example, only a year. This date could be used by decision support guidance to determine if the  individual is at risk of relapse, for example in the first 12 months since quitting. (en)">
+					text = <"Date de cessation globale">
+					description = <"La date à laquelle l'individu a cessé pour la dernière fois de fumer un type de tabac quelconque.">
+					comment = <"Il peut s'agir d'une date partielle, par exemple, seulement un an. Cette date pourrait être utilisée par les services d'aide à la décision pour déterminer si la personne risque de rechuter, par exemple au cours des 12 premiers mois depuis qu'elle a cessé de fumer.">
 				>
 				["at0017"] = <
-					text = <"*Pack years (en)">
-					description = <"*Estimate of the cumulative amount of tobacco smoked using the specified type of tobacco. (en)">
-					comment = <"*Commonly used in assessment of cigarette use. It is calculated by multiplying the number of packs of cigarettes smoked per day by the number of years the individual has smoked. One pack year equals 365 packs of cigarettes. Details about how to calculate pack years for other types of tobacco can be found at http://smokingpackyears.com. The definition of a pack can be recorded in the protocol of this archetype using the 'Pack definition' data element. (en)">
+					text = <"Paquet-année">
+					description = <"Estimation de la quantité cumulative de tabac fumé à l'aide du type de tabac spécifié.">
+					comment = <"Utilisée couramment dans l'évaluation de la consommation de cigarettes. Elle est calculée en multipliant le nombre de paquets de cigarettes fumés par jour par le nombre d'années pendant lesquelles la personne a fumé. Un paquet par an équivaut à 365 paquets de cigarettes. Pour plus de détails sur le calcul des années-paquets pour d'autres types de tabac, consultez le site http://smokingpackyears.com. La définition d'un paquet peut être enregistrée dans le protocole de cet archétype en utilisant l'élément de données \"Définition du paquet\".">
 				>
 				["at0019"] = <
-					text = <"*Overall comment (en)">
-					description = <"*Additional narrative about all tobacco smoking that has not been captured in other fields. (en)">
-					comment = <"*For example: stopped smoking or reduced amount on becoming pregnant. (en)">
+					text = <"Commentaire général">
+					description = <"Informations complémentaires sur le tabagisme qui n'ont pas été saisies dans d'autres domaines.">
+					comment = <"Par exemple : arrêt de la consommation de tabac ou réduction de la quantité de cigarettes lors de la grossesse.">
 				>
 				["at0021"] = <
 					text = <"Tree">
 					description = <"@ internal @">
 				>
 				["at0022"] = <
-					text = <"*Last updated (en)">
-					description = <"*The date this tobacco smoking summary was last updated. (en)">
+					text = <"Dernière mise à jour">
+					description = <"Date de la dernière mise à jour de ce résumé sur le tabagisme.">
 				>
 				["at0023"] = <
-					text = <"*Typical use (units) (en)">
-					description = <"*Estimate of number of units of the specified type of tobacco consumed. (en)">
-					comment = <"*For example: the number of 'sticks' or 'full pipes' per day or per week. This data element is redundant if a value is recorded for 'Typical use(mass)'. (en)">
+					text = <"Utilisation typique (unités)">
+					description = <"Estimation du nombre d'unités du type de tabac spécifié consommées.">
+					comment = <"Par exemple : le nombre de \"bâtons\" ou de \"pipes pleins\" par jour ou par semaine. Cet élément d'information est redondant si une valeur est enregistrée pour \"Utilisation typique (masse)\".">
 				>
 				["at0025"] = <
-					text = <"*Number of quit attempts (en)">
-					description = <"*Total number of times the individual has attempted to stop smoking the specified type of tobacco within this episode. (en)">
+					text = <"Nombre de tentatives de cessation">
+					description = <"Nombre total de fois où l'individu a tenté d'arrêter de fumer le type de tabac spécifié au cours de cet épisode.">
 				>
 				["at0026"] = <
-					text = <"*Episode details (en)">
-					description = <"*Additional structured details about the specified episode of tobacco smoking. (en)">
+					text = <"Détails de l'épisode">
+					description = <"Détails supplémentaires structurés concernant l'épisode de tabagisme spécifié.">
 				>
 				["at0029"] = <
-					text = <"*Per type (en)">
-					description = <"*Details about smoking activity for a specified type of smoked tobacco. (en)">
+					text = <"Par type">
+					description = <"Détails sur l'activité de tabagisme pour un type de tabac spécifié.">
 				>
 				["at0030"] = <
-					text = <"*Pattern (en)">
-					description = <"*The typical pattern of smoking for the specified type of tobacco. (en)">
+					text = <"Schéma">
+					description = <"Les habitudes de consommation de tabac typiques pour le type de tabac spécifié.">
 				>
 				["at0043"] = <
-					text = <"*Overall description (en)">
-					description = <"*Narrative summary about the individual's overall tobacco smoking pattern and history. (en)">
-					comment = <"*Use this data element to record a narrative description of the tobacco smoking habits for this individual or to incorporate unstructured tobacco smoking information from existing or legacy clinical systems into an archetyped format. (en)">
+					text = <"Description générale">
+					description = <"Résumé narratif sur les habitudes et les antécédents de l'individu en matière de tabagisme.">
+					comment = <"Utilisez cet élément de données pour enregistrer une description narrative des habitudes tabagiques de cette personne ou pour incorporer des informations non structurées sur le tabagisme provenant de systèmes cliniques existants ou anciens dans un format archétypal.">
 				>
 				["at0052"] = <
-					text = <"*Status (en)">
-					description = <"*Statement about current smoking behaviour for the specified type of tobacco. (en)">
+					text = <"Statut">
+					description = <"Déclaration sur le comportement actuel en matière de tabagisme pour le type de tabac spécifié.">
 				>
 				["at0053"] = <
-					text = <"*Description (en)">
-					description = <"*Narrative summary about smoking behaviour for the specified type of tobacco. (en)">
+					text = <"Description">
+					description = <"Résumé narratif du comportement de l'individu en matière de tabagisme pour le type de tabac spécifié.">
 				>
 				["at0054"] = <
-					text = <"*Cigarettes (en)">
-					description = <"*Also known as manufactured cigarettes, 'factory made' cigarettes or 'tailor made' cigarettes. Processed tobacco, manufactured into cylinder made of paper or a substance that does not contain tobacco. (en)">
+					text = <"Cigarettes">
+					description = <"Aussi appelées cigarettes manufacturées, cigarettes \"fabriquées en usine\" ou cigarettes \"sur mesure\". Tabac transformé, fabriqué en cylindre de papier ou d'une substance ne contenant pas de tabac.">
 				>
 				["at0055"] = <
-					text = <"*Hand-rolled cigarettes (en)">
-					description = <"*Also known as \"rollies\" or \"roll-ups\". Loose tobacco, hand rolled into a cylinder using cigarette papers. (en)">
+					text = <"Cigarettes roulées à la main">
+					description = <"Tabac en vrac, roulé à la main dans un cylindre à l'aide de papier à cigarettes.">
 				>
 				["at0056"] = <
-					text = <"*Cigars (en)">
-					description = <"*Also known as \"large cigar\". Roll of tobacco wrapped within a leaf tobacco or in a substance that contains tobacco. (en)">
+					text = <"Cigares">
+					description = <"Rouleau de tabac enveloppé dans une feuille de tabac ou dans une substance qui contient du tabac.">
 				>
 				["at0057"] = <
-					text = <"*Pipe (en)">
-					description = <"*Loose tobacco placed inside a pipe bowl. (en)">
+					text = <"Pipe">
+					description = <"Tabac en vrac placé à l'intérieur d'un bol à pipe.">
 				>
 				["at0059"] = <
-					text = <"*Former smoker (en)">
-					description = <"*Individual has previously smoked the specified type of tobacco but is not a current smoker. (en)">
+					text = <"Ancien fumeur">
+					description = <"La personne a déjà fumé le type de tabac spécifié mais n'est pas un fumeur actuel.">
 				>
 				["at0061"] = <
-					text = <"*Current smoker (en)">
-					description = <"*Individual is a current smoker of the specified type of tobacco. (en)">
+					text = <"Fumeur actuel">
+					description = <"L'individu est un fumeur actuel du type de tabac spécifié.">
 				>
 				["at0062"] = <
-					text = <"*Waterpipe (en)">
-					description = <"*Also known as \"hookah\", \"shisha\", \"narguileh\" and \"hubble-bubble\". Tobacco, often flavoured, is burned then cooled through a basin of water and consumed through a hose and mouthpiece. (en)">
+					text = <"Narguilé">
+					description = <"Également connu sous le nom de \"shisha\". Le tabac, souvent aromatisé, est brûlé puis refroidi dans une bassine d'eau et consommé à l'aide d'un tuyau et d'un embout.">
 				>
 				["at0064"] = <
-					text = <"*Per episode (en)">
-					description = <"*Details about a discrete period of smoking activity for the specified type of tobacco. (en)">
+					text = <"Par épisode">
+					description = <"Détails sur une période discrète d'activité de tabagisme pour le type de tabac spécifié.">
 				>
 				["at0065"] = <
-					text = <"*Typical use (mass) (en)">
-					description = <"*Estimate of the weight of loose leaf tobacco smoked. (en)">
-					comment = <"*This data element will typically be used for pipes and hand-rolled cigarettes and is redundant if a value is recorded for 'Typical use (units)'. (en)">
+					text = <"Utilisation typique (masse)">
+					description = <"Estimation du poids du tabac en feuilles fumé.">
+					comment = <"Cet élément de données sera généralement utilisé pour les pipes et les cigarettes roulées à la main et est redondant si une valeur est enregistrée pour \"Usage typique (unités)\".">
 				>
 				["at0066"] = <
-					text = <"*Cigarillos (en)">
-					description = <"*Also known as mini cigars. Short and narrow cigar. (en)">
+					text = <"Cigarillos">
+					description = <"Aussi appelés mini-cigares. Cigare court et étroit.">
 				>
 				["at0069"] = <
-					text = <"*Comment (en)">
-					description = <"*Additional narrative about smoking of the specified type of tobacco, not captured in other fields. (en)">
+					text = <"Commentaire">
+					description = <"Informations supplémentaires sur le tabagisme du type de tabac spécifié, non saisies dans d'autres domaines.">
 				>
 				["at0071"] = <
-					text = <"*Quit date definition (en)">
-					description = <"*The applied definition for the 'Quit date' data elements used in this archetype. (en)">
+					text = <"Définition de la date de cessation">
+					description = <"La définition appliquée pour les éléments de données de la \"Date de cessation\" utilisés dans cet archétype.">
 				>
 				["at0072"] = <
-					text = <"*Pack definition (en)">
-					description = <"*The definition of the size of pack used as part of the algorithm for calculating 'Pack years' data elements used in this archetype. (en)">
-					comment = <"*Definition may need to be specified per type. For example, the number of units in a pack used for cigarettes may be different to cigars; the mass of loose tobacco in a pack used for hand-rolled cigarettes or pipes. (en)">
+					text = <"Définition du paquet">
+					description = <"La définition de la taille du paquet utilisée dans le cadre de l'algorithme de calcul des éléments de données \"Paquets-année\" utilisés dans cet archétype.">
+					comment = <"Il peut être nécessaire de préciser la définition par type. Par exemple, le nombre d'unités dans un paquet utilisé pour les cigarettes peut être différent de celui des cigares ; la masse de tabac en vrac dans un paquet utilisé pour les cigarettes roulées à la main ou les pipes.">
 				>
 				["at0073"] = <
-					text = <"*Extension (en)">
-					description = <"*Additional information required to capture local content or to align with other reference models/formalisms. (en)">
-					comment = <"*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents. (en)">
+					text = <"Extension">
+					description = <"Informations supplémentaires requises pour saisir le contenu local ou pour s'aligner sur d'autres modèles/formalismes de référence.">
+					comment = <"Par exemple : exigences locales en matière d'information ou métadonnées supplémentaires pour s'aligner sur les équivalents FHIR ou CIMI.">
 				>
 				["at0074"] = <
-					text = <"*Overall pack years (en)">
-					description = <"*Estimate of the cumulative amount for all types of tobacco smoked. (en)">
-					comment = <"*The definition of a pack can be recorded in the protocol of this archetype using the 'Pack definition' data element. (en)">
+					text = <"Nombre total de paquets-année">
+					description = <"Estimation de la quantité cumulative pour tous les types de tabacs fumés.">
+					comment = <"La définition d'un paquet peut être enregistrée dans le protocole de cet archétype en utilisant l'élément de données \"Définition du paquet\".">
 				>
 				["at0075"] = <
-					text = <"*Current smoker definition (en)">
-					description = <"*The applied definition for the 'Current smoker' value in each of the 'Status' data elements used in this archetype. (en)">
-					comment = <"*Definition may need to be specified per type. Current smoker definitions vary in different jurisdictions. For example: USA Centre for Disease Control refers to smoking during the past one month and New Zealand Ministry of Health uses 28 days.
- (en)">
+					text = <"Définition du fumeur actuel">
+					description = <"La définition appliquée pour la valeur \"Fumeur actuel\" dans chacun des éléments de données \"Statut\" utilisés dans cet archétype.">
+					comment = <"Il peut être nécessaire de préciser la définition par type. Les définitions actuelles des fumeurs varient d'une juridiction à l'autre. Par exemple : Le Centre de contrôle des maladies des États-Unis fait référence au fait de fumer au cours du dernier mois et le ministère de la santé de Nouvelle-Zélande utilise 28 jours.
+">
 				>
 				["at0076"] = <
-					text = <"*Former smoker definition (en)">
-					description = <"*The applied definition for the 'Former smoker' value in each of the 'Status' data elements used in this archetype. (en)">
-					comment = <"*Definition may need to be specified per type of tobacco. Former smoker definitions vary in different jurisdictions. For example: New Zealand Ministry of Health refers to not having smoked during the past 28 days. (en)">
+					text = <"Définition de l'ancien fumeur">
+					description = <"La définition appliquée pour la valeur \"Ancien fumeur\" dans chacun des éléments de données \"Statut\" utilisés dans cet archétype.">
+					comment = <"Il peut être nécessaire de préciser la définition par type de tabac. Les définitions des anciens fumeurs varient selon les juridictions. Par exemple, les définitions des anciens fumeurs varient selon les juridictions : Le ministère de la santé de Nouvelle-Zélande fait référence au fait de ne pas avoir fumé au cours des 28 derniers jours.">
 				>
 				["at0077"] = <
-					text = <"*Type details (en)">
-					description = <"*Additional structured details about the specified type of tobacco smoking. (en)">
+					text = <"Détails du type">
+					description = <"Des détails supplémentaires structurés sur le type de tabagisme spécifié.">
 				>
 				["at0078"] = <
-					text = <"*Bidis (en)">
-					description = <"*Also known as Beedis. Thin hand-rolled cigarettes filled with tobacco and wrapped in a leaf, often tied with colorful string at one or both ends. They can be flavoured or unflavoured. (en)">
+					text = <"Bidis">
+					description = <"Également connu sous le nom de Beedis. Fines cigarettes roulées à la main, remplies de tabac et enveloppées dans une feuille, souvent attachées par une ficelle colorée à une ou deux extrémités. Elles peuvent être aromatisées ou non.">
 				>
 				["at0079"] = <
-					text = <"*Never smoked definition (en)">
-					description = <"*The applied definition for the 'Never smoked' value in each of the 'Status' data elements used in this archetype. (en)">
-					comment = <"*Definition may need to be specified per type. For example, the definition may not be zero, but less than a specified amount (as units or mass) smoked during a specified time interval. (en)">
+					text = <"Définition de jamais fumé">
+					description = <"La définition appliquée pour la valeur \"Jamais fumé\" dans chacun des éléments de données \"Statut\" utilisés dans cet archétype.">
+					comment = <"Il peut être nécessaire de préciser la définition par type. Par exemple, la définition peut ne pas être nulle, mais inférieure à une quantité donnée (en unités ou en masse) fumée pendant un intervalle de temps donné.">
 				>
 				["at0080"] = <
-					text = <"*Daily smoking commenced (en)">
-					description = <"*The date or partial date when the individual first started daily smoking of tobacco of any type. (en)">
-					comment = <"*Can be a partial date, for example, only a year. (en)">
+					text = <"Début du tabagisme quotidien">
+					description = <"La date ou une partie de la date à laquelle l'individu a commencé à fumer quotidiennement du tabac, quel qu'en soit le type.">
+					comment = <"Il peut s'agir d'une date partielle, par exemple, seulement une année.">
 				>
 				["at0081"] = <
-					text = <"*Episode label (en)">
-					description = <"*Identification of an episode of smoking activity - either as a number in a sequence and/or a named event. (en)">
-					comment = <"*For example: '2' as the second episode within a sequence of episodes; or 'Pregnancy with twins' if describing the smoking activity during a health event such as during a specific pregnancy. (en)">
+					text = <"Étiquette d'épisode">
+					description = <"Identification d'un épisode de tabagisme - soit sous la forme d'un numéro dans une séquence et/ou d'un événement nommé.">
+					comment = <"Par exemple : \"2\" comme le deuxième épisode d'une séquence d'épisodes ; ou \"grossesse avec des jumeaux\" si l'on décrit l'activité de tabagisme pendant un événement de santé comme une grossesse spécifique.">
 				>
 				["at0082"] = <
-					text = <"*Episode end date (en)">
-					description = <"*Date when this episode ceased. (en)">
-					comment = <"*Can be a partial date, for example, only a year. This data field will be empty if the episode is current and ongoing. (en)">
+					text = <"Date de fin de l'épisode">
+					description = <"Date à laquelle cet épisode a cessé.">
+					comment = <"Il peut s'agir d'une date partielle, par exemple, seulement un an. Ce champ de données sera vide si l'épisode est actuel et en cours.">
 				>
 				["at0083"] = <
-					text = <"*Daily (en)">
-					description = <"*Smoking the specified type of tobacco at least once every day. (en)">
+					text = <"Quotidiennement">
+					description = <"Fumer le type de tabac spécifié au moins une fois par jour.">
 				>
 				["at0084"] = <
-					text = <"*Non-daily (en)">
-					description = <"*Not smoking the specified type of tobacco every day. (en)">
+					text = <"Non quotidien">
+					description = <"Ne pas fumer le type de tabac spécifié tous les jours.">
 				>
 				["at0085"] = <
-					text = <"*Quit attempt definition (en)">
-					description = <"*The applied definition for a Quit attempt used to determine value for the 'Number of quit attempts' data element used in this archetype. (en)">
-					comment = <"*For example: 'stopped smoking for one day or longer with the intention of quitting'. (en)">
+					text = <"Définition de la tentative de cessation">
+					description = <"La définition appliquée pour une tentative d'arrêt du tabac utilisée pour déterminer la valeur de l'élément de données \"Nombre de tentatives de cessation\" utilisé dans cet archétype.">
+					comment = <"Par exemple : \"a arrêté de fumer pendant un jour ou plus avec l'intention de cesser de fumer\".">
 				>
 				["at0086"] = <
-					text = <"*Overall details (en)">
-					description = <"*Additional structured details about the overall tobacco smoking behaviour. (en)">
+					text = <"Détails généraux">
+					description = <"Détails supplémentaires structurés sur le comportement global en matière de tabagisme.">
 				>
 				["at0087"] = <
-					text = <"*Episode comment (en)">
-					description = <"*Additional narrative about tobacco smoking during the specified episode, not captured in other fields. (en)">
+					text = <"Commentaire de l'épisode">
+					description = <"Des informations supplémentaires sur le tabagisme pendant l'épisode spécifié, qui ne sont pas saisies dans d'autres champs.">
 				>
 				["at0088"] = <
-					text = <"*Kreteks (en)">
-					description = <"*Also known as clove cigarettes. Cigarettes that contain a mixture of tobacco, cloves and other additives. (en)">
+					text = <"Kreteks">
+					description = <"Aussi connues sous le nom de cigarettes au clou de girofle. Cigarettes qui contiennent un mélange de tabac, de clous de girofle et d'autres additifs.">
 				>
 				["at0089"] = <
-					text = <"*Overall status (en)">
-					description = <"*Statement about current smoking behaviour for all types of tobacco. (en)">
+					text = <"Statut générale">
+					description = <"Déclaration sur le comportement actuel en matière de tabagisme pour tous les types de tabac.">
 				>
 				["at0091"] = <
-					text = <"*Never smoked (en)">
-					description = <"*Individual has never smoked the specified type of tobacco. (en)">
+					text = <"Jamais fumé">
+					description = <"L'individu n'a jamais fumé le type de tabac spécifié.">
 				>
 				["at0093"] = <
-					text = <"*Overall years of smoking (en)">
-					description = <"*The cumulative number of years that the individual has smoked tobacco. (en)">
-					comment = <"*This data element does not take into account the amount of tobacco smoked. It may be used to calculate the 'Smoking index'. (en)">
+					text = <"Nombre total d'années de tabagisme">
+					description = <"Le nombre cumulé d'années pendant lesquelles l'individu a fumé du tabac.">
+					comment = <"Cet élément de données ne tient pas compte de la quantité de tabac fumé. Il peut être utilisé pour calculer l'\"indice de tabagisme\".">
 				>
 				["at0094"] = <
-					text = <"*Smoking index (en)">
-					description = <"*An indication of the cumulative amount of tobacco smoking exposure. (en)">
-					comment = <"*This parameter is similar to Pack Years but based on units of cigarettes, bidis etc smoked per day, rather than packs. (en)">
+					text = <"Indice de tabagisme">
+					description = <"Une indication de la quantité cumulée d'exposition au tabac.">
+					comment = <"Ce paramètre est similaire à celui des années-pack, mais il est basé sur les unités de cigarettes, bidis, etc. fumées par jour, plutôt que sur les paquets.">
 				>
 				["at0095"] = <
-					text = <"*Type (en)">
-					description = <"*The type of tobacco smoked by the individual. (en)">
+					text = <"Type">
+					description = <"Le type de tabac fumé par l'individu.">
 				>
 			>
 		>
